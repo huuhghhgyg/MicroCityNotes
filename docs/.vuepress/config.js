@@ -2,6 +2,7 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { defaultTheme } from "@vuepress/theme-default";
 
 module.exports = {
+  base: "/MicroCityNotes/",
   title: "MicroCity Notes",
   description: "Just playing around",
   theme: defaultTheme({
