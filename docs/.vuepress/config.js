@@ -1,5 +1,6 @@
-import { searchPlugin } from "@vuepress/plugin-search";
+// import { searchPlugin } from "@vuepress/plugin-search";
 import { defaultTheme } from "@vuepress/theme-default";
+import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 
 module.exports = {
   base: "/MicroCityNotes/",
@@ -60,10 +61,17 @@ module.exports = {
     ],
   }),
   plugins: [
-    searchPlugin({
-      // 配置项
-      // 允许搜索 Frontmatter 中的 `tags`
-      getExtraFields: (page) => page.frontmatter.tags ?? [],
+    // searchPlugin({
+    //   // 配置项
+    //   // 允许搜索 Frontmatter 中的 `tags`
+    //   getExtraFields: (page) => page.frontmatter.tags ?? [],
+    // }),
+    fullTextSearchPlugin({
+      locales: {
+        "/": {
+          placeholder: "搜索",
+        },
+      },
     }),
   ],
 };
