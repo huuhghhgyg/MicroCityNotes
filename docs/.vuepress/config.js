@@ -8,13 +8,17 @@ module.exports = {
   description: "Just playing around",
   theme: defaultTheme({
     logo: "/images/icon_microcity.png",
+
+    // 顶栏配置
     navbar: [
-      // NavbarGroup
       {
         text: "首页",
         link: "/",
       },
-      // NavbarItem
+      {
+        text: "笔记",
+        link: "/notes/",
+      },
       {
         text: "MicroCity文档",
         children: [
@@ -31,15 +35,18 @@ module.exports = {
       },
     ],
 
+    // 侧边栏配置
     sidebar: {
+      "/": [
+        { text: "MicroCity文档", link: "/docs/", collapsible: true },
+        { text: "笔记", link: "/notes/", collapsible: true },
+      ],
       "/docs/": [
         {
           text: "MicroCity文档",
-          link: "/docs/",
-          collapsible: true,
           children: [
-            { text: "目录", link: "/docs/" },
-            { text: "1.MicroCity介绍", collapsible: true, link: "/docs/1.1_what_microcity_can_do.md" },
+            { text: "目录", link: "/docs/readme.md" },
+            { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do.md" },
             {
               text: "2.开始使用MicroCity",
               collapsible: true,
@@ -67,7 +74,7 @@ module.exports = {
               children: [
                 { text: "4.1 脚本概览", link: "/docs/4.1_si_overview.md" },
                 { text: "4.2 控制用户界面", link: "/docs/4.2_ui_control.md" },
-                { text: "4.3 矢量图形和表格", link: "/docs/4.3_shapes_and_table.md" },
+                { text: "4.3 矢量图形和表格", link: "/docs/4.3_shapes_and_tables.md" },
                 { text: "4.4 栅格图形", link: "/docs/4.4_grids.md" },
                 { text: "4.5 3D场景", link: "/docs/4.5_3d_scenes.md" },
                 { text: "4.6 网络", link: "/docs/4.6_networks.md" },
@@ -78,14 +85,17 @@ module.exports = {
           ],
         },
       ],
+      "/notes/": [
+        {
+          text: "笔记",
+          children: [{ text: "LUA语言快速上手", link: "/notes/lua.md" }],
+        },
+      ],
     },
   }),
+  
   plugins: [
-    // searchPlugin({
-    //   // 配置项
-    //   // 允许搜索 Frontmatter 中的 `tags`
-    //   getExtraFields: (page) => page.frontmatter.tags ?? [],
-    // }),
+    // 搜索插件
     fullTextSearchPlugin({
       locales: {
         "/": {
