@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-147825fb","path":"/docs/","title":"MicroCity文档","lang":"en-US","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"目录","slug":"目录","link":"#目录","children":[]}],"git":{"updatedTime":1669395256000,"contributors":[{"name":"huuhghhgyg","email":"huuhghhgyg@outlook.com","commits":1}]},"filePathRelative":"docs/readme.md"}');export{e as data};
