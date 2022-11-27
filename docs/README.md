@@ -3,4 +3,6 @@
 
 [MicroCity文档](./docs)：搜索及部分解释
 
+[笔记](./notes)：学习笔记
+
 如果发现文档有问题，欢迎 [Pull Request](https://github.com/huuhghhgyg/MicroCityNotes/pulls) 或者提供 [Issues](https://github.com/huuhghhgyg/MicroCityNotes/issues) 让它变得更完善😋
