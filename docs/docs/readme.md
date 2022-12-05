@@ -22,4 +22,4 @@
   - [4.5 3D Scenes](4.5_3d_scenes.md) 3D场景
   - [4.6 Networks](4.6_networks.md) 网络
   - [4.7 Discrete Event Simulations](4.7_des_simulations.md) 离散事件模拟
-  - [4.8 Mixed Integer Programming](4.8_mixed_integer_programming.md) 混合整数规划
+  - [4.8 Mixed Integer Programming](4.8_mixed_integer_programming.md) 混合整数线性规划

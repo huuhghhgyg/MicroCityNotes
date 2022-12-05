@@ -125,4 +125,9 @@ for i=1,#list do
     print(list[i])
 end
 ```
-Lua的数组（集合）下标从`1`开始，不同于C类语言的`0`
+Lua的数组（集合）下标从`1`开始，不同于C类语言的`0`。此处以前面定义的`collection`为例：
+```lua
+print(collection[1][1]) --a
+print(collection[2]) --abc
+print(collection[3][2]) --3
+```
