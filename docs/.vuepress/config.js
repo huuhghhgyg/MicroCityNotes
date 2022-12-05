@@ -45,42 +45,26 @@ module.exports = {
         {
           text: "MicroCity文档",
           children: [
-            { text: "目录", link: "/docs/readme.md" },
-            { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do.md" },
+            { text: "目录", link: "/docs/", children: [] },
+            {
+              text: "1.MicroCity介绍",
+              collapsible: true,
+              children: ["/docs/1.1_what_microcity_can_do.md"],
+            },
             {
               text: "2.开始使用MicroCity",
               collapsible: true,
-              children: [
-                { text: "2.1 展示世界地图", link: "/docs/2.1_showing_a_world_map.md" },
-                { text: "2.2 寻找国家", link: "/docs/2.2_searching_for_countries.md" },
-              ],
+              children: ["/docs/2.1_showing_a_world_map.md", "/docs/2.2_searching_for_countries.md"],
             },
             {
               text: "3.用户界面",
               collapsible: true,
-              children: [
-                { text: "3.1 用户界面概览", link: "/docs/3.1_ui_overview.md" },
-                { text: "3.2 矢量图", link: "/docs/3.2_vector_shapes.md" },
-                { text: "3.3 栅格图", link: "/docs/3.3_raster_grids.md" },
-                { text: "3.4 3D场景", link: "/docs/3.4_3d_scenes.md" },
-                { text: "3.5 表格", link: "/docs/3.5_tables.md" },
-                { text: "3.6 地图和图层", link: "/docs/3.6_maps_and_layers.md" },
-                { text: "3.7 拓展模块", link: "/docs/3.7_modules.md" },
-              ],
+              children: ["/docs/3.1_ui_overview.md", "/docs/3.2_vector_shapes.md", "/docs/3.3_raster_grids.md", "/docs/3.4_3d_scenes.md", "/docs/3.5_tables.md", "/docs/3.6_maps_and_layers.md", "/docs/3.7_modules.md"],
             },
             {
               text: "4.脚本接口",
               collapsible: true,
-              children: [
-                { text: "4.1 脚本概览", link: "/docs/4.1_si_overview.md" },
-                { text: "4.2 控制用户界面", link: "/docs/4.2_ui_control.md" },
-                { text: "4.3 矢量图形和表格", link: "/docs/4.3_shapes_and_tables.md" },
-                { text: "4.4 栅格图形", link: "/docs/4.4_grids.md" },
-                { text: "4.5 3D场景", link: "/docs/4.5_3d_scenes.md" },
-                { text: "4.6 网络", link: "/docs/4.6_networks.md" },
-                { text: "4.7 离散事件模拟", link: "/docs/4.7_des_simulations.md" },
-                { text: "4.8 混合整数规划", link: "/docs/4.8_mixed_integer_programming.md" },
-              ],
+              children: ["/docs/4.1_si_overview.md", "/docs/4.2_ui_control.md", "/docs/4.3_shapes_and_tables.md", "/docs/4.4_grids.md", "/docs/4.5_3d_scenes.md", "/docs/4.6_networks.md", "/docs/4.7_des_simulations.md", "/docs/4.8_mixed_integer_programming.md"],
             },
           ],
         },
@@ -88,12 +72,19 @@ module.exports = {
       "/notes/": [
         {
           text: "笔记",
-          children: [{ text: "LUA语言快速上手", link: "/notes/lua.md" }],
+          children: [
+            {
+              text: "目录",
+              link: "/notes/",
+              children: [],
+            },
+            "/notes/lua.md",
+          ],
         },
       ],
     },
   }),
-  
+
   plugins: [
     // 搜索插件
     fullTextSearchPlugin({
