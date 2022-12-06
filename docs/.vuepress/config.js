@@ -27,7 +27,7 @@ module.exports = {
           { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do.md" },
           { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map.md" },
           { text: "3.用户界面", link: "/docs/3.1_ui_overview.md" },
-          { text: "4.脚本接口", link: "/docs/4.1_si_overview.md" },
+          { text: "4.脚本编写", link: "/docs/4.1_si_overview.md" },
         ],
       },
       {
@@ -63,7 +63,7 @@ module.exports = {
               children: ["/docs/3.1_ui_overview.md", "/docs/3.2_vector_shapes.md", "/docs/3.3_raster_grids.md", "/docs/3.4_3d_scenes.md", "/docs/3.5_tables.md", "/docs/3.6_maps_and_layers.md", "/docs/3.7_modules.md"],
             },
             {
-              text: "4.脚本接口",
+              text: "4.脚本编写",
               collapsible: true,
               children: ["/docs/4.1_si_overview.md", "/docs/4.2_ui_control.md", "/docs/4.3_shapes_and_tables.md", "/docs/4.4_grids.md", "/docs/4.5_3d_scenes.md", "/docs/4.6_networks.md", "/docs/4.7_des_simulations.md", "/docs/4.8_mixed_integer_programming.md"],
             },
@@ -80,6 +80,7 @@ module.exports = {
               children: [],
             },
             "/notes/lua.md",
+            "/notes/network.md",
           ],
         },
       ],
@@ -100,7 +101,7 @@ module.exports = {
     sitemapPlugin({
       hostname: "https://huuhghhgyg.github.io",
       // 排除无实际内容的页面
-      exclude: ["/404.html"]
+      exclude: ["/404.html","/docs/imgs/"]
     }),
   ],
 };
