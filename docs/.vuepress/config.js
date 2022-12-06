@@ -1,6 +1,7 @@
 // import { searchPlugin } from "@vuepress/plugin-search";
 import { defaultTheme } from "@vuepress/theme-default";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 module.exports = {
   base: "/MicroCityNotes/",
@@ -93,6 +94,13 @@ module.exports = {
           placeholder: "搜索",
         },
       },
+    }),
+    //SEO优化相关
+    //网站地图
+    sitemapPlugin({
+      hostname: "https://huuhghhgyg.github.io",
+      // 排除无实际内容的页面
+      exclude: ["/404.html"]
     }),
   ],
 };
