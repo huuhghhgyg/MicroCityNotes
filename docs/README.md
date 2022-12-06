@@ -1,7 +1,7 @@
 # MicroCity笔记
 目前正在施工中🧱...
 
-[MicroCity文档](./docs)：搜索及部分解释
+[MicroCity文档](./docs)：提供全文搜索功能及部分解释
 
 [笔记](./notes)：学习笔记
 
