@@ -80,6 +80,7 @@ module.exports = {
               children: [],
             },
             "/notes/lua.md",
+            "/notes/visualization.md",
             "/notes/network.md",
           ],
         },
