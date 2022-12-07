@@ -1,4 +1,6 @@
 # 结果可视化
+本文介绍了多种将计算结果可视化的方法。包括改变内容的颜色，改变形状大小，改变元素显示的属性标签等。
+
 ## 改变形状颜色
 在程序界面左下角的图形属性框内可以通过改变`Colors`栏目下的`Type`属性改变显示颜色的种类。共有3种选项：
 - Unique Symbol：指定颜色
@@ -63,4 +65,36 @@
 - **标签尺寸参考系设置**：`Labels`栏目下的`Size relates to...`调整标签尺寸的参考系，`Default Size`调整的是标签(Labels)相对于坐标系的尺寸。
 
 ## 更改显示的标签
-在程序界面左下角的图形属性框内可以设置图形及其标签的尺寸参考系。上图中显示的标签为`ID`，如果需要改为表格中的其他列，可以更改`Lables`下的`Attribute`属性实现。
+在程序界面左下角的图形属性框内可以设置图形及其标签的尺寸参考系。上图中显示的标签为`ID`，如果需要改为表格中的其他列，可以更改`Lables`栏目下的`Attribute`属性实现。
+
+需要更改的属性位置如图，图中需要显示表中对应`MSG`列的值，只需要将`Labels`栏目下的`Attribute`属性值改为`MSG`即可。
+
+![](./images/LabelAttribProperties.png)
+
+但是每次更改图形并执行`Update()`函数后标签（Label）会取消显示。如果需要执行的脚本中含有此对于此图层的`Update()`函数，不必在每次执行完脚本后手动重新设置显示的标签，可以通过脚本自动选择显示的标签。
+
+通过`SetParameter()`函数可以更改属性值。以上图`Labels`栏目下的`Attribute`属性为例，选中这条属性后可以看到底栏显示其`ID`为`LABEL_ATTRIB`，其类型为`Choice`。
+> 需要注意的是，当类型为`Choice`时，参数值从1开始编号，编号顺次对应下拉菜单的内容。
+
+点开这条属性以后，可以看到`MSG`在第二个。由于LUA中编号一般由1开始，因此此处`MSG`的编号对应2，`ID`的编号对应1。
+
+![](./images/SetParameterProperties.png)
+
+此时已经得到了所有需要的参数，可以使用SetParameter()对其进行更改
+```lua
+-- transports为图形图层
+SetParameter(transports, "LABEL_ATTRIB", 2)
+```
+> `SetParameter()`函数需要在`Update()`函数执行后再执行，否则效果会被`Update()`函数覆盖。
+
+现在回过头来再看看`SetParameter()`函数的具体用法：
+```lua
+SetParameter (Shapes|Table|Grid|Scene|Module, "id", Number|"String"|Object)
+```
+|参数|含义|
+|---|---|
+|参数1|输入的对象，可以是`Shapes`、`Table`、`Grid`、`Scene`、`Module`|
+|参数2|其中的`id`为属性对应的ID。如果是上文的情况，就是`LABEL_ATTRIB`|
+|参数3|如果需要更改属性值，只接受数值(Number)、字符串(String)、对象(Object)三种类型|
+
+`SetParameter()`函数的介绍出现在文档 [4.2 控制用户界面](../docs/4.2_ui_control.md) 中，请参阅。
