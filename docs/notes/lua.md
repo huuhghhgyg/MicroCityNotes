@@ -1,3 +1,10 @@
+---
+head:
+  - - meta
+    - name: keywords
+      content: MicroCity 编程 脚本 lua
+---
+
 # LUA语言快速上手
 由于MicroCity采用的脚本语言是LUA，因此在开始使用MicroCity编写脚本之前需要先熟悉LUA的基本用法。
 
