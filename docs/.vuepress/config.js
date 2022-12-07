@@ -6,8 +6,8 @@ import { seoPlugin } from "vuepress-plugin-seo2";
 
 module.exports = {
   base: "/MicroCityNotes/",
-  title: "MicroCity Notes",
-  description: "Just playing around",
+  title: "MicroCity笔记",
+  description: "记录MicroCity的学习过程并提供快捷的参考",
   theme: defaultTheme({
     logo: "/images/icon_microcity.png",
 
