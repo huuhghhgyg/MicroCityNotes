@@ -24,7 +24,7 @@ module.exports = {
       {
         text: "MicroCity文档",
         children: [
-          { text: "文档目录", link: "/docs" },
+          { text: "文档目录", link: "/docs/" },
           { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
           { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
           { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
