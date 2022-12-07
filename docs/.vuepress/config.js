@@ -8,6 +8,13 @@ module.exports = {
   base: "/MicroCityNotes/",
   title: "MicroCity笔记",
   description: "记录MicroCity的学习过程并提供快捷的参考",
+  locales: {
+    // 作为特例，默认语言可以使用 '/' 作为其路径。
+    '/': {
+      lang: 'zh-CN',
+    },
+  },
+  
   theme: defaultTheme({
     logo: "/images/icon_microcity.png",
 
