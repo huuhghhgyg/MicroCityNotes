@@ -1,5 +1,6 @@
 ---
 home: true
+title: 首页
 actions:
   - text: 文档目录
     link: /docs/
