@@ -2,6 +2,7 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { seoPlugin } from "vuepress-plugin-seo2";
 
 module.exports = {
   base: "/MicroCityNotes/",
@@ -24,10 +25,10 @@ module.exports = {
         text: "MicroCity文档",
         children: [
           { text: "文档目录", link: "/docs" },
-          { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do.md" },
-          { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map.md" },
-          { text: "3.用户界面", link: "/docs/3.1_ui_overview.md" },
-          { text: "4.脚本编写", link: "/docs/4.1_si_overview.md" },
+          { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
+          { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
+          { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
+          { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
         ],
       },
       {
@@ -50,22 +51,22 @@ module.exports = {
             {
               text: "1.MicroCity介绍",
               collapsible: true,
-              children: ["/docs/1.1_what_microcity_can_do.md"],
+              children: ["/docs/1.1_what_microcity_can_do"],
             },
             {
               text: "2.开始使用MicroCity",
               collapsible: true,
-              children: ["/docs/2.1_showing_a_world_map.md", "/docs/2.2_searching_for_countries.md"],
+              children: ["/docs/2.1_showing_a_world_map", "/docs/2.2_searching_for_countries"],
             },
             {
               text: "3.用户界面",
               collapsible: true,
-              children: ["/docs/3.1_ui_overview.md", "/docs/3.2_vector_shapes.md", "/docs/3.3_raster_grids.md", "/docs/3.4_3d_scenes.md", "/docs/3.5_tables.md", "/docs/3.6_maps_and_layers.md", "/docs/3.7_modules.md"],
+              children: ["/docs/3.1_ui_overview", "/docs/3.2_vector_shapes", "/docs/3.3_raster_grids", "/docs/3.4_3d_scenes", "/docs/3.5_tables", "/docs/3.6_maps_and_layers", "/docs/3.7_modules"],
             },
             {
               text: "4.脚本编写",
               collapsible: true,
-              children: ["/docs/4.1_si_overview.md", "/docs/4.2_ui_control.md", "/docs/4.3_shapes_and_tables.md", "/docs/4.4_grids.md", "/docs/4.5_3d_scenes.md", "/docs/4.6_networks.md", "/docs/4.7_des_simulations.md", "/docs/4.8_mixed_integer_programming.md"],
+              children: ["/docs/4.1_si_overview", "/docs/4.2_ui_control", "/docs/4.3_shapes_and_tables", "/docs/4.4_grids", "/docs/4.5_3d_scenes", "/docs/4.6_networks", "/docs/4.7_des_simulations", "/docs/4.8_mixed_integer_programming"],
             },
           ],
         },
@@ -79,9 +80,9 @@ module.exports = {
               link: "/notes/",
               children: [],
             },
-            "/notes/lua.md",
-            "/notes/visualization.md",
-            "/notes/network.md",
+            "/notes/lua",
+            "/notes/visualization",
+            "/notes/network",
           ],
         },
       ],
@@ -102,7 +103,11 @@ module.exports = {
     sitemapPlugin({
       hostname: "https://huuhghhgyg.github.io",
       // 排除无实际内容的页面
-      exclude: ["/404.html","/docs/imgs/"]
+      exclude: ["/404.html", "/docs/imgs/"],
+    }),
+    seoPlugin({
+      // 你的选项
+      hostname: "https://huuhghhgyg.github.io",
     }),
   ],
 };
