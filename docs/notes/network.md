@@ -77,6 +77,21 @@ Update(Links)
 
 虽然一开始就输入了网络连线，但是在拓补化的过程中可能由于连线上的节点重合，在拓补化的过程中会把连续的连线拆成多段，因此得到的`Links`图层可能与输入的图层存在不同。而拓补化得到的节点`Nodes`和得到的连线`Links`是对应的，因此推荐使用拓补化处理完的Links图层作为网络节点之间的连线。
 
+### 踩坑经验
+如果需要使用`CreateNetwork(Nodes, Links)`函数再次建立网络，需要保留以下在拓补化过程中添加的属性，否则将会出现网络初始化错误的问题：
+```lua
+AddField(Links, "ID", "int")
+AddField(Links, "O", "int")
+AddField(Links, "D", "int")
+AddField(Links, "IMPEDANCE", "double") --阻抗
+AddField(Links, "DIRECTION", "int") --方向
+AddField(Links, "CAPACITY", "double") --容量
+```
+
+如果只是一次性地进行网络拓补，不会再用拓补化过的网络重新创建网络对象，也需要先创建以上属性。拓补化后数据并不会根据属性名称填入，而是根据位置填入。
+
+如果只创建了`O`和`D`两个属性，则`O`的属性中会被填入`ID`数据，而`D`的属性中会被填入`O`的数据。而如果只根据上面的顺序创建了`ID`、`O`、`D`三个属性，由于数据顺序根据位置填入，则最终的填入的数据是正确的。
+
 ### CopyShapeTo函数
 拓补的操作中使用了`CopyShapeTo()`函数，其作用是将一个`Shape`对象复制到`Shapes`图层中的对应位置，并根据输入的`dx`和`dy`在`Shapes`图层中进行位置变换。其中，`dx`和`dy`分别为在`x`和`y`方向上的位移量（理解为deltax和deltay）。
 ```lua
