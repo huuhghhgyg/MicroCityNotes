@@ -2,7 +2,7 @@
 head:
   - - meta
     - name: keywords
-      content: MicroCity 编程 脚本 lua
+      content: MicroCity,编程,脚本,lua
 ---
 
 # LUA语言快速上手
