@@ -2,7 +2,7 @@
 head:
   - - meta
     - name: keywords
-      content: MicroCity 结果 可视化
+      content: MicroCity,结果,可视化
 ---
 # 结果可视化
 本文介绍了多种将计算结果可视化的方法。包括改变内容的颜色，改变形状大小，改变元素显示的属性标签等。
