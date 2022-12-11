@@ -6,7 +6,7 @@ head:
 ---
 
 # LUA语言快速上手
-由于MicroCity采用的脚本语言是LUA，因此在开始使用MicroCity编写脚本之前需要先熟悉LUA的基本用法。
+由于MicroCity采用的脚本语言是Lua，因此在开始使用MicroCity编写脚本之前需要先熟悉Lua的基本用法。本文介绍了MicroCity编写Lua脚本的常用的语法，能够帮助你快速地根据其他编程语言中的概念理解MicroCity脚本编写的总体思路。
 
 ## 变量和函数定义
 lua会自动识别变量类型，因此无需在变量名称前定义变量类型，直接赋值即可。
@@ -138,3 +138,172 @@ print(collection[1][1]) --a
 print(collection[2]) --abc
 print(collection[3][2]) --3
 ```
+
+### table的排序
+#### 默认排序方法
+可以使用函数对列表进行排序，最简单的用法如下
+```lua
+table.sort(list) -- 默认升序排序
+```
+
+此处提供一个实验案例
+```lua
+-- 函数：打印列表
+function PrintList(list)
+    -- 输出列表
+    local listStr = ""
+    for i = 1, #list do
+        listStr = listStr .. list[i] .. " "
+    end
+    print(listStr)
+end
+
+local list = { 3, 7, 2, 5, 4 } -- 原始列表
+
+PrintList(list) -- 输出原始列表
+table.sort(list) -- 对列表进行排序
+PrintList(list) -- 输出排序后的列表
+
+-- 结果：
+-- 3 7 2 5 4 (原始列表)
+-- 2 3 4 5 7 (排序后的列表)
+```
+
+#### 自定义排序方法
+`table.sort`函数也可以使用自定义排序规则，但是这个规则你需要写在函数里。
+```lua
+table.sort(list, function(a, b))
+```
+`function(a, b)`是自定义的排序规则，要求最终返回一个`bool`值(`true`或`false`)。`a`和`b`分别为列表中的任意两项，如果函数返回`true`，则`a`在`b`的前面，否则`b`在`a`的前面。
+
+下面提供了2个示例供参考。
+
+##### 示例1：上面代码改为降序输出
+```lua
+-- 此处省略PrintList()函数，函数代码与上方相同
+
+local list = { 3, 7, 2, 5, 4 } -- 原始列表
+
+PrintList(list) -- 输出原始列表
+table.sort(list, function(a, b) -- 对列表进行排序
+    return a > b -- 降序排序，如果a>b，则a在b前面
+end)
+PrintList(list) -- 输出排序后的列表
+
+-- 结果：
+-- 3 7 2 5 4 (原始列表)
+-- 7 5 4 3 2 (排序后的列表)
+```
+
+##### 示例2：二维数组中的排序
+```lua
+-- 函数：打印列表
+function PrintList(list)
+    -- 输出列表
+    local listStr = ""
+    for i = 1, #list do
+        listStr = listStr .. "\n" .. list[i][1] .. ", " .. list[i][2]
+    end
+    print(listStr)
+end
+
+ -- 原始列表
+local list = { { 3, 5 }, { 7, 6 }, { 2, 2 }, { 5, 1 }, { 4, 3 } }
+
+PrintList(list) -- 输出原始列表
+
+-- 以列表中每项的第1维降序排序
+table.sort(list, function(a, b)
+    return a[1] > b[1]
+end)
+PrintList(list) -- 输出排序后的列表
+
+-- 以列表中每项的第2维降序排序
+table.sort(list, function(a, b)
+    return a[2] > b[2] 
+end)
+PrintList(list) -- 输出排序后的列表
+
+-- 结果：
+-- 原始列表：
+-- 3, 5
+-- 7, 6
+-- 2, 2
+-- 5, 1
+-- 4, 3
+
+-- 以第1维降序排序：
+-- 7, 6
+-- 5, 1
+-- 4, 3
+-- 3, 5
+-- 2, 2
+
+-- 以第2维降序排序：
+-- 7, 6
+-- 3, 5
+-- 4, 3
+-- 2, 2
+-- 5, 1
+```
+
+### table的引用
+当没有对`table`进行对拷，而直接复制的时候，你新的到的`table`相当于原`table`的引用，称为**浅拷贝**。当你修改浅拷贝得到的`table`中的元素时，由于两个`table`是引用的关系，原`table`中的元素也会随之改变。
+
+上面的示例代码也遵循了这一原理。下面将用一个新的例子突出这一特点。
+
+#### 示例：浅拷贝
+```lua
+function PrintList(list)
+    -- 输出列表
+    local listStr = ""
+    for i = 1, #list do
+        listStr = listStr .. list[i] .. " "
+    end
+    print(listStr)
+end
+
+list1 = { 1, 2, 3, 4, 5 }
+PrintList(list1)
+-- 1 2 3 4 5
+
+list2 = list1
+PrintList(list2)
+-- 1 2 3 4 5
+
+-- 修改list2的第2个元素
+list2[2] = 10
+PrintList(list2)
+-- 1 10 3 4 5
+
+PrintList(list1)
+-- 1 10 3 4 5
+```
+
+#### 示例：深拷贝
+而如果想要复制一个全新的列表list2怎么办呢？那么你就需要对table中的元素进行逐个复制，也称**深拷贝**。
+```lua
+-- PrintList函数代码与上方相同
+
+list1 = { 1, 2, 3, 4, 5 }
+PrintList(list1)
+-- 1 2 3 4 5
+
+list2 = {} -- 新建一个空列表
+
+-- 将list1的元素复制到list2
+for index, value in pairs(list1) do
+    table.insert(list2, value)
+end
+PrintList(list2)
+-- 1 2 3 4 5
+
+-- 修改list2的第2个元素
+list2[2] = 10
+PrintList(list2)
+-- 1 10 3 4 5
+
+PrintList(list1)
+-- 1 2 3 4 5 (没有发生变化)
+```
+在这个例子中，修改深拷贝得到的`list2`中的元素并不会对原来的`list1`产生影响。
