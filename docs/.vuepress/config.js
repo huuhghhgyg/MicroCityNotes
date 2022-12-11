@@ -5,7 +5,7 @@ import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
 
 module.exports = {
-  base: "/MicroCityNotes/",
+  base: "/microcitynotes/",
   title: "MicroCity笔记",
   description: "记录MicroCity的学习过程并提供快捷的参考",
   head: [["meta", { name: "keywords", content: "MicroCity,笔记,学习,介绍,文档,可视化" }]],
