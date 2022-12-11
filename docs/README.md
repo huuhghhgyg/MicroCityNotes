@@ -34,7 +34,7 @@ Print("hello, world!")
 
 更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：[**MicroCity文档**](./docs/)，也可以参考 [MicroCtiy](https://microcity.github.io/) 在GitHub上的文档。
 
-## [microcitynotes](https://github.com/huuhghhgyg/microcitynotes) 仓库
+## [MicroCityNotes](https://github.com/huuhghhgyg/microcitynotes) 仓库
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/microcitynotes) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/huuhghhgyg/microcitynotes/pages%20build%20and%20deployment)
 
