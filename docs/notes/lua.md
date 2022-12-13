@@ -5,7 +5,7 @@ head:
       content: MicroCity,编程,脚本,lua
 ---
 
-# LUA语言快速上手
+# Lua语言快速上手
 由于MicroCity采用的脚本语言是Lua，因此在开始使用MicroCity编写脚本之前需要先熟悉Lua的基本用法。本文介绍了MicroCity编写Lua脚本的常用的语法，能够帮助你快速地根据其他编程语言中的概念理解MicroCity脚本编写的总体思路。
 
 ## 变量和函数定义
