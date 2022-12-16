@@ -3,6 +3,7 @@ import { defaultTheme } from "@vuepress/theme-default";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 module.exports = {
   base: "/microcitynotes/",
@@ -114,8 +115,15 @@ module.exports = {
       exclude: ["/404.html", "/docs/imgs/"],
     }),
     seoPlugin({
-      // 你的选项
       hostname: "https://huuhghhgyg.github.io",
+    }),
+    mdEnhancePlugin({
+      // 启用代码块分组
+      codetabs: true,
+      // 使用 KaTeX 启用 TeX 支持
+      katex: true,
+      // 使用 mathjax 启用 TeX 支持
+      mathjax: true,
     }),
   ],
 };
