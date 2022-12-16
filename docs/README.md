@@ -36,7 +36,7 @@ Print("hello, world!")
 
 ## [MicroCityNotes](https://github.com/huuhghhgyg/microcitynotes) 仓库
 
-![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/microcitynotes) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/huuhghhgyg/microcitynotes/pages%20build%20and%20deployment)
+![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/microcitynotes) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/huuhghhgyg/microcitynotes/DeployPage.yml?branch=main)
 
 目前正在施工阶段🧱...
 
