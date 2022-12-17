@@ -23,6 +23,9 @@ jobs:
       # 拉取代码
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          # 拉取commit的深度，默认1，0表示拉取所有commit，会降低速度
+          fetch-depth: 0
 
       # 安装NPM
       - name: npm/yarn/pnpm install
