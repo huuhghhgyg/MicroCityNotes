@@ -9,12 +9,12 @@ actions:
     link: /notes/
     type: secondary
 features:
-  - title: 文档和搜索
-    details: 文档内容搬运自 MicroCity 项目文档并做了一点修改，在这里可以使用网站提供的搜索功能快速查找内容
-  - title: 学习笔记
-    details: 除了文档，还有 MicroCity 使用过程中的一些总结和记录
-  - title: 高颜值
-    details: 由 VuePress 驱动的独立网站，提供流畅的阅读体验
+  - title: 文档和搜索 🔍
+    details: 文档内容搬运自 MicroCity 项目文档并做了一点修改，在这里可以使用网站提供的搜索功能快速查找并跳转至内容
+  - title: 学习笔记 📔
+    details: 除了文档，还有 MicroCity 使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避开天坑
+  - title: 高颜值，流畅 ✨
+    details: 由 VuePress 驱动的独立网站，提供流畅的阅读和文档参考体验
 ---
 ## 开始使用MicroCity
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/microcity.github.io) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/microcity.github.io/latest/total)
