@@ -92,6 +92,7 @@ module.exports = {
             "/notes/lua",
             "/notes/visualization",
             "/notes/network",
+            "/notes/lp"
           ],
         },
       ],
