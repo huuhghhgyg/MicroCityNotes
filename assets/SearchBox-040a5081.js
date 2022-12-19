@@ -1,4 +1,4 @@
-import{u as j}from"./app-18eaac95.js";import{r as m,h as C,z as A,c as I,U as N,u as R,_,p as u,q as p,a0 as E,ad as O,S as b,w as S,a5 as y,P as k,Q as M,R as v,v as x,ae as F}from"./framework-9fc6aeb2.js";const B=[{path:"/",title:"首页",pathLocale:"/",contents:[{header:"开始使用MicroCity",slug:"开始使用microcity",content:'转到MicroCity的文档仓库下载 MicroCity的最新版本 打开 ScriptEditor 并输入: Print("hello, world!") 将脚本另存为 test.mcs 并将其拖入 MicroCity 在程序主界面左侧转到 Modules 标签页，打开 test ，双击其中的 main ，执行刚刚编写的脚本。 程序界面下方的 Messages 栏中会输出执行脚本的信息。 更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：MicroCity文档，也可以参考 MicroCtiy 在GitHub上的文档。'},{header:"MicroCityNotes 仓库",slug:"microcitynotes-仓库",content:`目前正在施工阶段🧱...
+import{u as D}from"./app-26cd6409.js";import{r as m,h as C,z as A,c as _,U as I,u as N,_ as R,p as h,q as p,a0 as E,ad as O,S as b,w as S,a5 as y,P as k,Q as v,R as M,v as x,ae as F}from"./framework-9fc6aeb2.js";const B=[{path:"/",title:"首页",pathLocale:"/",contents:[{header:"开始使用MicroCity",slug:"开始使用microcity",content:'转到MicroCity的文档仓库下载 MicroCity的最新版本 打开 ScriptEditor 并输入: Print("hello, world!") 将脚本另存为 test.mcs 并将其拖入 MicroCity 在程序主界面左侧转到 Modules 标签页，打开 test ，双击其中的 main ，执行刚刚编写的脚本。 程序界面下方的 Messages 栏中会输出执行脚本的信息。 更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：MicroCity文档，也可以参考 MicroCtiy 在GitHub上的文档。'},{header:"MicroCityNotes 仓库",slug:"microcitynotes-仓库",content:`目前正在施工阶段🧱...
 如果发现文档或笔记有问题，欢迎 Pull Request 或者提供 Issues 让它变得更完善😋`}]},{path:"/docs/1.1_what_microcity_can_do.html",title:"1.1 MicroCity能做什么",pathLocale:"/",contents:[{header:"1.1 MicroCity能做什么",slug:"_1-1-microcity能做什么",content:"MicroCity is designed to be a handy spatial planning tool, which is portable, compact and fast."},{header:"A Modeling Framework",slug:"a-modeling-framework",content:"Based on GIS, Networks and Mixed Integer Programming libraries, MicroCity can be used as a modeling framework to solve transporation problems, such as City Logistics and Shipping Planning:"},{header:"A Simulation Platform",slug:"a-simulation-platform",content:"Based on 3D CGI and Discrete Event Simulation Engine, MicroCity can be used as a simulation platform to evaluate logistic scenarios, such as Automated Warehouses and Container Terminals:"},{header:"Customized by Scriptable Modules",slug:"customized-by-scriptable-modules",content:"MicroCity can extend its functionality with modules which can be inherited from SAGA or scripted and debugged in Script Editor: Currently, MicroCity is mainly used in teaching and research. It can be freely distributed."}]},{path:"/docs/2.1_showing_a_world_map.html",title:"2.1 展示世界地图",pathLocale:"/",contents:[{header:"2.1 展示世界地图",slug:"_2-1-展示世界地图",content:"This tutorial will guide you in manipulating and visualizing GIS data in MicroCity."},{header:"Loading Data and Creating a Map",slug:"loading-data-and-creating-a-map",content:"Download the countries.shp (ArcGIS shapefile) and the countries.dbf (dBase file) in a same folder. Open MicroCity and load or drag the countries.shp into MicroCity and select Data Tab in Workspace panel. Double click Data->Shapes->Polygon->01. countries in Workspace panel."},{header:"Visualizing Coutries' Properties",slug:"visualizing-coutries-properties",content:"Right click 01. countries in the Workspace panel. Click Attributes->Table->Show in the popup menu. In the Settings Panel, find the Colors->Type option and select Graduated Color. In its sub-option Attribute, select POP_EST which is population property of countries. In the Setting Panel, find the Chart option and click the ... button. In the popup dialog, select pie in Chart Type option and select GDP_MD_EST in Attribute (Size) option and select EXPORT and IMPORT checkboxs in Fields option and click Okay button."},{header:"Editing Shapes",slug:"editing-shapes",content:"Select Action button at toolbar. Left click some country and right click it and select Edit Selected Shape in the popup menu. Then the shape will be in editing mode. You can change its polygon points and finish your editing by right click and select Edit Selected Shape again."}]},{path:"/docs/2.2_searching_for_countries.html",title:"2.2 寻找国家",pathLocale:"/",contents:[{header:"2.2 寻找国家",slug:"_2-2-寻找国家",content:"This tutorial will guide you in coding with MicroCity Script to manipulate GIS data. You have to complete 2.1 to proceed."},{header:"GIS Data Structure",slug:"gis-data-structure",content:"In MicroCity, GIS data consists of three types of Shapes: Point, Polyline and Polygon, each of which can be visualized as a Map Layer. In a layer, a Shape object consists of one or more Parts, and every Part consists of one or more Points. A Shape object is also associated to a record in the Attributes Table. You can also edit the shape or its attributes (see 3.2). If you want perform a complex editing or handle a batch of shapes, you can use MicroCity Script, in which many built-in functions can be used."},{header:"Making a Query",slug:"making-a-query",content:`Suppose we want to find countries, each of which has a population of more than 100 million and is entirely in the northern hemisphere. So we need to check every point's coordinate in each shape and the population attribute of the shape. Open ScriptEditor and type following codes:
 local Countries = Open("countries.shp") --Try to open the shapes layer
 for i = 1, GetRecCount(Countries) do --Loop all the shape objects in the layer local country = GetShape(Countries, i) --Get the shape object of a country local north = true --Assume the country is in the northern hemisphere for j = 1, GetPartCount(country) do --Loop all of the parts in the shape for k = 1, GetPointCount(country, j) do --Loop all of the points in the shape part local x, y = GetPointXY(country, k, j) --Get coordinate of the point j if y < 0 then --If the latitude is less than 0 north = false --The north assumption is false end end end local pop = GetValue(country, "POP_EST") --Get the population property local name = GetValue(country, "NAME") --Get the country name if pop > 100000000 and north then --Check the two conditions Print(name, ": ", pop/100000000) --Print out the result end
@@ -398,7 +398,88 @@ end
 目标函数值：42
 x1=0
 x2=2
-x3=1`}]},{path:"/notes/lua.html",title:"Lua语言快速上手",pathLocale:"/",contents:[{header:"Lua语言快速上手",slug:"lua语言快速上手",content:"由于MicroCity采用的脚本语言是Lua，因此在开始使用MicroCity编写脚本之前需要先熟悉Lua的基本用法。本文介绍了MicroCity编写Lua脚本的常用的语法，能够帮助你快速地根据其他编程语言中的概念理解MicroCity脚本编写的总体思路。"},{header:"变量和函数定义",slug:"变量和函数定义",content:`lua会自动识别变量类型，因此无需在变量名称前定义变量类型，直接赋值即可。
+x3=1`},{header:"建模的一些技巧",slug:"建模的一些技巧",content:""},{header:"线性化",slug:"线性化",content:`有时候我们会遇到多下标的建模问题，如决策变量为xijx_{ij}xij​，这个时候就要将其进行线性化编码。
+假设决策变量本身的形状共有3行4列，即： 列1
+列2
+列3
+列4 x11x_{11}x11​
+x12x_{12}x12​
+x13x_{13}x13​
+x14x_{14}x14​ x21x_{21}x21​
+x22x_{22}x22​
+x23x_{23}x23​
+x24x_{24}x24​ x31x_{31}x31​
+x32x_{32}x32​
+x33x_{33}x33​
+x34x_{34}x34​ 假设目标函数要将这些决策变量求和，即 F=∑i=13∑j=14xijF=\\sum_{i=1}^3\\sum_{j=1}^4x_{ij}F=∑i=13​∑j=14​xij​ 如果要将其输入目标函数，此时可以将其线性化为 x11+x12+...+x14+x21+...+x24+x31+...+x34x_{11}+x_{12}+...+x_{14}+x_{21}+...+x_{24}+x_{31}+...+x_{34}x11​+x12​+...+x14​+x21​+...+x24​+x31​+...+x34​
+由于只有两个维度，因此可以使用两个for实现：
+local cons = {}
+for i = 1, 3 do -- 第一维 for j = 1, 4 do -- 第二维 cons[4 * (i - 1) + j] = 1 -- 填入系数 -- 其中 4 * (i - 1) + j 的思想类似于进位 end
+end --结果：
+-- cons长度为12，值都为1`},{header:"例题：指派模型",slug:"例题-指派模型",content:`下面以一个实际的例题来看看多维线性化的具体使用方法及其方便之处。
+甲、乙、丙、丁四人配送A，B，C，D四种货物，所需时间如表所示。若一种货物只交一人送货，则应指派何人配送何种货物，能使总的时间最少？ 人\\工件
+A
+B
+C
+D 甲
+14
+9
+4
+15 乙
+11
+7
+9
+10 丙
+13
+2
+10
+5 丁
+17
+9
+15
+13 假设货物A、B、C、D对应的编号依次为1、2、3、4，设 xij=1x_{ij}=1xij​=1 时表示第i个人送j货，xij=0x_{ij}=0xij​=0 时表示第i个人不送j货。
+则上述问题的数学模型可以表示为
+minZ=∑i=14∑j=14cijxijs.t.{∑j=14xij=1,i=1,2,...,4∑i=14xij=1,j=1,2,...,4xij=0,1
+minZ=\\sum_{i=1}^4\\sum_{j=1}^4c_{ij}x_{ij}\\\\
+s.t.\\left\\{\\begin{matrix} \\sum_{j=1}^4x_{ij}=1, i=1,2,...,4 \\\\ \\sum_{i=1}^4x_{ij}=1, j=1,2,...,4 \\\\ x_{ij}=0,1
+\\end{matrix}\\right. minZ=i=1∑4​j=1∑4​cij​xij​s.t.⎩⎨⎧​∑j=14​xij​=1,i=1,2,...,4∑i=14​xij​=1,j=1,2,...,4xij​=0,1​
+求解代码
+-- 效率矩阵
+local cost = { { 14, 9, 4, 15 }, { 11, 7, 9, 10 }, { 13, 2, 10, 5 }, { 17, 9, 15, 13 }
+} local lp = CreateLP() -- 创建目标函数
+local fcons = {}
+for i = 1, 4 do for j = 1, 4 do -- 此处可以轻松将二维数组转换为一维数组 fcons[4 * (i - 1) + j] = cost[i][j] end
+end SetObjFunction(lp, fcons, "min") --添加约束
+for k = 1, 4 do -- 第i维的值控制 local cons = {} for i = 1, 4 do for j = 1, 4 do if i == k then -- j求和，判断i cons[4 * (i - 1) + j] = 1 else cons[4 * (i - 1) + j] = 0 end end end AddConstraint(lp, cons, "==", 1)
+end for k = 1, 4 do -- 第j维的值控制 local cons = {} for i = 1, 4 do for j = 1, 4 do if j == k then --i求和，判断j cons[4 * (i - 1) + j] = 1 else cons[4 * (i - 1) + j] = 0 end end end AddConstraint(lp, cons, "==", 1)
+end -- 求解模型
+SolveLP(lp) -- 输出目标函数值
+print("目标函数值：",GetObjective(lp)) -- 输出决策变量
+for i = 1, 4 do -- 第一维 for j = 1, 4 do -- 第二维 local x = GetVariable(lp, 4 * (i - 1) + j) if x~=0 then print("x[", i, "][", j, "]=", x) end end
+end
+输出
+目标函数值：29
+x[1][3]=1
+x[2][1]=1
+x[3][4]=1
+x[4][2]=1 结果
+人
+配送工件 x13=1x_{13}=1x13​=1
+甲
+C x21=1x_{21}=1x21​=1
+乙
+A x34=1x_{34}=1x34​=1
+丙
+D x42=1x_{42}=1x42​=1
+丁
+B`},{header:"中间变量的处理",slug:"中间变量的处理",content:`有时候模型中会存在一些中间变量，这些变量必须要在矩阵中有对应的位置才能对其进行求解，而这些中间变量不参与目标函数值的运算。可以将中间变量对应位置的系数设为0。
+假设x1,x2,x3,x4x_1,x_2,x_3,x_4x1​,x2​,x3​,x4​为决策变量，y1,y2y_1,y_2y1​,y2​为中间变量。目标函数为:
+z=∑i=14xi
+z=\\sum_{i=1}^4x_i
+z=i=1∑4​xi​
+则目标函数系数可以设为：
+local fcons = {1, 1, 1, 1, 0, 0}
+接下来按照一般流程做就可以啦😎`}]},{path:"/notes/lua.html",title:"Lua语言快速上手",pathLocale:"/",contents:[{header:"Lua语言快速上手",slug:"lua语言快速上手",content:"由于MicroCity采用的脚本语言是Lua，因此在开始使用MicroCity编写脚本之前需要先熟悉Lua的基本用法。本文介绍了MicroCity编写Lua脚本的常用的语法，能够帮助你快速地根据其他编程语言中的概念理解MicroCity脚本编写的总体思路。"},{header:"变量和函数定义",slug:"变量和函数定义",content:`lua会自动识别变量类型，因此无需在变量名称前定义变量类型，直接赋值即可。
 a = 1.5
 b = "string"
 c = {} -- c为集合，见下文介绍
@@ -607,4 +688,4 @@ SetParameter (Shapes|Table|Grid|Scene|Module, "id", Number|"String"|Object) 参�
 输入的对象，可以是Shapes、Table、Grid、Scene、Module 参数2
 其中的id为属性对应的ID。如果是上文的情况，就是LABEL_ATTRIB 参数3
 如果需要更改属性值，只接受数值(Number)、字符串(String)、对象(Object)三种类型 SetParameter()函数的介绍出现在文档 4.2 控制用户界面 中，请参阅。`}]},{path:"/docs/imgs/",title:"",pathLocale:"/",contents:[{header:"",slug:"",content:"This folder contains images used by documentation pages."}]},{path:"/404.html",title:"",pathLocale:"/",contents:[]}],z="update-vuepress-plugin-full-text-search2-search-index";var T=m(B),U=C(()=>{const e=new Map;for(const t of T.value)e.set(t.path,t);return e});import.meta.webpackHot&&(__VUE_HMR_RUNTIME__[z]=e=>{T.value=e});function Y(e){const t=m([]);let s=null;return A(e,()=>{s&&clearTimeout(s),s=setTimeout(o,100)}),t;function o(){const d=e.value.toLowerCase().trim();if(!d){t.value=[];return}const i=new Map,n=new Set;for(const a of T.value)for(const r of V(a,d)){n.add(r.parentPageTitle);let l=i.get(r.parentPageTitle);l||(l=[],i.set(r.parentPageTitle,l)),l.push(r)}const c=[...n].sort((a,r)=>{const l=i.get(a);return i.get(r).length-l.length});t.value=[...i].flatMap(([,a])=>a).sort((a,r)=>a.parentPagePriority-r.parentPagePriority||c.indexOf(a.parentPageTitle)-c.indexOf(r.parentPageTitle)||a.priority-r.priority)}}function*V(e,t){const s=P(e.title,t);if(s){yield{path:e.path,parentPageTitle:w(e),title:e.title,display:s,page:e,content:null,parentPagePriority:1,priority:1};return}for(const o of e.contents){const d=P(o.header,t);if(d){yield{path:e.path+(o.slug?`#${o.slug}`:""),parentPageTitle:w(e),title:e.title,display:d,page:e,content:null,parentPagePriority:10,priority:2};continue}const i=P(o.content,t);i&&(yield{path:e.path+(o.slug?`#${o.slug}`:""),parentPageTitle:w(e),title:e.title,display:[{type:"header",str:`${o.header}
-`},...i],page:e,content:null,parentPagePriority:10,priority:10})}}function w(e){const t=e.path.split("/");let s="/";return t[1]&&(s=`/${t[1]}/`),(U.value.get(s)||e).title}function P(e,t){const s=[];let o=0;const d=e.toLowerCase().replace(/\s/gu," ");let i=0,n=d.indexOf(t,i);if(n<0)return null;for(;n>=0;){const a=n+t.length;if(c(e.slice(i,n),"normal"),c(e.slice(n,a),"highlight"),i=a,n=d.indexOf(t,i),o>100)break}return c(e.slice(i),"normal"),s.filter(a=>a.str);function c(a,r){let l=a;r==="normal"&&l.length>100&&o===0&&(l=`… ${l.slice(-10)}`);let g=!1;if(o+l.length>100){if(s.some(f=>f.type==="ellipsis"))return;l=l.slice(0,Math.max(100-o,1)),g=!0}s.push({type:r,str:l}),o+=l.length,g&&(s.push({type:"ellipsis",str:" …"}),o+=2)}}const X={"/":{placeholder:"搜索"}},W=I({name:"SearchBox",props:{locales:{type:Object,required:!1,default:()=>X}},setup(e){const{locales:t}=N(e),s=m(""),o=m(!1),d=m(-1),i=Y(s),n=C(()=>s.value&&o.value&&i.value.length),c=R(),a=j(),r=C(()=>t.value[a.value]??{});function l(){if(!n.value)return;let h=d.value-1;h<0&&(h=i.value.length-1),f(h)}function g(){if(!n.value)return;let h=d.value+1;h>=i.value.length&&(h=0),f(h)}function f(h){d.value=h}function G(){d.value=-1}function D(h){if(!n.value)return;const L=i.value[h];L&&c.push(L.path)}return{query:s,focused:o,focusIndex:d,suggestions:i,activeSuggestion:n,onUp:l,onDown:g,focus:f,unfocus:G,go:D,locale:r}}});const q={class:"search-box",role:"search"},$=["placeholder"],H=["onMousedown","onMouseenter"],Q=["href"],Z={key:0,class:"parent-page-title"},J={class:"suggestion-row"},K={class:"page-title"},ee={class:"suggestion-content"};function te(e,t,s,o,d,i){return u(),p("div",q,[E(b("input",{ref:"input","onUpdate:modelValue":t[0]||(t[0]=n=>e.query=n),"aria-label":"Search",class:S({focused:e.focused}),placeholder:e.locale.placeholder??"Search",autocomplete:"off",spellcheck:"false",onFocus:t[1]||(t[1]=()=>e.focused=!0),onBlur:t[2]||(t[2]=()=>e.focused=!1),onKeyup:[t[3]||(t[3]=y(n=>e.go(e.focusIndex),["enter"])),t[4]||(t[4]=y((...n)=>e.onUp&&e.onUp(...n),["up"])),t[5]||(t[5]=y((...n)=>e.onDown&&e.onDown(...n),["down"]))]},null,42,$),[[O,e.query]]),e.activeSuggestion?(u(),p("ul",{key:0,class:"suggestions",onMouseleave:t[7]||(t[7]=(...n)=>e.unfocus&&e.unfocus(...n))},[(u(!0),p(k,null,M(e.suggestions,(n,c)=>(u(),p("li",{key:c,class:S(["suggestion",{focused:c===e.focusIndex}]),onMousedown:a=>e.go(c),onMouseenter:a=>e.focus(c)},[b("a",{href:n.path,onClick:t[6]||(t[6]=F(()=>{},["prevent"]))},[n.parentPageTitle&&(!e.suggestions[c-1]||e.suggestions[c-1].parentPageTitle!==n.parentPageTitle)?(u(),p("div",Z,x(n.parentPageTitle),1)):v("v-if",!0),b("div",J,[b("div",K,x(n.title||n.path),1),b("div",ee,[(u(!0),p(k,null,M(n.display,(a,r)=>(u(),p("span",{key:r,class:S(a.type)},x(a.str),3))),128))])])],8,Q)],42,H))),128))],32)):v("v-if",!0)])}const oe=_(W,[["render",te],["__scopeId","data-v-fd6cd4d5"],["__file","SearchBox.vue"]]);export{oe as default};
+`},...i],page:e,content:null,parentPagePriority:10,priority:10})}}function w(e){const t=e.path.split("/");let s="/";return t[1]&&(s=`/${t[1]}/`),(U.value.get(s)||e).title}function P(e,t){const s=[];let o=0;const d=e.toLowerCase().replace(/\s/gu," ");let i=0,n=d.indexOf(t,i);if(n<0)return null;for(;n>=0;){const a=n+t.length;if(c(e.slice(i,n),"normal"),c(e.slice(n,a),"highlight"),i=a,n=d.indexOf(t,i),o>100)break}return c(e.slice(i),"normal"),s.filter(a=>a.str);function c(a,r){let l=a;r==="normal"&&l.length>100&&o===0&&(l=`… ${l.slice(-10)}`);let g=!1;if(o+l.length>100){if(s.some(f=>f.type==="ellipsis"))return;l=l.slice(0,Math.max(100-o,1)),g=!0}s.push({type:r,str:l}),o+=l.length,g&&(s.push({type:"ellipsis",str:" …"}),o+=2)}}const X={"/":{placeholder:"搜索"}},W=_({name:"SearchBox",props:{locales:{type:Object,required:!1,default:()=>X}},setup(e){const{locales:t}=I(e),s=m(""),o=m(!1),d=m(-1),i=Y(s),n=C(()=>s.value&&o.value&&i.value.length),c=N(),a=D(),r=C(()=>t.value[a.value]??{});function l(){if(!n.value)return;let u=d.value-1;u<0&&(u=i.value.length-1),f(u)}function g(){if(!n.value)return;let u=d.value+1;u>=i.value.length&&(u=0),f(u)}function f(u){d.value=u}function j(){d.value=-1}function G(u){if(!n.value)return;const L=i.value[u];L&&c.push(L.path)}return{query:s,focused:o,focusIndex:d,suggestions:i,activeSuggestion:n,onUp:l,onDown:g,focus:f,unfocus:j,go:G,locale:r}}});const q={class:"search-box",role:"search"},$=["placeholder"],H=["onMousedown","onMouseenter"],Z=["href"],Q={key:0,class:"parent-page-title"},J={class:"suggestion-row"},K={class:"page-title"},ee={class:"suggestion-content"};function te(e,t,s,o,d,i){return h(),p("div",q,[E(b("input",{ref:"input","onUpdate:modelValue":t[0]||(t[0]=n=>e.query=n),"aria-label":"Search",class:S({focused:e.focused}),placeholder:e.locale.placeholder??"Search",autocomplete:"off",spellcheck:"false",onFocus:t[1]||(t[1]=()=>e.focused=!0),onBlur:t[2]||(t[2]=()=>e.focused=!1),onKeyup:[t[3]||(t[3]=y(n=>e.go(e.focusIndex),["enter"])),t[4]||(t[4]=y((...n)=>e.onUp&&e.onUp(...n),["up"])),t[5]||(t[5]=y((...n)=>e.onDown&&e.onDown(...n),["down"]))]},null,42,$),[[O,e.query]]),e.activeSuggestion?(h(),p("ul",{key:0,class:"suggestions",onMouseleave:t[7]||(t[7]=(...n)=>e.unfocus&&e.unfocus(...n))},[(h(!0),p(k,null,v(e.suggestions,(n,c)=>(h(),p("li",{key:c,class:S(["suggestion",{focused:c===e.focusIndex}]),onMousedown:a=>e.go(c),onMouseenter:a=>e.focus(c)},[b("a",{href:n.path,onClick:t[6]||(t[6]=F(()=>{},["prevent"]))},[n.parentPageTitle&&(!e.suggestions[c-1]||e.suggestions[c-1].parentPageTitle!==n.parentPageTitle)?(h(),p("div",Q,x(n.parentPageTitle),1)):M("v-if",!0),b("div",J,[b("div",K,x(n.title||n.path),1),b("div",ee,[(h(!0),p(k,null,v(n.display,(a,r)=>(h(),p("span",{key:r,class:S(a.type)},x(a.str),3))),128))])])],8,Z)],42,H))),128))],32)):M("v-if",!0)])}const oe=R(W,[["render",te],["__scopeId","data-v-fd6cd4d5"],["__file","SearchBox.vue"]]);export{oe as default};
