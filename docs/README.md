@@ -15,6 +15,10 @@ features:
     details: 除了文档，还有 MicroCity 使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避开天坑
   - title: 高颜值，流畅 ✨
     details: 由 VuePress 驱动的独立网站，提供流畅的阅读和文档参考体验
+
+head:
+  - - meta
+    - description: 提供流畅舒适的文档搜索和学习体验。文档内容搬运自MicroCity项目文档并做了一点修改，在这里可以使用网站提供的搜索功能快速查找并跳转至内容。除了文档，还有MicroCity使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避开天坑。
 ---
 ## 开始使用MicroCity
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/microcity.github.io) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/microcity.github.io/latest/total)
