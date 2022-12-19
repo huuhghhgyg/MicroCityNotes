@@ -24,4 +24,4 @@
   - [4.7 Discrete Event Simulations](4.7_des_simulations.md) 离散事件模拟
   - [4.8 Mixed Integer Programming](4.8_mixed_integer_programming.md) 混合整数线性规划
 
-声明：本网站文档的部分内容来自[microcity.github.io](http://microcity.github.io)，版权归原作者所有。
+> 声明：本网站文档部分内容来自[microcity.github.io](http://microcity.github.io)，版权归原作者所有。
