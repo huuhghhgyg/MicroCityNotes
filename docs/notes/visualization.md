@@ -48,15 +48,17 @@ head:
 
 内容以地图为参考系时，显示内容的大小会根据地图大小同步缩放，如下图：
 ![RelateToMapBig.png](./images/RelateToMapBig.png)
-(以地图为参考系放大)
+<center>(以地图为参考系放大)</center>
+
 ![RelateToMapSmall.png](./images/RelateToMapSmall.png)
-(以地图为参考系缩小)
+<center>(以地图为参考系缩小)</center>
 
 内容以屏幕为参考系时，无论地图怎么缩放内容的大小都差不多，如下图：
 ![RelateToScreenBig.png](./images/RelateToScreenBig.png)
-(以屏幕为参考系放大)
+<center>(以屏幕为参考系放大)</center>
+
 ![RelateToScreenSmall.png](./images/RelateToScreenSmall.png)
-(以屏幕为参考系缩小)
+<center>(以屏幕为参考系缩小)</center>
 
 因此，绘图的时候**要根据绘图的目的选定参考系**。
 - 如果需要在地图上绘制确定尺寸的形状或者标明确定尺寸的标签，如绘制一个半径为10km的圆，此时应选用**以地图为参考系**。
@@ -115,3 +117,12 @@ SetParameter (Shapes|Table|Grid|Scene|Module, "id", Number|"String"|Object)
 |参数3|如果需要更改属性值，只接受数值(Number)、字符串(String)、对象(Object)三种类型|
 
 `SetParameter()`函数的介绍出现在文档 [4.2 控制用户界面](../docs/4.2_ui_control.md) 中，请参阅。
+
+## 借助栅格图
+栅格图也可以用于可视化，我认为栅格图最常用的场景就是**绘制热力图**。热力图的绘制主要通过修改栅格图上每个格子的值实现。如果不清楚栅格图的具体结构，可以先参考文档 [3.3 栅格图](../docs/3.3_raster_grids.md)。关于使用脚本控制栅格图，可以参考文档 [4.4 栅格图形](../docs/4.4_grids.md)。
+
+一种使用栅格图绘制热力图的场景就是**绘制地价图**。在绘制地价图时，我们可以遍历栅格图上的每个格点，计算该格点到每个仓库的距离之和。然后将该格点的值设置为这个值，就可以得到一张热力图。这种方法可以帮助我们可视化地价的分布情况，并且可以用来发现地价的趋势和规律。
+
+![PlotPrice1.png](./images/PlotPrice1.png)
+![PlotPrice2.png](./images/PlotPrice2.png)
+![DL_Heatmap.png](./images/DL_Heatmap.png)
