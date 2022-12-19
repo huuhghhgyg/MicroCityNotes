@@ -4,10 +4,10 @@ title: 首页
 actions:
   - text: 文档目录
     link: /docs/
-    type: primary
+    type: secondary
   - text: 学习笔记
     link: /notes/
-    type: secondary
+    type: primary
 features:
   - title: 文档和搜索 🔍
     details: 文档内容搬运自 MicroCity 项目文档并做了一点修改，在这里可以使用网站提供的搜索功能快速查找并跳转至内容
