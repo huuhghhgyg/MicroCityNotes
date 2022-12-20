@@ -113,12 +113,12 @@ CopyShapeTo(TargetShapes, 0, 0, Shape1 [, Shape2, ...])
 #### 创建最小生成树
 **第一步**，先要以`startID`为开始点创建最短路径生成树。理论上以始点创建最短路径生成树后，就可以获取始点到网络上任意一点的最短距离。创建最短路径生成树可以调用`GenSTPTree()`函数实现。
 ```lua
-GenSTPTree (Network, startID [, endID])
+GenSTPTree(Network, startID [, endID])
 ```
 此处的endID不是必须的，如果有可以提供给函数。也就是说，您共有两种做法实现这一步：
 ```lua
-GenSTPTree (Network, startID) --方法1
-GenSTPTree (Network, startID , endID) --方法2（建议）
+GenSTPTree(Network, startID) --方法1
+GenSTPTree(Network, startID , endID) --方法2（建议）
 ```
 一般认为提供的信息越完备，执行的效果越好。由于在计算最短路径之前就知道`endID`，因此建议将其提供给函数。
 > 此处已经对函数的这种中括号写法进行了解释，后文中将会直接使用这种写法。
@@ -130,17 +130,17 @@ MicroCity的文档中提供了3种获取最短路径的方式。
 
 **第一种**，由于前面计算了最短路径生成树，已经输入了起始点的信息。因此现在只需要提供终点信息即可。（即使刚刚可能已经提供了终点信息）函数需要网络对象`Network`和终点`endID`用法如下。
 ```lua
-local len = GetSTPLen (Network, endID)
+local len = GetSTPLen(Network, endID)
 ```
 
 **第二种**，通过提供始点`startID`和终点`endID`计算两个点在网络上的最短路长。这种用法不要求在计算最短路径前先生成最短路径生成树，可以直接使用。`Network`为网络对象，用法如下：
 ```lua
-local len = GetSTPLen (Network, startID, endID)
+local len = GetSTPLen(Network, startID, endID)
 ```
 
-**第三种**，通过提供始点和终点的xy坐标计算两个点在网络上的最短路长。这种用法也不需要在计算最短路径前先生成最短路径生成树，可以直接使用。起点的坐标设为`x1`，`y1`；终点的坐标设为`x2`，`y2`，`Network为`网络对象，用法如下：
+**第三种**，通过提供始点和终点的xy坐标计算两个点在网络上的最短路长。这种用法也不需要在计算最短路径前先生成最短路径生成树，可以直接使用。起点的坐标设为`x1`，`y1`；终点的坐标设为`x2`，`y2`，`Network`为网络对象，用法如下：
 ```lua
-local len = GetSTPLen (Network, x1, y1, x2, y2)
+local len = GetSTPLen(Network, x1, y1, x2, y2)
 ```
 
 #### 获取最短路径
@@ -164,7 +164,7 @@ GetSTPPath (Network, endID, "iLinkShp")
 ---
 
 ### 踩坑经验：序列
-在[LUA语言快速上手](./lua)中介绍过LUA中的**集合**，它提供了丰富的特性帮助编写代码。但是没有听说过序列。**序列**是下面这个东西：
+在[Lua语言快速上手](./lua)中介绍过Lua中的**集合**，它提供了丰富的特性帮助编写代码。但是没有听说过序列。**序列**是下面这个东西：
 ```lua
 local x, y = GetCenterXY(Shapes) --借用一下这个函数
 ```
@@ -175,19 +175,19 @@ GetDistance (x1, y1, x2, y2 [, x3, y3, ...]) --再次借用一个函数
 在这种情况下，输入的点越多，返回值也越多。如果输入4个点，可以这样处理：
 ```lua
 -- 正常情况
-d1, d2, d3, d4 = GetDistance (x1, y1, x2, y2, x3, y3, x4, y4)
+d1, d2, d3, d4 = GetDistance(x1, y1, x2, y2, x3, y3, x4, y4)
 
 -- 也可以仅取前两个返回值
-d1, d2 = GetDistance (x1, y1, x2, y2, x3, y3, x4, y4)
+d1, d2 = GetDistance(x1, y1, x2, y2, x3, y3, x4, y4)
 
 -- 当然，只取一个返回值也可以
-d1 = GetDistance (x1, y1, x2, y2, x3, y3, x4, y4)
+d1 = GetDistance(x1, y1, x2, y2, x3, y3, x4, y4)
 ```
 
 上面的函数输入参数数量和输出参数数量是有关系的。如果输入了n个点的参数，就会返回n个点的距离。但是对于网络拓补来说，在返回最短路径的时候返回的都是参数序列，而我并不知道函数会给我传出多少个参数；而且当输出参数的个数太多的时候，也不太可能手动创建很多个变量存放这些参数。
 ```lua
 -- 错误做法：
-local indexList = GetSTPPath (Network, endID, "iLinkShp")
+local indexList = GetSTPPath(Network, endID, "iLinkShp")
 -- GetSTPPath()函数不会返回一个table
 -- 这里获取到的indexList只是第一个Link的index，是一个数值。
 ```
@@ -198,6 +198,6 @@ local list = {1, 2, 3, 4, 5}
 ```
 右边的`1, 2, 3, 4, 5`其实可以看做一个序列。所以，只要给函数的返回值加上括号就能把他们全部捞起来 ( •̀ ω •́ )✧
 ```lua
-local indexList = { GetSTPPath (Network, endID, "iLinkShp") }
+local indexList = { GetSTPPath(Network, endID, "iLinkShp") }
 ```
 上面的这种做法得到的`indexList`就是一个table类型的变量了。然后就可以开始执行集合的各种操作了捏😋
