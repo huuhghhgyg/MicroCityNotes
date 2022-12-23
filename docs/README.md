@@ -42,7 +42,4 @@ Print("hello, world!")
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/MicroCityNotes) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/huuhghhgyg/MicroCityNotes/DeployPage.yml?branch=main)
 
-
-目前正在施工阶段🧱...
-
 如果发现文档或笔记有问题，欢迎 [Pull Request](https://github.com/huuhghhgyg/MicroCityNotes/pulls) 或者提供 [Issues](https://github.com/huuhghhgyg/MicroCityNotes/issues) 让它变得更完善😋
