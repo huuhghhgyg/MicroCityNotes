@@ -47,18 +47,22 @@ head:
 显示内容尺寸的参考系有2个，一个是以地图为参考系，一个是以屏幕为参考系。此处将图形和标签的显示尺寸都设置为相同的参考系。
 
 内容以地图为参考系时，显示内容的大小会根据地图大小同步缩放，如下图：
+::: center
 ![RelateToMapBig.png](./images/RelateToMapBig.png)
-<center>(以地图为参考系放大)</center>
+(以地图为参考系放大)
 
 ![RelateToMapSmall.png](./images/RelateToMapSmall.png)
-<center>(以地图为参考系缩小)</center>
+(以地图为参考系缩小)
+:::
 
 内容以屏幕为参考系时，无论地图怎么缩放内容的大小都差不多，如下图：
+::: center
 ![RelateToScreenBig.png](./images/RelateToScreenBig.png)
-<center>(以屏幕为参考系放大)</center>
+(以屏幕为参考系放大)
 
 ![RelateToScreenSmall.png](./images/RelateToScreenSmall.png)
-<center>(以屏幕为参考系缩小)</center>
+(以屏幕为参考系缩小)
+:::
 
 因此，绘图的时候**要根据绘图的目的选定参考系**。
 - 如果需要在地图上绘制确定尺寸的形状或者标明确定尺寸的标签，如绘制一个半径为10km的圆，此时应选用**以地图为参考系**。
