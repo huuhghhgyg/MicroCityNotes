@@ -4,6 +4,7 @@ import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { pwaPlugin } from "vuepress-plugin-pwa2";
 
 module.exports = {
   base: "/MicroCityNotes/",
@@ -19,6 +20,7 @@ module.exports = {
       lang: "zh-CN",
     },
   },
+  shouldPrefetch: false, //pwa插件要求
 
   theme: defaultTheme({
     logo: "/images/icon_microcity.png",
@@ -95,7 +97,7 @@ module.exports = {
             "/notes/lua",
             "/notes/visualization",
             "/notes/network",
-            "/notes/lp"
+            "/notes/lp",
           ],
         },
       ],
@@ -121,6 +123,7 @@ module.exports = {
     seoPlugin({
       hostname: "https://huuhghhgyg.github.io",
     }),
+    //markdown增强
     mdEnhancePlugin({
       // 启用代码块分组
       codetabs: true,
@@ -130,6 +133,15 @@ module.exports = {
       mathjax: true,
       // 自定义对齐
       align: true,
+    }),
+    //PWA支持
+    pwaPlugin({
+      // 首次成功注册时显示PWA安装按钮
+      showInstall: true,
+      // 缓存站点图片（站点图片不大）
+      cachePic: true,
+      // 网站体积不大，并使文档完全离线可用
+      cacheHTML: true,
     }),
   ],
 };
