@@ -5,8 +5,12 @@ import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { pwaPlugin } from "vuepress-plugin-pwa2";
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 
-module.exports = {
+import { getDirname, path } from '@vuepress/utils'
+const __dirname = getDirname(import.meta.url)
+
+export default {
   base: "/MicroCityNotes/",
   title: "MicroCity笔记",
   description: "记录MicroCity的学习过程并提供快捷的参考",
@@ -142,6 +146,9 @@ module.exports = {
       cachePic: true,
       // 网站体积不大，并使文档完全离线可用
       cacheHTML: true,
+    }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
     }),
   ],
 };
