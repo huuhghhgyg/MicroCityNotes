@@ -12,7 +12,7 @@ module.exports = {
   description: "记录MicroCity的学习过程并提供快捷的参考",
   head: [
     ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
-    ["link", { rel: "icon", href: "/images/icon_microcity.png" }],
+    ["link", { rel: "icon", href: "/MicroCityNotes/images/icon_microcity.png" }],
   ],
   locales: {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -23,7 +23,7 @@ module.exports = {
   shouldPrefetch: false, //pwa插件要求
 
   theme: defaultTheme({
-    logo: "/images/icon_microcity.png",
+    logo: "/images/icon_microcitynotes.png",
 
     // 顶栏配置
     navbar: [
