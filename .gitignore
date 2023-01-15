@@ -1,4 +1,15 @@
-node_modules/
+node_modules/*
+!node_modules/@vuepress/
+node_modules/@vuepress/*
+!node_modules/@vuepress/theme-default/
+node_modules/@vuepress/theme-default/*
+!node_modules/@vuepress/theme-default/lib/
+node_modules/@vuepress/theme-default/lib/*
+!node_modules/@vuepress/theme-default/lib/client/
+node_modules/@vuepress/theme-default/lib/client/*
+!node_modules/@vuepress/theme-default/lib/client/components/
+node_modules/@vuepress/theme-default/lib/client/components/*
+!node_modules/@vuepress/theme-default/lib/client/components/Page.vue
 .temp
 .cache/
 dist/
