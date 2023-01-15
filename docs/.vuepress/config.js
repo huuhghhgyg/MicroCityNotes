@@ -1,4 +1,3 @@
-// import { searchPlugin } from "@vuepress/plugin-search";
 import { defaultTheme } from "@vuepress/theme-default";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
@@ -6,6 +5,7 @@ import { seoPlugin } from "vuepress-plugin-seo2";
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { pwaPlugin } from "vuepress-plugin-pwa2";
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { commentPlugin } from "vuepress-plugin-comment2";
 
 import { getDirname, path } from '@vuepress/utils'
 const __dirname = getDirname(import.meta.url)
@@ -149,6 +149,14 @@ export default {
     }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
+    }),
+    //评论插件
+    commentPlugin({
+      provider: "Giscus",
+      repo: "huuhghhgyg/MicroCityNotes",
+      repoId: "R_kgDOIf-Z0Q",
+      category: "讨论",
+      categoryId: "DIC_kwDOIf-Z0c4CTl1f",
     }),
   ],
 };
