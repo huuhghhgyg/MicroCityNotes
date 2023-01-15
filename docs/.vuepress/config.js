@@ -153,6 +153,7 @@ export default {
     //评论插件
     commentPlugin({
       provider: "Giscus",
+      comment: true,
       repo: "huuhghhgyg/MicroCityNotes",
       repoId: "R_kgDOIf-Z0Q",
       category: "讨论",
