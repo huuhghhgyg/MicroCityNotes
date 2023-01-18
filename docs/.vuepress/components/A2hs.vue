@@ -48,5 +48,5 @@ export default {
 </script>
 
 <template>
-  <p v-if="!added">由于本站架设于Github上，国内访问可能不稳定。强烈建议您将本站添加至主屏幕，以便网络状况不佳或离线时使用。您可以 <a @click="promptA2hs()" style="font-weight: bold">点击此处</a> 将本站作为Web应用程序安装。</p>
+  <p v-if="!added">由于本站架设于Github上，国内访问可能不稳定🤧。强烈建议您将本站添加至主屏幕，以便网络状况不佳或离线时使用。您可以 <a @click="promptA2hs()" style="font-weight: bold">点击此处</a> 将本站作为Web应用程序安装。</p>
 </template>

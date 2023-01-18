@@ -50,7 +50,7 @@ export default {
         ],
       },
       {
-        text: "MicroCity项目地址",
+        text: "MicroCity项目仓库",
         link: "https://microcity.github.io/",
       },
     ],
