@@ -20,17 +20,17 @@ local lp = CreateLP()
 ### 创建目标函数
 MicroCity中，使用`SetObjectFunction()`设置模型对象的目标函数。允许选择目标函数求**最大值**或**最小值**。具体用法如下：
 <!-- ```lua
-SetObjFunction(lp, cons, "min") --求最小值
-SetObjFunction(lp, cons, "max") --求最大值
+SetObjFunction(lp, coeff, "min") --求最小值
+SetObjFunction(lp, coeff, "max") --求最大值
 ``` -->
 ::: code-tabs#shell
 @tab:active 最大值
 ```lua
-SetObjFunction(lp, cons, "max") --求最大值
+SetObjFunction(lp, coeff, "max") --求最大值
 ```
 @tab 最小值
 ```lua
-SetObjFunction(lp, cons, "min") --求最小值
+SetObjFunction(lp, coeff, "min") --求最小值
 ```
 :::
 > "min"和"max"不区分大小写，写"MIN"和"MAX"也可以
@@ -39,18 +39,18 @@ SetObjFunction(lp, cons, "min") --求最小值
 | 参数             | 作用                                                                  |
 | ---------------- | --------------------------------------------------------------------- |
 | `lp`             | 数学模型对象。将数学模型输入函数中，为模型设置目标函数                |
-| `cons`           | 目标函数系数，是一个`table`类型的变量。用于确定模型中目标函数的系数。 |
+| `coeff`           | 目标函数系数，是一个`table`类型的变量。用于确定模型中目标函数的系数。 |
 | `"min"`或`"max"` | 确定目标函数求最大还是求最小。                                        |
 
-`cons`是目标函数的系数列表，是一个`table`类型的变量。假设你要求函数$4x_1+12x_2+18x_3$的**最小值**，则添加目标函数的做法如下：
+`coeff`是目标函数的系数列表，是一个`table`类型的变量。假设你要求函数$4x_1+12x_2+18x_3$的**最小值**，则添加目标函数的做法如下：
 ```lua
 -- 假设你已经创建了模型对象，并存入变量lp中
 
 -- 4*x1 + 12*x2 + 18*x3
-local cons = {4, 12, 18}
+local coeff = {4, 12, 18}
 
 -- 设置目标函数：求最小
-SetObjFunction(lp, cons, "min")
+SetObjFunction(lp, coeff, "min")
 ```
 
 ### 添加约束方程
@@ -217,8 +217,8 @@ local n = 3 --设置目标函数个数
 
 -- 目标函数：4*x1 + 12*x2 + 18*x3
 -- 设置目标函数系数，目标函数求最小
-local cons = { 4, 12, 18 }
-SetObjFunction(lp, cons, "min")
+local coeff = { 4, 12, 18 }
+SetObjFunction(lp, coeff, "min")
 
 -- 添加约束1：x1 + 3*x3 ≥ 3
 cons = { 1, 0, 3 }
@@ -321,15 +321,15 @@ local cost = {
 local lp = CreateLP()
 
 -- 创建目标函数
-local fcons = {}
+local coeff = {}
 for i = 1, 4 do
     for j = 1, 4 do
         -- 此处可以轻松将二维数组转换为一维数组
-        fcons[4 * (i - 1) + j] = cost[i][j]
+        coeff[4 * (i - 1) + j] = cost[i][j]
     end
 end
 
-SetObjFunction(lp, fcons, "min")
+SetObjFunction(lp, coeff, "min")
 
 --添加约束
 for k = 1, 4 do -- 第i维的值控制
