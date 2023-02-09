@@ -122,7 +122,7 @@ export default {
     sitemapPlugin({
       hostname: "https://huuhghhgyg.github.io",
       // 排除无实际内容的页面
-      exclude: ["/404.html", "/docs/imgs/"],
+      excludeUrls: ["/404.html", "/docs/imgs/"],
     }),
     seoPlugin({
       hostname: "https://huuhghhgyg.github.io",
