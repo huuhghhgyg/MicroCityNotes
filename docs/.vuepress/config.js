@@ -4,11 +4,11 @@ import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { pwaPlugin } from "vuepress-plugin-pwa2";
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { commentPlugin } from "vuepress-plugin-comment2";
 
-import { getDirname, path } from '@vuepress/utils'
-const __dirname = getDirname(import.meta.url)
+import { getDirname, path } from "@vuepress/utils";
+const __dirname = getDirname(import.meta.url);
 
 export default {
   base: "/MicroCityNotes/",
@@ -51,7 +51,14 @@ export default {
       },
       {
         text: "MicroCity项目仓库",
-        link: "https://microcity.github.io/",
+        children: [
+          { text: "MicroCity", link: "https://microcity.github.io/" },
+          { text: "MicroCityWeb", link: "https://gitee.com/microcityweb/microcityweb" },
+        ],
+      },
+      {
+        text: "MicroCityWeb",
+        link: "https://microcityweb.gitee.io/",
       },
     ],
 
@@ -148,7 +155,7 @@ export default {
       cacheHTML: true,
     }),
     registerComponentsPlugin({
-      componentsDir: path.resolve(__dirname, './components'),
+      componentsDir: path.resolve(__dirname, "./components"),
     }),
     //评论插件
     commentPlugin({
