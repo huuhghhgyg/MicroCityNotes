@@ -98,19 +98,26 @@ export default {
       ],
       "/notes/": [
         {
-          text: "笔记",
+          text: "目录",
+          link: "/notes/",
+          children: [], // 侧边栏不显示子目录
+        },
+        {
+          text: "通用知识",
           children: [
-            {
-              text: "目录",
-              link: "/notes/",
-              children: [],
-            },
             "/notes/lua",
+            "/notes/versions",
+          ],
+        },
+        {
+          text: "MicroCity",
+          collapsible: true,
+          children: [
             "/notes/visualization",
             "/notes/network",
             "/notes/lp",
-          ],
-        },
+          ]
+        }
       ],
     },
   }),
