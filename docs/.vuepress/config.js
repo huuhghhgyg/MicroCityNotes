@@ -104,20 +104,18 @@ export default {
         },
         {
           text: "通用知识",
-          children: [
-            "/notes/lua",
-            "/notes/versions",
-          ],
+          children: ["/notes/lua", "/notes/versions"],
         },
         {
           text: "MicroCity",
           collapsible: true,
-          children: [
-            "/notes/visualization",
-            "/notes/network",
-            "/notes/lp",
-          ]
-        }
+          children: ["/notes/visualization", "/notes/network", "/notes/lp"],
+        },
+        {
+          text: "MicroCityWeb",
+          collapsible: true,
+          children: ["/notes/web_ui"],
+        },
       ],
     },
   }),
@@ -151,6 +149,8 @@ export default {
       mathjax: true,
       // 自定义对齐
       align: true,
+      // 自定义图片大小
+      imgSize: true,
     }),
     //PWA支持
     pwaPlugin({
