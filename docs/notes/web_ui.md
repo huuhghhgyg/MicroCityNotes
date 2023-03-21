@@ -16,6 +16,7 @@ MicroCityWeb的总体界面如下图，本文将详细介绍MicroCityWeb的用�
 
 ## 蓝色：命令区域
 此区域的的内容如下图所示，共有9个可用按钮。
+
 ![命令栏](./images/MicroCityWeb/CommandBar.png)
 
 ### 程序控制
@@ -34,6 +35,7 @@ MicroCityWeb的总体界面如下图，本文将详细介绍MicroCityWeb的用�
 5. **打开内置的代码。** 可以直接载入内置的代码（导入内置模型），如立方体、卡车、地球、世界地图等。具体的模型将在介绍[画布区域](#红色画布区域)时详细介绍。
 ::: center
 ![内置代码](./images/MicroCityWeb/Presets.png)
+
 内置代码列表
 :::
 6. **打开本地代码。** 点击后将弹出打开文件的对话框，您可以选择本机上的代码文件。确定打开文件后，代码文件文本将自动导入到左侧代码编辑器中。
@@ -52,23 +54,23 @@ MicroCityWeb左侧整合的代码编辑器源于AceEditor，因此也具有AceEd
 ### 快捷键
 下面将介绍一些常用的快捷键，帮助你更好地编辑代码。
 
-最常用
+**最常用**
 * <kbd>Ctrl</kbd>+<kbd>Z</kbd>：撤销
 
-行操作
+**行操作**
 * <kbd>Ctrl</kbd>+<kbd>D</kbd>：删除一行
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>：复制一行
 * <kbd>Alt</kbd>+<kbd>↑</kbd>：行代码上移
 * <kbd>Alt</kbd>+<kbd>↓</kbd>：行代码下移
 
-查找内容
+**查找内容**
 * <kbd>Ctrl</kbd>+<kbd>K</kbd>：在代码中查找下一个与选中内容
 
-代码缩进
+**代码缩进**
 * <kbd>Ctrl</kbd>+<kbd>[</kbd>：增加代码缩进
 * <kbd>Ctrl</kbd>+<kbd>]</kbd>：减少代码缩进
 
-修改数值
+**修改数值**
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>：光标前的数字数值+1
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>：光标前的数字数值-1
 
@@ -102,9 +104,9 @@ MicroCityWeb左侧整合的代码编辑器源于AceEditor，因此也具有AceEd
 ![底栏](./images/MicroCityWeb/BottomBar.gif)
 
 说到这个区域输出的信息，代码输出区域会输出以下信息：
-* 脚本输出：左侧是脚本的输出，包含输出时间、脚本输出内容。
-* 脚本运行状态：右边第一行为脚本运行状态。`state:ready`表示脚本已经准备好开始运行（未运行），`state:running`表示脚本正在运行。
-* MicroCityWeb版本号：表示当前使用的MicroCityWeb版本号。如果与已知版本有差异，可以通过强制刷新加载最新版本。
+* **脚本输出:** 左侧是脚本的输出，包含输出时间、脚本输出内容。
+* **脚本运行状态:** 右边第一行为脚本运行状态。`state:ready`表示脚本已经准备好开始运行（未运行），`state:running`表示脚本正在运行。
+* **MicroCityWeb版本号:** 表示当前使用的MicroCityWeb版本号。如果与已知版本有差异，可以通过强制刷新加载最新版本。
 
 ## 注意事项
 ![关闭自动翻译](./images/MicroCityWeb/AutoTranslate.png)

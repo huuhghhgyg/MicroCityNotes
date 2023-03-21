@@ -116,6 +116,11 @@ export default {
           collapsible: true,
           children: ["/notes/web_ui", "/notes/3d_scene","/notes/3d_objects"],
         },
+        {
+          text: "思路",
+          collapsible: true,
+          children: ["/notes/warehouse_simulation"]
+        }
       ],
     },
   }),
