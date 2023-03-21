@@ -163,6 +163,8 @@ local obj = scene.addobj('/res/2axle.glb')
 local obj = scene.addobj('https://huuhghhgyg.github.io/ModelResource/models/F16-lite.glb')
 ```
 
+> 如果需要外部模型，可以到 [ModelResource仓库](https://github.com/huuhghhgyg/ModelResource) 中找有没有合适的模型。如果其中没有合适的模型，但是你手上又有特别想用的模型，可以按照 [ModelResource仓库提供的指引](https://github.com/huuhghhgyg/ModelResource) 进行Pull Request请求上传模型。一旦你的Pull Request被同意，Github工作流会立即将你上传的模型部署到仓库网页中供使用。
+
 ### light
 设置光源的方向，可选参数 `vertices` 为一个三维向量，表示光的照射方向。由于MicroCityWeb的场景中已经设置了很强的光源，因此此处不过多做介绍。
 
