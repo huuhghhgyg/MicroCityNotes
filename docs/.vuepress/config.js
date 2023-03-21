@@ -114,7 +114,7 @@ export default {
         {
           text: "MicroCityWeb",
           collapsible: true,
-          children: ["/notes/web_ui", "/notes/3d_scene"],
+          children: ["/notes/web_ui", "/notes/3d_scene","/notes/3d_objects"],
         },
       ],
     },
