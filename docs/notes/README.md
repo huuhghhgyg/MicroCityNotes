@@ -9,8 +9,8 @@
 - [模型求解](./lp.md)
 
 ## MicroCityWeb
-- [用户界面简介](./web_ui.md) [EN](./web_ui_en.md)
-- [3D 场景](./3d_scene.md)
+- [用户界面简介](./web_ui.md) \[[EN](./web_ui_en.md)\]
+- [3D 场景](./3d_scene.md) \[[EN](./3d_scene_en.md)\]
 - [3D 对象](./3d_objects.md)
 
 ## 思路
