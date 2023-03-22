@@ -6,10 +6,10 @@ The overall interface of MicroCityWeb is shown in the following figure. This art
 
 ## Overview of Interface Zones
 Overall, the interface of MicroCityWeb can be roughly divided into four areas:
-* [Top - blue area](#blue-command-area): performs various operations on code and files
-* [Left - green area](#green-code-editor): code editor
-* [Right - red area](#red-canvas-area): view area
-* [Bottom - yellow area](#yellow-code-output-area): output information, recognize program running status
+* [Top - Blue Area](#blue-command-area): performs various operations on code and files
+* [Left - Green Area](#green-code-editor): code editor
+* [Right - Red Area](#red-canvas-area): view area
+* [Bottom - Yellow Area](#yellow-code-output-area): output information, recognize program running status
 
 ![Interface zones](./images/MicroCityWeb/WebUIParts.png)
 
@@ -136,4 +136,4 @@ Regarding the information output in this area, the code output area will output 
 ## Notes
 ![Turn off automatic translation](./images/MicroCityWeb/AutoTranslate.png)
 
-**Turn off automatic translation:** If automatic translation is turned on, it needs to be manually turned off, otherwise there will be errors in code execution.
+**Turn off automatic translation:** If your operating system language is not English and the browser has automatic translation enabled, it needs to be manually disabled, otherwise there will be errors when running the code.
