@@ -38,6 +38,15 @@ Print("hello, world!")
 
 更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：[**MicroCity文档**](./docs/)，也可以参考 [MicroCtiy](https://microcity.github.io/) 在GitHub上的文档。
 
+## 开始使用MicroCityWeb
+1. 打开[MicroCityWeb](https://microcityweb.gitee.io/)，默认加载方块旋转的示例代码。
+
+2. 点击运行![Play](./notes/images/play.svg)按钮运行代码
+ 
+3. 程序运行，看到右侧视图中方块旋转。
+
+如果想要深入了解MicroCityWeb的用法和使用技巧，可以参阅本站提供的 [**学习笔记**](./notes/)
+
 ## [MicroCityNotes](https://github.com/huuhghhgyg/MicroCityNotes) 仓库
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/MicroCityNotes) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/huuhghhgyg/MicroCityNotes/DeployPage.yml?branch=main)
