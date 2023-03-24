@@ -104,7 +104,7 @@ export default {
         },
         {
           text: "通用知识",
-          children: ["/notes/lua", "/notes/versions"],
+          children: ["/notes/lua", "/notes/versions", "/notes/timelapse"],
         },
         {
           text: "MicroCity",
@@ -158,6 +158,8 @@ export default {
       imgSize: true,
       // 启用容器
       container: true,
+      // 启用流程图
+      flowchart: true,
     }),
     //PWA支持
     pwaPlugin({
