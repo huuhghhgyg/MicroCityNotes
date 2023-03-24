@@ -94,4 +94,6 @@ These two parameters usually do not need to be set specially, and the default va
 
 ### Regarding high-frequency setting scenarios
 
-2023/03/21: It has been found that setting the scene too frequently can cause excessive memory usage and browser crashes. Therefore, it is recommended to avoid calling the `scene.setenv()` function in a loop as much as possible. If it is necessary to do so, make sure that the frequency of calls is relatively low. This allows the browser to have enough time for garbage collection, otherwise it may cause the browser to crash.
+2023/03/21: It has been found that setting the scene too frequently can cause excessive memory usage and browser crashes. Therefore, it is recommended to avoid calling the `scene.setenv()` function in a loop as much as possible. 
+
+If it is necessary to do so, make sure that the frequency of calls is relatively low. This allows the browser to have enough time for garbage collection, otherwise it may cause the browser to crash.

@@ -156,6 +156,8 @@ export default {
       align: true,
       // 自定义图片大小
       imgSize: true,
+      // 启用容器
+      container: true,
     }),
     //PWA支持
     pwaPlugin({
