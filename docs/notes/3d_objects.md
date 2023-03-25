@@ -167,7 +167,11 @@ local obj = scene.addobj('https://huuhghhgyg.github.io/ModelResource/models/F16-
 ```
 
 ::: tip
-如果需要外部模型，可以到 [ModelResource仓库](https://github.com/huuhghhgyg/ModelResource) 中找有没有合适的模型。如果其中没有合适的模型，但是你手上又有特别想用的模型，可以按照 [ModelResource仓库提供的指引](https://github.com/huuhghhgyg/ModelResource) 进行Pull Request请求上传模型。一旦你的Pull Request被同意，Github工作流会立即将你上传的模型部署到仓库网页中供使用。
+如果需要外部模型，可以到 [ModelResource仓库](https://github.com/huuhghhgyg/ModelResource) 中找有没有合适的模型。如果其中没有合适的模型，但是你手上又有特别想用的模型，可以按照 [ModelResource仓库提供的指引](https://github.com/huuhghhgyg/ModelResource) 进行Pull Request请求上传模型。一旦你的Pull Request被同意，Github工作流会立即将你上传的模型部署到仓库网页中供使用并以邮件形式通知。
+:::
+
+::: info
+如果手中有三维模型资源，可以在[3D Viewer](http://3dviewer.net/)中查看，也可以通过这个网站导出为 `.glb` 模型
 :::
 
 ### light
