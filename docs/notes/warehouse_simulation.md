@@ -2,7 +2,7 @@
 > 以下思路仅供参考
 
 ## 具体问题：基于元胞自动机的仓库仿真
-![Problem1](./images/MicroCityWeb/../WarehouseSim/problem1.png)
+![Problem1](./images/MicroCityWeb/../WarehouseSim/problem1.webp)
 
 其中，出入库位置可以更改，叉车为AGV。
 
@@ -67,7 +67,7 @@
 * 黄色高亮：相同布局下操作次数最少（ticks最小）的方案
 
 ::: center
-![最佳布局](./images/WarehouseSim/optimal_layout.png)
+![最佳布局](./images/WarehouseSim/optimal_layout.webp)
 :::
 
 #### 空间利用率最大
@@ -109,7 +109,7 @@
 
 
 ## 仿真改进：三维化自动仓库仿真
-![Problem2](./images/WarehouseSim/problem2.png)
+![Problem2](./images/WarehouseSim/problem2.webp)
 
 在这一部分题目也稍微有所变化，要求将元胞自动机仿真仓库案例**三维化**，进行自动化仓库仿真。具体要求如上图。
 
@@ -152,7 +152,7 @@
 ### 创新
 由于测试的次数较多，因此将主体流程写入函数并进行适应性改进，实现自动对所有情况进行仿真测试并将数据输出。下图为自动仿真测试运行为示例。
 
-![自动测试](./images/WarehouseSim/auto_test.png)
+![自动测试](./images/WarehouseSim/auto_test.webp)
 
 自动仿真测试流程代码，仅供参考
 
@@ -193,7 +193,7 @@ end
 在自动仿真测试的过程中发现了BUG，详见下文说明。
 
 ### 货架布局方案
-![货架布局方案](./images/WarehouseSim/test_layout.jpg)
+![货架布局方案](./images/WarehouseSim/test_layout.webp)
 
 颜色说明
 * 浅蓝色：出入库点
@@ -209,18 +209,18 @@ end
 对每个货物布局方案中每种需求数量的情况仿真测试30次，求单方案结果中的最大值、最小值、平均值。最终得到结论为在6个货架的情况中，方案2的布局表现最优。
 
 #### 方案3：3个货架
-![方案3](./images/WarehouseSim/3trend.png)
+![方案3](./images/WarehouseSim/3trend.webp)
 
 #### 方案6
 方案6平均Ticks总趋势图
-![方案6平均Ticks总趋势图](./images/WarehouseSim/6trend.png)
+![方案6平均Ticks总趋势图](./images/WarehouseSim/6trend.webp)
 
 方案6最优布局方案：方案2
-![方案6最优布局方案](./images/WarehouseSim/sim-result.jpg)
+![方案6最优布局方案](./images/WarehouseSim/sim-result.webp)
 
 还应绘制分方案的“需求量-最短平均服务时间”单位趋势图。以下以方案6-1为例，横坐标为货物需求数量，纵轴为最短平均服务时间（Ticks）。
 
-![方案6-1](./images/WarehouseSim/6-1trend.png)
+![方案6-1](./images/WarehouseSim/6-1trend.webp)
 
 ### 改进空间
 由于题目没有给定具体事件的执行时间，也没有指定时间单位，因此此处只计量货架的操作次数作为耗费的时间。也就是说，时间是后计算的，我想大部分同学做到这里可能都是这样的思路。虽然最终得出的结果没有问题，但是思路还可以转变一下，适应于后面的学习。
