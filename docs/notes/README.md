@@ -12,7 +12,7 @@
 ## MicroCityWeb
 - [用户界面简介](./web_ui.md) \[[EN](./web_ui_en.md)\]
 - [3D 场景](./3d_scene.md) \[[EN](./3d_scene_en.md)\]
-- [3D 对象](./3d_objects.md)
+- [3D 对象](./3d_objects.md) \[[EN](./3d_objects_en.md)\]
 
 ## 思路
 - [仓库仿真](./warehouse_simulation.md)
