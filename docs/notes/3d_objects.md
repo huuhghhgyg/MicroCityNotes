@@ -12,7 +12,7 @@ local obj = scene.addobj([类型], {key1 = value1, key2 = value2, ...})
 添加到场景中的对象通常支持设置以下属性中的某些属性
 |对象属性|含义|
 |:---:|----|
-|`color`|对象的颜色。颜色的格式支持内置颜色、十六进制、RGB。与 [场景背景颜色](#bgcolor-场景背景颜色) 的设置相同|
+|`color`|对象的颜色。颜色的格式支持内置颜色、十六进制、RGB。与 [场景背景颜色](./3d_scene.md#bgcolor-场景背景颜色) 的设置相同|
 |`opacity`|透明度|
 |`hcolor`|选中时的颜色|
 |`size`|对象的大小，默认值为1|
@@ -36,11 +36,13 @@ local obj = scene.addobj([类型], {key1 = value1, key2 = value2, ...})
 - `polyline`：[线段集合](#polyline)
 - `box`：[立方体](#box)
 - `sphere`：[球体](#sphere)
-- `polygen`：[多边形](#polygen)
+- `polygon`：[多边形](#polygon)
 - `light`：[光源](#light)
 - `mesh`：[点构成的面](#mesh)
 
-> 为了简洁起见，下方示例的对象可选属性中只展示对应对象的关键属性。其他通用的属性可以参考 [对象属性列表](#对象可选属性) 自行添加。
+::: note 注释
+为了简洁起见，下方示例的对象可选属性中只展示对应对象的关键属性。其他通用的属性可以参考 [对象可选属性列表](#对象可选属性列表) 自行添加。
+:::
 
 ### label
 `label` 是文本标签。可以在 `text` 属性中设置label的文本。
@@ -134,8 +136,8 @@ local obj = scene.addobj('sphere', {radius=15, segments=360})
 不同segment对于相同sphere的影响
 :::
 
-### polygen
-`polygen` 是多边形。主要通过 `vertices` 属性对其进行设置。
+### polygon
+`polygon` 是多边形。主要通过 `vertices` 属性对其进行设置。
 
 ```lua:no-line-numbers
 local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0}})
@@ -150,6 +152,7 @@ local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0
 
 ::: center
 ![不同size对于相同polygon体积的影响](./images/MicroCityWeb/polygon_sizes.jpg)
+
 不同size对于相同polygon体积的影响
 :::
 
