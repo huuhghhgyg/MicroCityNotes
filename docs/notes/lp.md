@@ -19,10 +19,7 @@ local lp = CreateLP()
 
 ### 创建目标函数
 MicroCity中，使用`SetObjectFunction()`设置模型对象的目标函数。允许选择目标函数求**最大值**或**最小值**。具体用法如下：
-<!-- ```lua
-SetObjFunction(lp, coeff, "min") --求最小值
-SetObjFunction(lp, coeff, "max") --求最大值
-``` -->
+
 ::: code-tabs#shell
 @tab:active 最大值
 ```lua
@@ -55,25 +52,6 @@ SetObjFunction(lp, coeff, "min")
 
 ### 添加约束方程
 在MicroCity中，添加模型约束的函数为`AddConstraint()`，用法如下：
-<!-- ```lua
--- 小于等于 ≤：
--- 使用符号表达
-AddConstraint(lp, cons, "<=", b)
--- 使用缩写表达
-AddConstraint(lp, cons, "le", b)
-
--- 大于等于 ≥：
--- 使用符号表达
-AddConstraint(lp, cons, "<=", b)
--- 使用缩写表达
-AddConstraint(lp, cons, "le", b)
-
--- 等于 =：
--- 使用符号表达
-AddConstraint(lp, cons, "==", b)
--- 使用缩写表达
-AddConstraint(lp, cons, "eq", b)
-``` -->
 
 ::: code-tabs#shell
 @tab:active ≤
@@ -136,10 +114,7 @@ AddConstraint(lp, cons, ">=", 5)
 MicroCity中的数学规划支持整数规划。如果没有对变量设置`SetUnbounded()`，默认变量的取值范围是非负实数(≥0)。下面介绍变量类型设置的详细做法。
 
 你可以将模型中第`i`个变量设置为**整数变量**或**0-1变量**。如果不将变量设置为这些类型，则默认变量为**非负实数**。
-<!-- ```lua
-SetInteger(lp, i) --整数变量
-SetBinary(lp, i) --0-1变量
-``` -->
+
 ::: code-tabs#shell
 @tab 整数变量
 ```lua
