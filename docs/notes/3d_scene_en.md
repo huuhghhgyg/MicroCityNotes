@@ -6,11 +6,9 @@ This section introduces 3D scenes and their settings.
 
 The 3D scene coordinate system in MicroCityWeb follows the right-hand coordinate system, and the specific direction of each coordinate axis is shown in the following figure.
 
-::: center
 ![Coordinate system in MicroCityWeb](./images/MicroCityWeb/coordinate.png)
 
 Coordinate system in MicroCityWeb
-:::
 
 ## Setting up a Scene
 
@@ -34,7 +32,7 @@ The variable `s` holds the returned environment object. The optional parameters 
 
 *   `grid`: [background grid of the scene](#grid-background-grid-of-the-scene)
 *   `bgcolor`: [background color of the scene](#bgcolor-background-color-of-the-scene)
-*   `camtype`: [camera view](#camtype-camera-view)
+*   `camtype`: [camera view](#camtype-camera-angle-of-view)
 *   `clear`: [whether to clear the scene](#clear-whether-to-clear-the-scene)
 *   `rotspeed` & `transpeed`\*: [adjustment of mouse operation speed](#rotspeed-transpeed)
 
