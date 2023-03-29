@@ -263,8 +263,6 @@ Gets the parent object of `obj`.
 local num = obj:getparent()
 ```
 
-> This function only returns a numerical value.
-
 ### setparent()
 
 Sets the parent object of `obj` to `obj0`.

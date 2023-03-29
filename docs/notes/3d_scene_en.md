@@ -10,6 +10,8 @@ The 3D scene coordinate system in MicroCityWeb follows the right-hand coordinate
 
 Coordinate system in MicroCityWeb
 
+> Note that the three-dimensional coordinate axes x, y, and z here are manually drawn to show the coordinate system in MicroCityWeb and do not directly exist in the three-dimensional scene.
+
 ## Setting up a Scene
 
 Setting up a scene requires the use of the `setenv` function, with the specific usage as follows:
