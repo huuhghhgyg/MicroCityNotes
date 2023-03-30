@@ -1,1 +1,0 @@
-import{_ as e,p as t,q as n,R as s}from"./framework-31ef5388.js";const o={},c=s("p",null,"This folder contains images used by documentation pages.",-1),_=[c];function a(i,r){return t(),n("div",null,_)}const l=e(o,[["render",a],["__file","index.html.vue"]]);export{l as default};
