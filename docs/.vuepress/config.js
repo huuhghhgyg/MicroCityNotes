@@ -98,19 +98,29 @@ export default {
       ],
       "/notes/": [
         {
-          text: "笔记",
-          children: [
-            {
-              text: "目录",
-              link: "/notes/",
-              children: [],
-            },
-            "/notes/lua",
-            "/notes/visualization",
-            "/notes/network",
-            "/notes/lp",
-          ],
+          text: "目录",
+          link: "/notes/",
+          children: [], // 侧边栏不显示子目录
         },
+        {
+          text: "通用知识",
+          children: ["/notes/lua", "/notes/versions", "/notes/timelapse"],
+        },
+        {
+          text: "MicroCity",
+          collapsible: true,
+          children: ["/notes/visualization", "/notes/network", "/notes/lp"],
+        },
+        {
+          text: "MicroCityWeb",
+          collapsible: true,
+          children: ["/notes/web_ui", "/notes/3d_scene","/notes/3d_objects"],
+        },
+        {
+          text: "思路",
+          collapsible: true,
+          children: ["/notes/warehouse_simulation"]
+        }
       ],
     },
   }),
@@ -144,6 +154,12 @@ export default {
       mathjax: true,
       // 自定义对齐
       align: true,
+      // 自定义图片大小
+      imgSize: true,
+      // 启用容器
+      container: true,
+      // 启用流程图
+      flowchart: true,
     }),
     //PWA支持
     pwaPlugin({
