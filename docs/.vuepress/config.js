@@ -104,6 +104,7 @@ export default {
         },
         {
           text: "通用知识",
+          collapsible: true,
           children: ["/notes/lua", "/notes/versions", "/notes/timelapse"],
         },
         {
@@ -114,13 +115,13 @@ export default {
         {
           text: "MicroCityWeb",
           collapsible: true,
-          children: ["/notes/web_ui", "/notes/3d_scene","/notes/3d_objects"],
+          children: ["/notes/web_ui", "/notes/3d_scene", "/notes/3d_objects"],
         },
         {
           text: "思路",
           collapsible: true,
-          children: ["/notes/warehouse_simulation"]
-        }
+          children: ["/notes/warehouse_simulation"],
+        },
       ],
     },
   }),
