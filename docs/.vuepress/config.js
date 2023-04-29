@@ -120,7 +120,7 @@ export default {
         {
           text: "思路",
           collapsible: true,
-          children: ["/notes/warehouse_simulation"],
+          children: ["/notes/warehouse_simulation","/notes/plots"],
         },
       ],
     },

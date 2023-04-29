@@ -16,3 +16,4 @@
 
 ## 思路
 - [仓库仿真](./warehouse_simulation.md)
+- [通用绘图代码](./plots.md)
