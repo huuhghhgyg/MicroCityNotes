@@ -14,12 +14,19 @@
 ![直方图示例](./images/Histogram.png =500x)
 :::
 
-如果你已经熟悉直方图对象的用法，点击此处可以 [**转到代码**](#直方图代码) 对代码进行复制并使用。下面将对直方图对象的用法进行详细介绍。
+### 导入直方图
+首先导入直方图的代码。目前有两种选择：
+1. **下载代码文件并导入（推荐）**：[下载直方图代码文件](#代码文件下载) `Histogram.lua`，在MicroCityWeb中导入该文件，再引用该文件后即可使用。引用的代码如下:
+```lua
+require("Histogram") --引用直方图
+```
 
-### 创建对象
+2. **复制代码**：直接将`Histogram.lua`文件中的代码复制到你的代码中，代码见[**下方**](#直方图代码)。
+
+### 创建直方图对象
 创建一个直方图对象
 ```lua
-local plot = Histogram(list) -- list为
+local plot = Histogram(list) -- list为数据集
 ```
 
 还可以在创建对象时对图的属性进行设置。
@@ -30,7 +37,7 @@ local plot = Histogram(list, {range={40,90,0,100}, scale={10, 50}, fdisp=functio
 
 属性的设置不是必须的，可以仅根据需要设置。此处就只设置了`range`、`scale`、`fdisp`属性。
 
-### 属性设置
+### 直方图属性设置
 上面提供了直方图属性设置的简单例子。根据代码，还可以设置更多的属性。具体见下表：
 
 |属性值|作用|示例|
@@ -43,7 +50,7 @@ local plot = Histogram(list, {range={40,90,0,100}, scale={10, 50}, fdisp=functio
 |`filled`|设置是否填充柱状图|`filled = false`，将柱状图设置为空心。默认样式为填充|
 |`fdisp`|数据标签的显示函数，默认返回数量。设置数据标签显示函数时也会影响y轴刻度的显示。|`fdisp = function(v) return (v/n*100).."%" end`，将数据标签改为按照比例显示（假设n为样本数）|
 
-### 高级用法
+### 直方图高级用法
 动态刷新数据图
 1. 修改图中的数据。此处以向图中添加数据为例。其中假设`rnd`为添加的数据。也可以直接修改`histplot.data`的值。
 ```lua
@@ -56,10 +63,10 @@ plot:refresh()
 ```
 
 ### 示例
-示例省去了一些[导入的代码](#直方图代码)。
-
 #### 基本用法示例：绘制泊松分布
 ```lua
+require("Histogram") --引用直方图
+
 local seed = math.randomseed(1, {
     distribution = "poisson",
     mu = "3"
@@ -82,6 +89,8 @@ scene.render()
 这是一个绘制泊松分布并动态刷新数据图的示例。假设已经导入了`Histogram`对象，并将场景设为二维显示。
 
 ```lua
+require("Histogram") --引用直方图
+
 local seed = math.randomseed(1, {
     distribution = "poisson",
     mu = "3"
@@ -90,7 +99,7 @@ local list = {seed:random()}
 
 local histplot = Histogram(list, {
     range = {0, 10, 0, 50},
-    scale = {1, 6}
+    scale = {1, 8}
 })
 scene.render()
 
@@ -113,9 +122,17 @@ end
 ![子图](./images/Subplot_Vertical.png =500x)
 :::
 
+### 导入子图
+首先导入直方图的代码。与直方图一样，导入有两种选择：
+1. **下载代码文件并导入（推荐）**：[下载子图代码文件](#代码文件下载)，在MicroCityWeb中导入`Subplot.lua`文件，再引用该文件后即可使用。引用的代码如下:
+```lua
+require("Subplot") --引入子图代码
+```
+2. **复制代码**：直接将`Subplot.lua`文件中的代码复制到你的代码中。这样就不需要导入了。代码见[**下方**](#子图代码)。
+
 ### 创建子图对象
 创建子图时必须输入子图的行数和列数。子图的行数和列数决定了子图的数量。
-```
+```lua
 local subplot = Subplot(rows, cols)
 ```
 
@@ -149,6 +166,8 @@ local subplot = Subplot(rows, cols, {span=10, diag={-80, -70, 80, 70}})
 此处将一个2行3列子图中各个子图的显示范围绘制为一个矩形。其中子图范围用四个灰色点表示，子图位置用蓝色矩形表示。
 
 ```lua
+require("Subplot") --引入子图代码
+
 local subplot = Subplot(2, 3, {span = 10})
 
 -- 绘制Subplot对象边界点
@@ -176,6 +195,14 @@ scene.render()
 
 ## 代码
 可以根据代码的组合情况删去开头的 `scene.setenv` 代码。代码中的 `scene.render()` 是为了在动态绘制时刷新图像。
+
+### 代码文件下载
+代码文件列表见 [ModelResource/libs](https://github.com/huuhghhgyg/ModelResource/tree/main/libs)
+
+|名称|链接|
+|---|---|
+|直方图|[ModelResource/libs/Histogram.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Histogram.lua)|
+|子图|[ModelResource/libs/Subplot.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Subplot.lua)|
 
 ### 直方图代码
 `Histogram`
@@ -384,8 +411,10 @@ end
 `Subplot`
 
 ```lua
-scene.setenv({camtype = "ortho", grid="plane"})
-
+-- 属性参数
+-- local diag = {-80, -70, 80, 70} --lbx,lby,rtx,rty
+-- local span = 10
+-- local row, col = 2, 2
 function Subplot(row, col, ...)
     local subplot = {
         span = 10,
@@ -415,9 +444,6 @@ function Subplot(row, col, ...)
         for i = 1, subplot.row do
             subplot.originpt[i]={}
             for j = 1, subplot.col do
-                -- print("i=",i,",j=",j)
-                -- print("subplot diag:",subplot.diag[1],",",subplot.diag[2])
-                -- print("gheight=",gheight)
                 subplot.originpt[i][j] = {subplot.diag[1]+(j-1)*gwidth, subplot.diag[2]+(i-1)*gheight}
             end
         end

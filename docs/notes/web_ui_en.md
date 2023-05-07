@@ -24,7 +24,9 @@ The content of this area is shown in the following figure, with nine available b
 The first three buttons are mainly used to control program execution. Their specific functions are as follows:
 
 1.  **Run/Debug:** Clicking the left mouse button will run the code in the [code editor](#green-code-editor) on the left-hand side of the webpage, while right-clicking will debug the code.
+
 2.  **Pause:** If the program is running, clicking this button will **pause** its execution (if supported).
+
 3.  **Stop/Force Stop:** If the program is running, clicking the left mouse button will stop its execution. If left-clicking does not stop the script, right-clicking can forcibly terminate its execution.
 
 ![Program control](./images/MicroCityWeb/RunCode.gif)
@@ -33,25 +35,34 @@ The first three buttons are mainly used to control program execution. Their spec
 
 Buttons 4-7 are mainly related to code editing.
 
-4.  **Show/Hide Editor:** If the code editor on the left is open, clicking this button will close it. If it is closed, clicking it will reopen it.
+4.  **Show/Hide Editor:** If the left code editor is open, clicking this button will close it. If it's closed, clicking it will reopen it. If you right-click, the editor can be expanded to full screen.
     
-5.  **Open Built-In Code:** Built-in code can be directly loaded (imported into the built-in model), such as cubes, trucks, earth, and world maps. Specific models will be introduced in detail when [canvas area](#red-canvas-area) is discussed.
-    
+5.  **Open Built-In Code:** You can directly load built-in code (import built-in models), such as cubes, trucks, earth, world maps, etc. The specific models will be introduced in detail when the [red canvas area](#red-canvas-area) is introduced.
 ::: center
 ![Built-in code](./images/MicroCityWeb/Presets.png)
 
 Built-in code list
 :::
     
-6.  **Open Local Code:** Clicking this button will pop up a dialog box to open the file, and you can select the code file on your local machine. After confirming to open the file, the code file text will be automatically imported into the left code editor.
+6.  **Open Local Code:** 
+
+    **Left-click**: A dialog box will pop up when you left-click, and you can choose a code file (.lua) on your local machine. After confirming the selection to open the file, the text of the code file will be automatically imported into the code editor on the left.
+
+    **Right-click**: You can select one or more files to upload to MicroCityWeb by right-clicking. The "Save" button (⑦) on the right can be clicked to view the list of uploaded files.
     
-7.  **Save Code:** When you save the file for the first time, a dialog to save the file will pop up after clicking the save button. You can choose the save location and fill in the file name. If you have previously saved the file locally, and you want to save changes to the file after modifying it, you can directly click the save button to save the changes to the previously saved file.
+7.  **Save Code:**
+
+    **Left-click**: When you save a file for the first time, a save file dialog box will pop up after you click the save button. You can choose the save location and fill in the file name. If you have previously saved the file locally and you have made modifications to the file and want to save the changes, you can simply click the save button to save the changes directly to the previously saved file.
+
+    **Right-click**: You can view the list of uploaded files, and you can click on a file in the list and download it to your local machine.
 
 ### Others
 
-8. **Share.** After clicking the button, a dialog box for entering a password will pop up. Afterwards, you will receive a link that anyone can use to access your share. If you enter a password in the dialog box, others who open the link can only run your program code and observe the running result, but cannot view your code (unless you tell them the password); if you do not enter a password, others can not only run your code to view the running result but also view the code you have written.
+8. **Share.** After clicking the button, a dialog box for entering a password will pop up. Afterwards, you will receive a link that anyone can use to access your share. 
+    
+    If you enter a password in the dialog box, others who open the link can only run your program code and observe the running result, but cannot view your code (unless you tell them the password); if you do not enter a password, others can not only run your code to view the running result but also view the code you have written.
 
-9. **View help documentation.**
+9.  **View help documentation.**
 
 ## Green: Code Editor
 
