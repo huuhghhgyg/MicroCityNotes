@@ -9,6 +9,29 @@ MicroCityWeb中的三维场景坐标系符合右手坐标系，各个坐标轴�
 MicroCityWeb中的坐标系
 :::
 
+手动绘制上图坐标轴的代码
+```lua
+scene.setenv({grid="plane"})
+
+-- x
+scene.addobj("polyline", {vertices = {0,0,0, 10,0,0}, color = "blue"})
+scene.addobj("points", {vertices = {10,0,0}, color = "blue", size = 5})
+local labelx = scene.addobj("label",{text="x"})
+labelx:setpos(10,1,0)
+-- y
+scene.addobj("polyline", {vertices = {0,0,0, 0,10,0}, color = "green"})
+scene.addobj("points", {vertices = {0,10,0}, color = "green", size = 5})
+local labelx = scene.addobj("label",{text="y"})
+labelx:setpos(0,11,0)
+-- z
+scene.addobj("polyline", {vertices = {0,0,0, 0,0,10}, color = "red"})
+scene.addobj("points", {vertices = {0,0,10}, color = "red", size = 5})
+local labelx = scene.addobj("label",{text="z"})
+labelx:setpos(0,1,10)
+
+scene.render()
+```
+
 ## 设置场景
 设置场景需要用到 `setenv` 函数，具体用法如下
 

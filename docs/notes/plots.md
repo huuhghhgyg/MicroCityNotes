@@ -52,9 +52,9 @@ local plot = Histogram(list, {range={40,90,0,100}, scale={10, 50}, fdisp=functio
 
 ### 直方图高级用法
 动态刷新数据图
-1. 修改图中的数据。此处以向图中添加数据为例。其中假设`rnd`为添加的数据。也可以直接修改`histplot.data`的值。
+1. 修改图中的数据。此处以向图中添加数据为例。其中假设`rnd`为添加的数据。也可以直接修改`plot.data`的值。
 ```lua
-table.insert(histplot.data, rnd)
+table.insert(plot.data, rnd)
 ```
 
 2. 刷新图

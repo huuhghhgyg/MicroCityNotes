@@ -115,12 +115,12 @@ export default {
         {
           text: "MicroCityWeb",
           collapsible: true,
-          children: ["/notes/web_ui", "/notes/3d_scene", "/notes/3d_objects"],
+          children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects"],
         },
         {
           text: "思路",
           collapsible: true,
-          children: ["/notes/warehouse_simulation","/notes/plots"],
+          children: ["/notes/warehouse-simulation","/notes/plots"],
         },
       ],
     },

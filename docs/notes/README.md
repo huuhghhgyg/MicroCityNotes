@@ -10,10 +10,10 @@
 - [模型求解](./lp.md)
 
 ## MicroCityWeb
-- [用户界面简介](./web_ui.md) \[[EN](./web_ui_en.md)\]
-- [3D 场景](./3d_scene.md) \[[EN](./3d_scene_en.md)\]
-- [3D 对象](./3d_objects.md) \[[EN](./3d_objects_en.md)\]
+- [用户界面简介](./web-ui.md) \[[EN](./web-ui-en.md)\]
+- [3D 场景](./3d-scene.md) \[[EN](./3d-scene-en.md)\]
+- [3D 对象](./3d-objects.md) \[[EN](./3d-objects-en.md)\]
 
 ## 思路
-- [仓库仿真](./warehouse_simulation.md)
+- [仓库仿真](./warehouse-simulation.md)
 - [通用绘图代码](./plots.md)
