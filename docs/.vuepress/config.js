@@ -105,7 +105,7 @@ export default {
         {
           text: "通用知识",
           collapsible: true,
-          children: ["/notes/lua", "/notes/versions", "/notes/timelapse"],
+          children: ["/notes/lua", "/notes/versions", "/notes/timelapse","/notes/oop"],
         },
         {
           text: "MicroCity",
