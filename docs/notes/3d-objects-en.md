@@ -16,7 +16,7 @@ Objects added to the scene typically support setting some of the following prope
 
 | Object Property | Meaning |
 | :---: | --- |
-| `color` | The color of the object. The format of the color can support built-in colors, hexadecimal, and RGB. Same as the [background color of the scene](./3d_scene_en.md#bgcolor-background-color-of-the-scene) |
+| `color` | The color of the object. The format of the color can support built-in colors, hexadecimal, and RGB. Same as the [background color of the scene](./3d-scene-en.md#bgcolor-background-color-of-the-scene) |
 | `opacity` | Opacity |
 | `hcolor` | The color when the object is selected |
 | `size` | The size of the object. The default value is 1 |
