@@ -115,7 +115,7 @@ export default {
         {
           text: "MicroCityWeb",
           collapsible: true,
-          children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects"],
+          children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling"],
         },
         {
           text: "思路",
