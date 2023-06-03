@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as n,a as o}from"./app-a72e5d04.js";const s={},c=o("p",null,"This folder contains images used by documentation pages.",-1),a=[c];function _(i,r){return t(),n("div",null,a)}const l=e(s,[["render",_],["__file","index.html.vue"]]);export{l as default};
