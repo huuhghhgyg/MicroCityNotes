@@ -161,6 +161,8 @@ export default {
       container: true,
       // 启用流程图
       flowchart: true,
+      // 启用图片懒加载
+      imgLazyload: true,
     }),
     //PWA支持
     pwaPlugin({
