@@ -82,9 +82,9 @@ end
 
 -- Coroutine updates the scene
 function update()
+    if not scene.render() then return end -- Render the scene and check if the program is terminated
     coroutine.queue(dt, update) -- Add the next update based on CPU step time
     carmove() -- Move the vehicle
-    scene.render() -- Render the scene
     refreshtime() -- Calculate the current dt
 end
 

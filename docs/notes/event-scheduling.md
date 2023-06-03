@@ -70,9 +70,9 @@ end
 
 -- 协程更新场景
 function update()
+    if not scene.render() then return end --渲染场景并检查程序是否中止
     coroutine.queue(dt, update) --根据CPU步进时间添加下一次更新
     carmove() --移动车辆
-    scene.render() --渲染场景
     refreshtime() --计算本次dt
 end
 
