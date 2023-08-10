@@ -19,6 +19,20 @@ MicroCityWeb版也提供使用浏览器打包导出的离线版本（见上方 �
 但是由于Chromium浏览器内核的更新，某些老旧的系统版本可能不受支持（如Windows 8.1及以下的Windows版本、32位的Windows操作系统等）
 :::
 
+## 兼容性
+由于使用了实验性的javascript函数，MicroCityWeb可能不支持以下浏览器内核：
+* iOS和iPad OS上的大多数浏览器（由于Apple强制使用Safari的浏览器内核）
+* FireFox浏览器
+
+**2023/8/10测试遇到的兼容性问题及部分技术细节**
+* iOS和iPad OS：
+  * 无法运行仿真
+  * 无法打开本地文件（由于使用了`showOpenFilePicker()`方法）
+* FireFox：
+  * 无法打开本地文件（由于使用了`showOpenFilePicker()`方法）
+
+> 关于`showOpenFilePicker()`方法的影响参见 [MDN Web Docs | showOpenFilePicker()](https://developer.mozilla.org/zh-CN/docs/Web/API/window/showOpenFilePicker#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7)
+
 ## 总结
 总的来说，MicroCityWeb版的推出使得软件更加易用和普及，让更多的用户可以从中受益。同时，MicroCity桌面版本仍然可用，使得那些已经习惯于使用该版本的用户可以继续使用，并让他们更容易地过渡到MicroCityWeb版。
 
