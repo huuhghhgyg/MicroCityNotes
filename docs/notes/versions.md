@@ -34,7 +34,7 @@ MicroCityWeb版也提供使用浏览器打包导出的离线版本（见上方 �
 > 关于`showOpenFilePicker()`方法的影响参见 [MDN Web Docs | showOpenFilePicker()](https://developer.mozilla.org/zh-CN/docs/Web/API/window/showOpenFilePicker#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7)
 
 ## 总结
-总的来说，MicroCityWeb版的推出使得软件更加易用和普及，让更多的用户可以从中受益。同时，MicroCity桌面版本仍然可用，使得那些已经习惯于使用该版本的用户可以继续使用，并让他们更容易地过渡到MicroCityWeb版。
+MicroCityWeb版的推出使得软件更加易用和普及，让更多的用户可以从中受益。同时，MicroCity桌面版本仍然可用，使得那些已经习惯于使用该版本的用户可以继续使用，并让他们更容易地过渡到MicroCityWeb版。
 
 本文作者在写这篇笔记的时候MicroCityWeb正在被第一次用于教学环境中，已经基本能够正常运行并实现一定的仿真功能。本文作者的学习经历如下：
 * MicroCity（桌面版）：物流信息管理

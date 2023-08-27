@@ -88,6 +88,8 @@ end
 coroutine.queue(dt,update)
 ```
 
+[在MicroCityWeb中打开](https://microcityweb.gitee.io/#rvnpar)
+
 ## 随机数
 ### 创建随机数种子
 ```lua:no-line-numbers
