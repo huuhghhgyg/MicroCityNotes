@@ -20,13 +20,12 @@ MicroCityWeb版也提供使用浏览器打包导出的离线版本（见上方 �
 :::
 
 ## 兼容性
-由于使用了实验性的javascript函数，MicroCityWeb可能不支持以下浏览器内核：
+由于使用了实验性的javascript函数，MicroCityWeb可能在以下浏览器内核中运行存在兼容性问题：
 * iOS和iPad OS上的大多数浏览器（由于Apple强制使用Safari的浏览器内核）
 * FireFox浏览器
 
-**2023/8/10测试遇到的兼容性问题及部分技术细节**
+**2023/9/29测试遇到的兼容性问题及部分技术细节**
 * iOS和iPad OS：
-  * 无法运行仿真
   * 无法打开本地文件（由于使用了`showOpenFilePicker()`方法）
 * FireFox：
   * 无法打开本地文件（由于使用了`showOpenFilePicker()`方法）
