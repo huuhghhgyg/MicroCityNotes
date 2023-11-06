@@ -30,9 +30,9 @@ head:
 如果想要深入了解MicroCityWeb的用法和使用技巧，可以参阅本站提供的 [**学习笔记**](./notes/)
 
 ## 开始使用MicroCity
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/microcity.github.io) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/microcity.github.io/latest/total)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/Desktop) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/Desktop/latest/total)
 
-1. 转到MicroCity的文档仓库下载 [**MicroCity的最新版本**](https://github.com/microcity/microcity.github.io/releases/latest)
+1. 转到MicroCity的文档仓库下载 [**MicroCity的最新版本**](https://github.com/microcity/Desktop/releases/latest)
 
 2. 打开 ![icon](./docs/imgs/icon_script_editor.png)**ScriptEditor** 并输入:  
 ```lua
