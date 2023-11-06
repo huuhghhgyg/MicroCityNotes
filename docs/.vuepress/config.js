@@ -52,13 +52,24 @@ export default {
       {
         text: "MicroCity项目仓库",
         children: [
-          { text: "MicroCity Desktop Github", link: "https://github.com/microcity/Desktop" },
-          { text: "MicroCity(Web) Github", link: "https://microcity.github.io/" },
-          { text: "MicroCity(Web) Gitee", link: "https://gitee.com/microcity/microcity" },
+          {
+            text: "github",
+            children: [
+              { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
+              { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+            ],
+          },
+          {
+            text: "gitee",
+            children: [
+              { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
+              { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+            ],
+          },
         ],
       },
       {
-        text: "MicroCity(Web)",
+        text: "MicroCity Web",
         link: "https://microcity.gitee.io/",
       },
     ],
