@@ -163,8 +163,6 @@ export default {
       codetabs: true,
       // 使用 KaTeX 启用 TeX 支持
       katex: true,
-      // 使用 mathjax 启用 TeX 支持
-      mathjax: true,
       // 自定义对齐
       align: true,
       // 自定义图片大小
