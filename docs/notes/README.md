@@ -4,6 +4,7 @@
 - [MicroCity的版本](./versions.md)
 - [时间推进法](./timelapse.md)
 - [面向对象编程](./oop.md)
+- [有关工具](./tools.md)
 
 ## MicroCity（桌面版）
 - [结果可视化](./visualization.md)
