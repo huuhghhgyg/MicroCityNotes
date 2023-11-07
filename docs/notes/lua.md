@@ -145,6 +145,35 @@ print(collection[2]) --abc
 print(collection[3][2]) --3
 ```
 
+### 添加元素
+向指定位置添加
+```lua
+table.insert(table, pos, value) --在指定位置(pos)添加元素
+```
+或者
+```lua
+table.insert(table, value) --向最后添加元素
+```
+
+示例
+```lua
+list = {1, 2, 3, 4, 5}
+table.insert(list, 6)
+-- {1, 2, 3, 4, 5, 6}
+```
+
+### 删除元素
+```lua
+table.remove(table, pos)
+```
+
+示例
+```lua
+list = {1, 2, 3, 4, 5}
+table.remove(list, 2)
+-- {1, 3, 4, 5}
+```
+
 ### table的排序
 #### 默认排序方法
 可以使用函数对列表进行排序，最简单的用法如下

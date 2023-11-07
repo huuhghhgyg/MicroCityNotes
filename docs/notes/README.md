@@ -3,6 +3,8 @@
 - [Lua语言快速上手](./lua.md)
 - [MicroCity的版本](./versions.md)
 - [时间推进法](./timelapse.md)
+- [面向对象编程](./oop.md)
+- [有关工具](./tools.md)
 
 ## MicroCity（桌面版）
 - [结果可视化](./visualization.md)
@@ -10,9 +12,14 @@
 - [模型求解](./lp.md)
 
 ## MicroCityWeb
-- [用户界面简介](./web_ui.md) \[[EN](./web_ui_en.md)\]
-- [3D 场景](./3d_scene.md) \[[EN](./3d_scene_en.md)\]
-- [3D 对象](./3d_objects.md) \[[EN](./3d_objects_en.md)\]
+- [用户界面简介](./web-ui.md) \[[EN](./web-ui-en.md)\]
+- [3D 场景](./3d-scene.md) \[[EN](./3d-scene-en.md)\]
+- [3D 对象](./3d-objects.md) \[[EN](./3d-objects-en.md)\]
+- [离散事件模拟和程序控制](./event-scheduling.md) \[[EN](./event-scheduling-en.md)\]
 
 ## 思路
-- [仓库仿真](./warehouse_simulation.md)
+- [仓库仿真](./warehouse-simulation.md)
+- [通用绘图代码](./plots.md)
+- [港口AGV服务流程三维仿真思路](./cy-simulation.md)
+
+> 本页目录所指的笔记内容适用于相应版本的MicroCity。特别感谢在编写和整理的过程中 [孙卓老师(MicroCity作者)](https://github.com/sunzhuo) 给予的指导和帮助。

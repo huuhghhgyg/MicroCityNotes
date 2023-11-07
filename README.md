@@ -7,4 +7,4 @@
 
 🔗 MicroCity项目链接
 - MicroCity: https://github.com/microcity/microcity.github.io
-- MicroCity文档: https://github.com/microcity/microcity.github.io/tree/main/docs
+- MicroCity文档: https://github.com/microcity/microcity.github.io/tree/main/doc

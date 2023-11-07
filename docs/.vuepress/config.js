@@ -40,25 +40,42 @@ export default {
         link: "/notes/",
       },
       {
-        text: "MicroCity文档",
+        text: "文档",
         children: [
-          { text: "文档目录", link: "/docs/" },
-          { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
-          { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
-          { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
-          { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+          {
+            text: "Desktop版文档",
+            link: "/docs/",
+            children: [
+              { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
+              { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
+              { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
+              { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+            ],
+          },
         ],
       },
       {
         text: "MicroCity项目仓库",
         children: [
-          { text: "MicroCity", link: "https://microcity.github.io/" },
-          { text: "MicroCityWeb", link: "https://gitee.com/microcityweb/microcityweb" },
+          {
+            text: "github",
+            children: [
+              { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
+              { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+            ],
+          },
+          {
+            text: "gitee",
+            children: [
+              { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
+              { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+            ],
+          },
         ],
       },
       {
-        text: "MicroCityWeb",
-        link: "https://microcityweb.gitee.io/",
+        text: "MicroCity Web",
+        link: "https://microcity.gitee.io/",
       },
     ],
 
@@ -105,7 +122,7 @@ export default {
         {
           text: "通用知识",
           collapsible: true,
-          children: ["/notes/lua", "/notes/versions", "/notes/timelapse"],
+          children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
         },
         {
           text: "MicroCity",
@@ -115,12 +132,12 @@ export default {
         {
           text: "MicroCityWeb",
           collapsible: true,
-          children: ["/notes/web_ui", "/notes/3d_scene", "/notes/3d_objects"],
+          children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling"],
         },
         {
           text: "思路",
           collapsible: true,
-          children: ["/notes/warehouse_simulation"],
+          children: ["/notes/warehouse-simulation", "/notes/plots", "/notes/cy-simulation"],
         },
       ],
     },
@@ -151,8 +168,6 @@ export default {
       codetabs: true,
       // 使用 KaTeX 启用 TeX 支持
       katex: true,
-      // 使用 mathjax 启用 TeX 支持
-      mathjax: true,
       // 自定义对齐
       align: true,
       // 自定义图片大小
