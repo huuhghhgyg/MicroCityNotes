@@ -2,10 +2,10 @@
 home: true
 title: 首页
 actions:
-  - text: 文档目录
+  - text: Desktop版 文档
     link: /docs/
     type: secondary
-  - text: 学习笔记
+  - text: Web版 学习笔记
     link: /notes/
     type: primary
 features:

@@ -2,7 +2,7 @@
 ## MicroCity
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/Desktop) [![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/Desktop/latest/total)](https://github.com/microcity/Desktop/releases/latest)
 
-当MicroCity软件最初推出时，它只有一个桌面版本，这意味着它只能在Windows操作系统上运行。随着时间的推移，开发者（[@mixwind](https://github.com/sunzhuo))意识到这个限制使得许多潜在的用户无法使用该软件，因为他们的电脑使用的可能是其他操作系统，比如MacOS、Linux等。
+MicroCity软件最初推出时只有一个桌面版本，只能在Windows操作系统上运行。随着时间的推移，开发者（[@mixwind](https://github.com/sunzhuo))意识到这个限制使得许多潜在的用户无法使用该软件，因为他们的电脑使用的可能是其他操作系统，比如MacOS、Linux等。
 
 ## MicroCityWeb
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/microcity/microcity.github.io/master)

@@ -40,13 +40,18 @@ export default {
         link: "/notes/",
       },
       {
-        text: "MicroCity文档",
+        text: "文档",
         children: [
-          { text: "文档目录", link: "/docs/" },
-          { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
-          { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
-          { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
-          { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+          {
+            text: "Desktop版文档",
+            link: "/docs/",
+            children: [
+              { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
+              { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
+              { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
+              { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+            ],
+          },
         ],
       },
       {
@@ -117,7 +122,7 @@ export default {
         {
           text: "通用知识",
           collapsible: true,
-          children: ["/notes/lua", "/notes/versions", "/notes/timelapse","/notes/oop"],
+          children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
         },
         {
           text: "MicroCity",
@@ -132,7 +137,7 @@ export default {
         {
           text: "思路",
           collapsible: true,
-          children: ["/notes/warehouse-simulation","/notes/plots","/notes/cy-simulation"],
+          children: ["/notes/warehouse-simulation", "/notes/plots", "/notes/cy-simulation"],
         },
       ],
     },
