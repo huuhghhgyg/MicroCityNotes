@@ -5,7 +5,7 @@ actions:
   - text: Desktop版 文档
     link: /docs/
     type: secondary
-  - text: Web版 学习笔记
+  - text: 学习笔记
     link: /notes/
     type: primary
 features:
