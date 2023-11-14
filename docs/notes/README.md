@@ -16,6 +16,7 @@
 - [3D 场景](./3d-scene.md) \[[EN](./3d-scene-en.md)\]
 - [3D 对象](./3d-objects.md) \[[EN](./3d-objects-en.md)\]
 - [离散事件模拟和程序控制](./event-scheduling.md) \[[EN](./event-scheduling-en.md)\]
+- [混合整数规划](./mip.md) \[[EN](./mip-en.md)\]
 
 ## 思路
 - [仓库仿真](./warehouse-simulation.md)
