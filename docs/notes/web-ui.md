@@ -1,10 +1,10 @@
 # 用户界面简介
-MicroCityWeb的总体界面如下图，本文将详细介绍MicroCityWeb的用户界面（UI）操作。
+MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用户界面（UI）操作。
 
 ![总体界面](./images/MicroCityWeb/WebUIOverview.png)
 
 ## 界面分区概览
-整体来看，MicroCityWeb的界面大致可以划分为4个区域。
+整体来看，MicroCity Web的界面大致可以划分为4个区域。
 * [顶部-蓝色区域](#蓝色-命令区域)：对代码、文件执行各种操作
 * [左侧-绿色区域](#绿色-代码编辑器)：代码编辑器
 * [右侧-红色区域](#红色-画布区域)：视图区域
@@ -45,7 +45,7 @@ MicroCityWeb的总体界面如下图，本文将详细介绍MicroCityWeb的用�
    
    **左键点击**：弹出打开文件的对话框，您可以选择本机上的某个代码文件(.lua)。确定打开文件后，代码文件文本将自动导入到左侧代码编辑器中。
    
-   **右键点击**：可以选择一个或多个文件上传到MicroCityWeb中。右键“保存”按钮(⑦)可以查看已上传的文件列表。
+   **右键点击**：可以选择一个或多个文件上传到MicroCity Web中。右键“保存”按钮(⑦)可以查看已上传的文件列表。
 
 7. **保存代码/下载** 
    
@@ -63,7 +63,7 @@ MicroCityWeb的总体界面如下图，本文将详细介绍MicroCityWeb的用�
 ## 绿色：代码编辑器
 ![代码编辑器](./images/MicroCityWeb/AceEditor.png)
 
-MicroCityWeb左侧整合的代码编辑器源于AceEditor，因此也具有AceEditor的一些特性。
+MicroCity Web左侧整合的代码编辑器源于AceEditor，因此也具有AceEditor的一些特性。
 
 ### 快捷键
 下面将介绍一些常用的快捷键，帮助你更好地编辑代码。
@@ -113,7 +113,7 @@ MicroCityWeb左侧整合的代码编辑器源于AceEditor，因此也具有AceEd
 无论是二维对象还是三维对象都遵循上述操作逻辑。
 
 ## 黄色：代码输出区域
-打开MicroCityWeb后，代码输出区域如下。点击代码输出区域后整个区域会上移，能够看到更多的历史输出信息。
+打开MicroCity Web后，代码输出区域如下。点击代码输出区域后整个区域会上移，能够看到更多的历史输出信息。
 
 ![底栏](./images/MicroCityWeb/BottomBar.gif)
 

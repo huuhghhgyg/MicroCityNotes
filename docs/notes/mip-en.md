@@ -114,7 +114,7 @@ It can be noticed that the number of coefficients is the same as the number of v
 
 ### Setting Variable Types
 
-MicroCity's mathematical programming supports integer programming. If the variable type is not set using `SetUnbounded()`, the default variable range is non-negative real numbers (≥0). Below is a detailed method for setting variable types.
+MicroCity's mathematical programming supports integer programming. The default variable range is non-negative real numbers (≥0). Below is a detailed method for setting variable types.
 
 You can set the `i`-th variable in the model as an **integer variable** or a **0-1 variable**. If you don't set the variable to these types, it defaults to a **non-negative real number**.
 

@@ -1,5 +1,5 @@
 # 3D 对象
-本节将介绍三维场景的对象及其控制函数。
+本节将介绍 MicroCity Web 中的三维场景对象及其控制函数。
 
 ## 添加对象
 向场景中添加对象，函数形式如下
@@ -178,7 +178,7 @@ local obj = scene.addobj('https://huuhghhgyg.github.io/ModelResource/models/F16-
 :::
 
 ### light
-设置光源的方向，可选参数 `vertices` 为一个三维向量，表示光的照射方向。由于MicroCityWeb的场景中已经设置了很强的光源，因此此处不过多做介绍。
+设置光源的方向，可选参数 `vertices` 为一个三维向量，表示光的照射方向。由于MicroCity Web的场景中已经设置了很强的光源，因此此处不过多做介绍。
 
 ### mesh
 多个点构成的面，多见于引用的外部模型中。由于应用较少此处不做介绍。

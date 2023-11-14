@@ -1,12 +1,12 @@
 # 3D 场景
-本节将介绍三维场景及其设置。
+本节将介绍 MicroCity Web 中的三维场景及其设置。
 
 ## MicroCityWeb三维场景坐标系
-MicroCityWeb中的三维场景坐标系符合右手坐标系，各个坐标轴的正方向具体见下图。
+MicroCity Web中的三维场景坐标系符合右手坐标系，各个坐标轴的正方向具体见下图。
 
 ::: center
 ![MicroCityWeb中的坐标系](./images/MicroCityWeb/coordinate.png)
-MicroCityWeb中的坐标系
+MicroCity Web中的坐标系
 :::
 
 手动绘制上图坐标轴的代码
