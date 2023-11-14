@@ -2,7 +2,7 @@
 home: true
 title: 首页
 actions:
-  - text: Desktop版 文档
+  - text: 桌面版 文档
     link: /docs/
     type: secondary
   - text: 学习笔记
@@ -17,8 +17,7 @@ features:
     details: VuePress 驱动的独立网站，提供流畅阅读和文档参考体验。支持以 PWA 方式安装为应用，随时查阅，不受网络限制
 
 head:
-  - - meta
-    - description: MicroCity学习笔记，提供流畅舒适的文档搜索和学习体验。可以使用网站提供的搜索功能快速查找并跳转至内容。除了文档，还有MicroCity使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避坑。
+  - [meta, { name: description , content: MicroCity学习笔记，提供流畅舒适的文档搜索和学习体验。可以使用网站提供的搜索功能快速查找并跳转至内容。除了文档，还有MicroCity使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避坑。 }]
 ---
 
 ## 开始使用MicroCity Web
