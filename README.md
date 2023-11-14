@@ -6,5 +6,6 @@
 🏠 站点的GitHub Page: https://huuhghhgyg.github.io/MicroCityNotes
 
 🔗 MicroCity项目链接
-- MicroCity: https://github.com/microcity/microcity.github.io
-- MicroCity文档: https://github.com/microcity/microcity.github.io/tree/main/doc
+- MicroCity Web: https://github.com/microcity/microcity.github.io
+- MicroCity Desktop: https://github.com/microcity/desktop
+- MicroCity Desktop文档: https://github.com/microcity/desktop/tree/main/doc
