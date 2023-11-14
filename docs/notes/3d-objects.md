@@ -246,3 +246,9 @@ local num = obj:getparent()
 ```lua:no-line-numbers
 obj:setparent(obj0)
 ```
+
+### delete()
+删除 `obj` 对象
+```lua:no-line-numbers
+obj:delete()
+```

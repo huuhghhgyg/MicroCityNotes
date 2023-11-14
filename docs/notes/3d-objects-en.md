@@ -6,7 +6,7 @@ This section will introduce the objects and their control functions in a 3D scen
 
 To add objects to the scene, use the following function:
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj([type], {key1 = value1, key2 = value2, ...})
 ```
 
@@ -52,7 +52,7 @@ The following are the types of objects that can be added to the scene:
 
 `label` is a text label. The text of the label can be set in the `text` attribute.
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj('label', {text = "Hello World!"})
 ```
 
@@ -91,7 +91,7 @@ polyline point order comparison
 
 `box` is a cuboid. Its shape can be modified mainly through the `length`, `width`, and `height` attributes.
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj('box', {length = 3, width = 4, height = 5})
 ```
 
@@ -127,7 +127,7 @@ Boxes with different lengths, widths, and heights.
 
 `sphere` is used to create a sphere object. Its size can be modified by the `radius` attribute, and its model quality can be set by setting the `segments` attribute. Refer to the example of the Earth in the built-in samples for more details.
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj('sphere', {radius=15, segments=360})
 ```
 
@@ -146,7 +146,7 @@ The impact of different `segments` on the same sphere
 
 `polygon` is used to create a polygon object, mainly set through the `vertices` attribute.
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0}})
 ```
 
@@ -167,13 +167,13 @@ Reference external files. However, for MicroCityWeb, only the built-in files on 
 
 For example, in the built-in example, a box-type truck is generated in the view by referencing the internal file:
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj('/res/2axle.glb')
 ```
 
 You can also reference an external model by referencing the URL of the file:
 
-```lua
+```lua:no-line-numbers
 local obj = scene.addobj('https://microcityweb.gitee.io/res/agv.glb')
 ```
 
@@ -195,7 +195,7 @@ Assuming the 3D object to be manipulated is `obj`.
 
 Gets the position coordinates (x, y, z) of `obj`.
 
-```lua
+```lua:no-line-numbers
 local x, y, z = obj:getpos()
 ```
 
@@ -203,7 +203,7 @@ local x, y, z = obj:getpos()
 
 Sets the position coordinates of `obj` to (x, y, z).
 
-```lua
+```lua:no-line-numbers
 obj:setpos(x, y, z)
 ```
 
@@ -211,7 +211,7 @@ obj:setpos(x, y, z)
 
 Gets the rotation angles (rx, ry, rz) of `obj` in the x, y, and z directions.
 
-```lua
+```lua:no-line-numbers
 local rx, ry, rz = obj:getrot()
 ```
 
@@ -219,7 +219,7 @@ local rx, ry, rz = obj:getrot()
 
 Sets the rotation angles of `obj` in the x, y, and z directions to (rx, ry, rz).
 
-```lua
+```lua:no-line-numbers
 obj:setrot(rx, ry, rz)
 ```
 
@@ -227,7 +227,7 @@ obj:setrot(rx, ry, rz)
 
 Gets the scaling ratios (sx, sy, sz) of `obj` in the x, y, and z directions.
 
-```lua
+```lua:no-line-numbers
 local sx, sy, sz = obj:getscale()
 ```
 
@@ -235,7 +235,7 @@ local sx, sy, sz = obj:getscale()
 
 Sets the scaling ratios of `obj` in the x, y, and z directions to (sx, sy, sz).
 
-```lua
+```lua:no-line-numbers
 obj:setscale(sx, sy, sz)
 ```
 
@@ -243,7 +243,7 @@ obj:setscale(sx, sy, sz)
 
 Gets the table of child objects of `obj`.
 
-```lua
+```lua:no-line-numbers
 local children = obj:getchildren()
 ```
 
@@ -251,7 +251,7 @@ local children = obj:getchildren()
 
 Sets the table of child objects of `obj` to `children_table`.
 
-```lua
+```lua:no-line-numbers
 obj:setchildren(children_table)
 ```
 
@@ -259,7 +259,7 @@ obj:setchildren(children_table)
 
 Gets the parent object of `obj`.
 
-```lua
+```lua:no-line-numbers
 local num = obj:getparent()
 ```
 
@@ -267,6 +267,14 @@ local num = obj:getparent()
 
 Sets the parent object of `obj` to `obj0`.
 
-```lua
+```lua:no-line-numbers
 obj:setparent(obj0)
+```
+
+### delete()
+
+Delete `obj`.
+
+```lua:no-line-numbers
+obj:delete()
 ```
