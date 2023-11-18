@@ -50,7 +50,7 @@ Print("hello, world!")
 
 ## [MicroCityNotes](https://github.com/huuhghhgyg/MicroCityNotes) 仓库
 
-![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/MicroCityNotes) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/huuhghhgyg/MicroCityNotes/DeployPage.yml?branch=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/huuhghhgyg/MicroCityNotes) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/huuhghhgyg/MicroCityNotes/DeployPage.yml?branch=main) [![Netlify Status](https://api.netlify.com/api/v1/badges/fe05238c-93ee-44db-84cf-7f805d43520a/deploy-status)](https://mcn.zhhuu.top)
 
 <A2hs/>
 
