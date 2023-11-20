@@ -45,10 +45,10 @@ stack traceback:
 ```
 
 ### 运行状态
-- `debug.debug()` 进入Debug模式
-- `debug.pause()` 暂停程序运行。顶部运行按钮:arrow_forward:会亮起，暂停按钮:pause_button:熄灭
+- `debug.debug()` 进入Debug模式。常用于在程序运行过程中进入Debug模式。如果想要启动时就进入Debug模式，可以右键顶部:arrow_forward:按钮。详见 [用户界面简介 - 运行状态](./web-ui.html#程序控制)。
+- `debug.pause()` 暂停程序运行。顶部运行按钮:arrow_forward:会亮起，暂停按钮:pause_button:熄灭。
 
-## 其他命令
+## 其他调试命令
 Lua 的 Debug 函数大多都适用于 MicroCity Web，可以参考：
 - [The Debug Library | Lua 5.4 Reference Manual](https://www.lua.org/manual/5.4/manual.html#6.10)
 - [Lua 调试(Debug) | 菜鸟教程](https://www.runoob.com/lua/lua-debug.html)
