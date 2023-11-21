@@ -18,6 +18,7 @@ export default {
     ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
     ["link", { rel: "icon", href: "./images/icon_microcity.png" }],
   ],
+  headers: { "Access-Control-Allow-Origin": "*" },
   locales: {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     "/": {
@@ -176,7 +177,7 @@ export default {
       container: true,
       // 启用流程图
       flowchart: true,
-    }),
+    }, false),
     //PWA支持
     pwaPlugin({
       // 首次成功注册时显示PWA安装按钮
