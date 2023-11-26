@@ -2,7 +2,7 @@
 
 面向对象编程（Object Oriented Programming）是一种编程思想，它将真实世界中的事物抽象成程序世界中的对象，对象之间通过消息传递进行通信，从而构成程序的功能。
 
-![堆场对象](../images/note/MicroCityWeb/../RMGObjects.png)
+![堆场对象](../images/note/RMGObjects.png)
 
 网上说的面向对象编程具有三大特征，即封装、继承和多态。但是我认为在这个仿真中用得最多的就是封装，继承和多态用的机会很少。此外，我暂时还没有在MicroCity中实现过对象的消息传递，如果实现了会继续更新本文。因此下面主要介绍一下如何在适用于MicroCity的lua代码中使用封装。
 

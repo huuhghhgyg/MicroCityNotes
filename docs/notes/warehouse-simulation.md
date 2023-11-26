@@ -3,7 +3,7 @@
 > 本文思路仅供参考，建议做出适当改进。
 
 ## 具体问题：基于元胞自动机的仓库仿真
-![Problem1](../images/note/MicroCityWeb/../WarehouseSim/problem1.webp)
+![Problem1](../images/note/WarehouseSim/problem1.webp)
 
 其中，出入库位置可以更改，叉车为AGV。
 
