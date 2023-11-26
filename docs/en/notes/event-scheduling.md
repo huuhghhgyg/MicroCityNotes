@@ -139,7 +139,7 @@ Program control, in this context, mainly refers to controlling the execution of 
 
 <center>
 
-![Command Bar](./images/MicroCityWeb/CommandBar.png)
+![Command Bar](../../images/note/MicroCityWeb/CommandBar.png)
 
 Command Bar
 

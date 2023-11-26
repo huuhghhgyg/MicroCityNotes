@@ -12,26 +12,20 @@ const __dirname = getDirname(import.meta.url);
 
 export default {
   base: "/MicroCityNotes/",
-  head: [
-    ["link", { rel: "icon", href: "./images/icon_microcity.png" }],
-  ],
+  head: [["link", { rel: "icon", href: "./images/icon_microcity.png" }]],
   locales: {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     "/": {
       lang: "zh-CN",
       title: "MicroCity笔记",
       description: "记录MicroCity的学习过程并提供快捷的参考",
-      head: [
-        ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
-      ],
+      head: [["meta", { name: "keywords", content: "MicroCity,笔记,文档" }]],
     },
     "/en/": {
       lang: "en-US",
       title: "MicroCity Notes",
       description: "Record the learning process of MicroCity and provide quick reference",
-      head: [
-        ["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }],
-      ],
+      head: [["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }]],
     },
   },
   shouldPrefetch: false, //pwa插件要求
@@ -41,125 +35,238 @@ export default {
 
     // 语言切换配置
     locales: {
-      '/': {
-        selectLanguageName: '简体中文',
-      },
-      '/en/': {
-        selectLanguageName: 'English',
-      },
-    },
+      "/": {
+        selectLanguageName: "简体中文",
 
-    // 顶栏配置
-    navbar: [
-      {
-        text: "首页",
-        link: "/",
-      },
-      {
-        text: "笔记",
-        link: "/notes/",
-      },
-      {
-        text: "文档",
-        children: [
+        // 顶栏配置
+        navbar: [
           {
-            text: "Desktop版文档",
-            link: "/docs/",
+            text: "首页",
+            link: "/",
+          },
+          {
+            text: "笔记",
+            link: "/notes/",
+          },
+          {
+            text: "文档",
             children: [
-              { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
-              { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
-              { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
-              { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+              {
+                text: "Desktop版文档",
+                link: "/docs/",
+                children: [
+                  { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
+                  { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
+                  { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
+                  { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
+                ],
+              },
             ],
+          },
+          {
+            text: "MicroCity项目仓库",
+            children: [
+              {
+                text: "github",
+                children: [
+                  { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
+                  { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+                ],
+              },
+              {
+                text: "gitee",
+                children: [
+                  { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
+                  { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "MicroCity Web",
+            link: "https://microcity.gitee.io/",
           },
         ],
-      },
-      {
-        text: "MicroCity项目仓库",
-        children: [
-          {
-            text: "github",
-            children: [
-              { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
-              { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
-            ],
-          },
-          {
-            text: "gitee",
-            children: [
-              { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
-              { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
-            ],
-          },
-        ],
-      },
-      {
-        text: "MicroCity Web",
-        link: "https://microcity.gitee.io/",
-      },
-    ],
 
-    // 侧边栏配置
-    sidebar: {
-      "/": [
-        { text: "MicroCity文档", link: "/docs/", collapsible: true },
-        { text: "笔记", link: "/notes/", collapsible: true },
-      ],
-      "/docs/": [
-        {
-          text: "MicroCity文档",
-          children: [
-            { text: "目录", link: "/docs/", children: [] },
+        // 侧边栏配置
+        sidebar: {
+          "/": [
+            { text: "MicroCity文档", link: "/docs/", collapsible: true },
+            { text: "笔记", link: "/notes/", collapsible: true },
+          ],
+          "/docs/": [
             {
-              text: "1.MicroCity介绍",
-              collapsible: true,
-              children: ["/docs/1.1_what_microcity_can_do"],
+              text: "MicroCity文档",
+              children: [
+                { text: "目录", link: "/docs/", children: [] },
+                {
+                  text: "1.MicroCity介绍",
+                  collapsible: true,
+                  children: ["/docs/1.1_what_microcity_can_do"],
+                },
+                {
+                  text: "2.开始使用MicroCity",
+                  collapsible: true,
+                  children: ["/docs/2.1_showing_a_world_map", "/docs/2.2_searching_for_countries"],
+                },
+                {
+                  text: "3.用户界面",
+                  collapsible: true,
+                  children: ["/docs/3.1_ui_overview", "/docs/3.2_vector_shapes", "/docs/3.3_raster_grids", "/docs/3.4_3d_scenes", "/docs/3.5_tables", "/docs/3.6_maps_and_layers", "/docs/3.7_modules"],
+                },
+                {
+                  text: "4.脚本编写",
+                  collapsible: true,
+                  children: ["/docs/4.1_si_overview", "/docs/4.2_ui_control", "/docs/4.3_shapes_and_tables", "/docs/4.4_grids", "/docs/4.5_3d_scenes", "/docs/4.6_networks", "/docs/4.7_des_simulations", "/docs/4.8_mixed_integer_programming"],
+                },
+              ],
+            },
+          ],
+          "/notes/": [
+            {
+              text: "目录",
+              link: "/notes/",
+              children: [], // 侧边栏不显示子目录
             },
             {
-              text: "2.开始使用MicroCity",
+              text: "通用知识",
               collapsible: true,
-              children: ["/docs/2.1_showing_a_world_map", "/docs/2.2_searching_for_countries"],
+              children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
             },
             {
-              text: "3.用户界面",
+              text: "MicroCity",
               collapsible: true,
-              children: ["/docs/3.1_ui_overview", "/docs/3.2_vector_shapes", "/docs/3.3_raster_grids", "/docs/3.4_3d_scenes", "/docs/3.5_tables", "/docs/3.6_maps_and_layers", "/docs/3.7_modules"],
+              children: ["/notes/visualization", "/notes/network", "/notes/lp"],
             },
             {
-              text: "4.脚本编写",
+              text: "MicroCityWeb",
               collapsible: true,
-              children: ["/docs/4.1_si_overview", "/docs/4.2_ui_control", "/docs/4.3_shapes_and_tables", "/docs/4.4_grids", "/docs/4.5_3d_scenes", "/docs/4.6_networks", "/docs/4.7_des_simulations", "/docs/4.8_mixed_integer_programming"],
+              children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip"],
+            },
+            {
+              text: "思路",
+              collapsible: true,
+              children: ["/notes/warehouse-simulation", "/notes/plots", "/notes/cy-simulation"],
             },
           ],
         },
-      ],
-      "/notes/": [
-        {
-          text: "目录",
-          link: "/notes/",
-          children: [], // 侧边栏不显示子目录
+      },
+      "/en/": {
+        selectLanguageName: "English",
+
+        // Top bar configuration
+        navbar: [
+          {
+            text: "Home",
+            link: "/",
+          },
+          {
+            text: "Notes",
+            link: "/en/notes/",
+          },
+          {
+            text: "Documentation",
+            children: [
+              {
+                text: "Desktop Documentation",
+                link: "/en/docs/",
+                children: [
+                  { text: "1. MicroCity Introduction", link: "/en/docs/1.1_what_microcity_can_do" },
+                  { text: "2. Getting Started with MicroCity", link: "/en/docs/2.1_showing_a_world_map" },
+                  { text: "3. User Interface", link: "/en/docs/3.1_ui_overview" },
+                  { text: "4. Script Writing", link: "/en/docs/4.1_si_overview" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "MicroCity Repositories",
+            children: [
+              {
+                text: "GitHub",
+                children: [
+                  { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
+                  { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+                ],
+              },
+              {
+                text: "Gitee",
+                children: [
+                  { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
+                  { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "MicroCity Web",
+            link: "https://microcity.gitee.io/",
+          },
+        ],
+
+        // Sidebar configuration
+        sidebar: {
+          "/": [
+            { text: "MicroCity Documentation", link: "/en/docs/", collapsible: true },
+            { text: "Notes", link: "/en/notes/", collapsible: true },
+          ],
+          "/en/docs/": [
+            {
+              text: "MicroCity Documentation",
+              children: [
+                { text: "Table of Contents", link: "/en/docs/", children: [] },
+                {
+                  text: "1. MicroCity Introduction",
+                  collapsible: true,
+                  children: ["/en/docs/1.1_what_microcity_can_do"],
+                },
+                {
+                  text: "2. Getting Started with MicroCity",
+                  collapsible: true,
+                  children: ["/en/docs/2.1_showing_a_world_map", "/en/docs/2.2_searching_for_countries"],
+                },
+                {
+                  text: "3. User Interface",
+                  collapsible: true,
+                  children: ["/en/docs/3.1_ui_overview", "/en/docs/3.2_vector_shapes", "/en/docs/3.3_raster_grids", "/en/docs/3.4_3d_scenes", "/en/docs/3.5_tables", "/en/docs/3.6_maps_and_layers", "/en/docs/3.7_modules"],
+                },
+                {
+                  text: "4. Script Writing",
+                  collapsible: true,
+                  children: ["/en/docs/4.1_si_overview", "/en/docs/4.2_ui_control", "/en/docs/4.3_shapes_and_tables", "/en/docs/4.4_grids", "/en/docs/4.5_3d_scenes", "/en/docs/4.6_networks", "/en/docs/4.7_des_simulations", "/en/docs/4.8_mixed_integer_programming"],
+                },
+              ],
+            },
+          ],
+          "/en/notes/": [
+            {
+              text: "Table of Contents",
+              link: "/en/notes/",
+              children: [], // Subdirectories are not displayed in the sidebar
+            },
+            {
+              text: "General Knowledge",
+              collapsible: true,
+              children: ["/en/notes/lua", "/en/notes/versions", "/en/notes/timelapse", "/en/notes/oop"],
+            },
+            {
+              text: "MicroCity",
+              collapsible: true,
+              children: ["/en/notes/visualization", "/en/notes/network", "/en/notes/lp"],
+            },
+            {
+              text: "MicroCityWeb",
+              collapsible: true,
+              children: ["/en/notes/web-ui", "/en/notes/3d-scene", "/en/notes/3d-objects", "/en/notes/event-scheduling", "/en/notes/mip"],
+            },
+            {
+              text: "Concepts",
+              collapsible: true,
+              children: ["/en/notes/warehouse-simulation", "/en/notes/plots", "/en/notes/cy-simulation"],
+            },
+          ],
         },
-        {
-          text: "通用知识",
-          collapsible: true,
-          children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
-        },
-        {
-          text: "MicroCity",
-          collapsible: true,
-          children: ["/notes/visualization", "/notes/network", "/notes/lp"],
-        },
-        {
-          text: "MicroCityWeb",
-          collapsible: true,
-          children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip"],
-        },
-        {
-          text: "思路",
-          collapsible: true,
-          children: ["/notes/warehouse-simulation", "/notes/plots", "/notes/cy-simulation"],
-        },
-      ],
+      },
     },
   }),
 
@@ -169,6 +276,9 @@ export default {
       locales: {
         "/": {
           placeholder: "搜索",
+        },
+        "/en/": {
+          placeholder: "Search",
         },
       },
     }),

@@ -6,7 +6,7 @@ This section introduces 3D scenes and their settings.
 
 The 3D scene coordinate system in MicroCityWeb follows the right-hand coordinate system, and the specific direction of each coordinate axis is shown in the following figure.
 
-![Coordinate system in MicroCityWeb](./images/MicroCityWeb/coordinate.png)
+![Coordinate system in MicroCityWeb](../../images/note/MicroCityWeb/coordinate.png)
 
 Coordinate system in MicroCityWeb
 

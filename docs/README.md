@@ -24,7 +24,7 @@ head:
 
 1. 打开[MicroCity Web](https://microcity.gitee.io/)，默认加载方块旋转的示例代码。
 
-2. 点击运行![Play](./notes/images/play.svg)按钮运行代码
+2. 点击运行![Play](./images/note/play.svg)按钮运行代码
  
 3. 程序运行，看到右侧视图中方块旋转。
 

@@ -11,7 +11,7 @@
 以下是用我包装的直方图对象绘制的直方图的示例
 
 ::: center
-![直方图示例](./images/Histogram.png =500x)
+![直方图示例](../images/note/Histogram.png =500x)
 :::
 
 ### 导入直方图
@@ -119,7 +119,7 @@ end
 子图(Subplot)是为了解决同时在界面中放置多个图的图定位和尺寸问题。名称借鉴自MATLAB。
 
 ::: center
-![子图](./images/Subplot_Vertical.png =500x)
+![子图](../images/note/Subplot_Vertical.png =500x)
 :::
 
 ### 导入子图

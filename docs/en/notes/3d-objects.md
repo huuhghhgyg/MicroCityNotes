@@ -81,7 +81,7 @@ scene.addobj("polyline", {vertices = {0,0,0, 4,6,7, -2,3,5}})
 scene.addobj("polyline", {vertices = {0,0,0, -2,3,5, 4,6,7}})
 ```
 
-![polyline point order comparison](./images/MicroCityWeb/polylines_order.jpg)
+![polyline point order comparison](../../images/note/MicroCityWeb/polylines_order.jpg)
 
 polyline point order comparison
 
@@ -119,7 +119,7 @@ while scene.render() do
 end
 ```
 
-![boxes with different lengths, widths, and heights](./images/MicroCityWeb/box_lwh.jpg)
+![boxes with different lengths, widths, and heights](../../images/note/MicroCityWeb/box_lwh.jpg)
 
 Boxes with different lengths, widths, and heights.
 
@@ -138,7 +138,7 @@ Optional attributes for `sphere` objects:
 | `radius` | The radius of the sphere. It can be used to control the size of the sphere. |
 | `segments` | The number of rendered surfaces of the sphere. The higher the value, the more detailed the sphere model will be. |
 
-![The impact of different segments on the same sphere](./images/MicroCityWeb/segments.jpg)
+![The impact of different segments on the same sphere](../../images/note/MicroCityWeb/segments.jpg)
 
 The impact of different `segments` on the same sphere
 
@@ -157,7 +157,7 @@ local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0
 | `vertices` | The vertices of the polygon | You can set the three-dimensional coordinates of each point in turn in the `vertices` attribute. The third dimension coordinates do not have an impact but play a placeholder role. |
 | `size` | Volume | Since the third dimension coordinates do not have an impact, and the area is already determined by the vertices of the polygon, the `size` attribute controls the volume by controlling the third dimension coordinate values of each point. |
 
-![The impact of different size on the same polygon volume](./images/MicroCityWeb/polygon_sizes.jpg)
+![The impact of different size on the same polygon volume](../../images/note/MicroCityWeb/polygon_sizes.jpg)
 
 The impact of different `size` on the same polygon volume
 

@@ -74,7 +74,7 @@ scene.addobj("polyline", {vertices = {0,0,0, -2,3,5, 4,6,7}})
 ```
 
 ::: center
-![polyline点顺序对比图](./images/MicroCityWeb/polylines_order.jpg)
+![polyline点顺序对比图](../images/note/MicroCityWeb/polylines_order.jpg)
 
 polyline点顺序对比图
 :::
@@ -112,7 +112,7 @@ end
 ```
 
 ::: center
-![不同长宽高设置的box](./images/MicroCityWeb/box_lwh.jpg)
+![不同长宽高设置的box](../images/note/MicroCityWeb/box_lwh.jpg)
 
 不同长宽高设置的box
 :::
@@ -131,7 +131,7 @@ local obj = scene.addobj('sphere', {radius=15, segments=360})
 |`segments`|球体的渲染面数。设置值越高球体的模型越精细。|
 
 ::: center
-![不同segment对于相同sphere的影响](./images/MicroCityWeb/segments.jpg)
+![不同segment对于相同sphere的影响](../images/note/MicroCityWeb/segments.jpg)
 
 不同segment对于相同sphere的影响
 :::
@@ -151,7 +151,7 @@ local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0
 |`size`|体积|由于第三维的坐标不影响，且多边形的顶点确定后面积就已经确定，因此 `size` 属性通过控制每个点的第三维坐标值来控制体积。|
 
 ::: center
-![不同size对于相同polygon体积的影响](./images/MicroCityWeb/polygon_sizes.jpg)
+![不同size对于相同polygon体积的影响](../images/note/MicroCityWeb/polygon_sizes.jpg)
 
 不同size对于相同polygon体积的影响
 :::
