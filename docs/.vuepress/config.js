@@ -12,20 +12,28 @@ const __dirname = getDirname(import.meta.url);
 
 export default {
   base: "/MicroCityNotes/",
-  head: [["link", { rel: "icon", href: "./images/icon_microcity.png" }]],
+  // head需要到locals中分别配置
   locales: {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     "/": {
       lang: "zh-CN",
       title: "MicroCity笔记",
       description: "记录MicroCity的学习过程并提供快捷的参考",
-      head: [["meta", { name: "keywords", content: "MicroCity,笔记,文档" }]],
+      head: [
+        ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
+        ["link", { rel: "manifest", href: "manifest.webmanifest" }],
+        ["link", { rel: "icon", href: "./images/icon_microcity.png" }],
+      ],
     },
     "/en/": {
       lang: "en-US",
       title: "MicroCity Notes",
       description: "Record the learning process of MicroCity and provide quick reference",
-      head: [["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }]],
+      head: [
+        ["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }],
+        ["link", { rel: "manifest", href: "../manifest.webmanifest" }],
+        ["link", { rel: "icon", href: "../images/icon_microcity.png" }],
+      ],
     },
   },
   shouldPrefetch: false, //pwa插件要求
