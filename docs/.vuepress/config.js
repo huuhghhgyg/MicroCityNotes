@@ -293,20 +293,23 @@ export default {
       hostname: "https://huuhghhgyg.github.io",
     }),
     //markdown增强
-    mdEnhancePlugin({
-      // 启用代码块分组
-      codetabs: true,
-      // 使用 KaTeX 启用 TeX 支持
-      katex: true,
-      // 自定义对齐
-      align: true,
-      // 自定义图片大小
-      imgSize: true,
-      // 启用容器
-      container: true,
-      // 启用流程图
-      flowchart: true,
-    }),
+    mdEnhancePlugin(
+      {
+        // 启用代码块分组
+        codetabs: true,
+        // 使用 KaTeX 启用 TeX 支持
+        katex: true,
+        // 自定义对齐
+        align: true,
+        // 自定义图片大小
+        imgSize: true,
+        // 启用容器
+        container: true,
+        // 启用流程图
+        flowchart: true,
+      },
+      false
+    ),
     //PWA支持
     pwaPlugin({
       // 首次成功注册时显示PWA安装按钮

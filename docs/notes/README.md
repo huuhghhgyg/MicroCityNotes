@@ -17,6 +17,7 @@
 - [3D 对象](./3d-objects.md)
 - [离散事件模拟和程序控制](./event-scheduling.md)
 - [混合整数规划](./mip.md)
+- [调试相关](./debug.md)
 
 ## 思路
 - [仓库仿真](./warehouse-simulation.md)
