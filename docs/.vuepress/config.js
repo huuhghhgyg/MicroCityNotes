@@ -158,7 +158,7 @@ export default {
         navbar: [
           {
             text: "Home",
-            link: "/",
+            link: "/en/",
           },
           {
             text: "Notes",
