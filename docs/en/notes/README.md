@@ -17,6 +17,7 @@
 - [3D Objects](./3d-objects.md)
 - [Discrete Event Simulation and Program Control](./event-scheduling.md)
 - [Mixed Integer Programming](./mip.md)
+- [Debugging](./debug.md)
 
 ## Ideas
 - [Warehouse Simulation](./warehouse-simulation.md)

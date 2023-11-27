@@ -141,7 +141,7 @@ export default {
             {
               text: "MicroCityWeb",
               collapsible: true,
-              children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip"],
+              children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip", "/notes/debug"],
             },
             {
               text: "思路",
@@ -257,7 +257,7 @@ export default {
             {
               text: "MicroCityWeb",
               collapsible: true,
-              children: ["/en/notes/web-ui", "/en/notes/3d-scene", "/en/notes/3d-objects", "/en/notes/event-scheduling", "/en/notes/mip"],
+              children: ["/en/notes/web-ui", "/en/notes/3d-scene", "/en/notes/3d-objects", "/en/notes/event-scheduling", "/en/notes/mip", "/en/notes/debug"],
             },
             {
               text: "Concepts",
