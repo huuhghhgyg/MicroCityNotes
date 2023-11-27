@@ -4,11 +4,12 @@ export default {
   data() {
     return {
       added: true, //默认已经添加
-      lang: document.documentElement.lang,
+      lang: undefined,
       deferredPrompt: null,
     };
   },
   mounted() {
+    this.lang = document.documentElement.lang; //设置语言
     window.addEventListener("beforeinstallprompt", (event) => {
       // 检测到用户可能会将网站添加到主屏幕
       // 在这里您可以显示一个提示，提醒用户将网站添加到主屏幕
