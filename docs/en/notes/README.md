@@ -1,19 +1,19 @@
 # Notes
 ## General Knowledge
-- [Quick Start to Lua Language](./lua.md)
+- [Quick Start with Lua Language](./lua.md)
 - [Versions of MicroCity](./versions.md)
-- [Time-lapse Method](./timelapse.md)
+- [Time Advancement Methods](./timelapse.md)
 - [Object-oriented Programming](./oop.md)
 - [Regarding Tools](./tools.md)
 
 ## MicroCity (Desktop Version)
-- [Results Visualization](./visualization.md)
+- [Visualization of Results](./visualization.md)
 - [Operating Networks](./network.md)
 - [Model Solving](./lp.md)
 
 ## MicroCityWeb
 - [Introduction to User Interface](./web-ui.md)
-- [3D Scenes](./3d-scene.md)
+- [3D Scene](./3d-scene.md)
 - [3D Objects](./3d-objects.md)
 - [Discrete Event Simulation and Program Control](./event-scheduling.md)
 - [Mixed Integer Programming](./mip.md)
