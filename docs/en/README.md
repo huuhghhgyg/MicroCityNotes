@@ -2,23 +2,23 @@
 home: true
 title: Home Page
 actions:
-- text: 桌面版 文档
-  link: /docs/
+- text: Desktop docs
+  link: ./docs/
   type: secondary
-- text: 学习笔记
-  link: /notes/
+- text: Learning notes
+  link: ./notes/
   type: primary
 features:
-- title: 文档和搜索 🔍
-  details: 桌面版文档内容搬运自 MicroCity 项目文档并稍作适应性修改，在这里可以使用网站提供的搜索功能快速查找并跳转至内容
-- title: 学习笔记 📔
-  details: 除了文档，还有 MicroCity Web/Desktop 使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避开天坑
-- title: 高颜值，流畅 ✨
-  details: VuePress 驱动的独立网站，提供流畅阅读和文档参考体验。支持以 PWA 方式安装为应用，随时查阅，不受网络限制
+- title: Doc and Search 🔍
+  details: The desktop documentation is adapted from MicroCity's project docs with slight modifications. Quickly search and navigate content using the website's search functionality.
+- title: Learning Notes 📔
+  details: In addition to docs, find summaries of pitfalls in using and learning MicroCity Web/Desktop. These notes aim to help you avoid as many pitfalls as possible.
+- title: Stylish and Smooth ✨
+  details: VuePress powers this standalone site for a seamless reading and documentation reference. Install it as a Progressive Web App (PWA) for anytime access, irrespective of network constraints.
 head:
 - - meta
   - name: description
-    content: MicroCity学习笔记，提供流畅舒适的文档搜索和学习体验。可以使用网站提供的搜索功能快速查找并跳转至内容。除了文档，还有MicroCity使用和学习过程中的一些踩坑总结和记录，帮助你尽可能多地避坑。
+    content: MicroCity learning notes provide a smooth and comfortable documentation search and learning experience. You can use the website's search functionality to quickly find and navigate to content. In addition to the documentation, there are also summaries and records of pitfalls encountered during the use and learning of MicroCity, helping you navigate as smoothly as possible.
 ---
 
 ## Getting Started with MicroCity Web
