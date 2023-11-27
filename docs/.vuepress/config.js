@@ -320,8 +320,6 @@ export default {
     ),
     //PWA支持
     pwaPlugin({
-      // 首次成功注册时显示PWA安装按钮
-      showInstall: true,
       // 缓存站点图片（站点图片不大）
       cachePic: true,
       // 网站体积不大，并使文档完全离线可用
