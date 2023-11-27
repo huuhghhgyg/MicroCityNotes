@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       added: true, //默认已经添加
+      lang: document.documentElement.lang,
       deferredPrompt: null,
     };
   },
@@ -48,5 +49,8 @@ export default {
 </script>
 
 <template>
-  <p v-if="!added">由于本站架设于Github上，国内访问可能不稳定🤧。强烈建议您将本站添加至主屏幕，以便网络状况不佳或离线时使用。您可以 <a @click="promptA2hs()" style="font-weight: bold">点击此处</a> 将本站作为Web应用程序安装。</p>
+  <div v-if="!added">
+    <p v-if="lang=='zh-CN'">由于本站架设于Github上，国内访问可能不稳定🤧。强烈建议您将本站添加至主屏幕，以便网络状况不佳或离线时使用。您可以 <a @click="promptA2hs()" style="font-weight: bold">点击此处</a> 将本站作为Web应用程序安装。</p>
+    <p v-else>You can <a @click="promptA2hs()" style="font-weight: bold">click here</a> to install this site as a web application 📦</p>
+  </div>
 </template>

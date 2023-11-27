@@ -2,7 +2,7 @@
 
 The overall interface of MicroCityWeb is shown in the following figure. This article will provide a detailed introduction to the user interface (UI) operations of MicroCityWeb.
 
-![Overall interface](./images/MicroCityWeb/WebUIOverview.png)
+![Overall interface](../../images/note/MicroCityWeb/WebUIOverview.png)
 
 ## Overview of Interface Zones
 Overall, the interface of MicroCityWeb can be roughly divided into four areas:
@@ -11,14 +11,14 @@ Overall, the interface of MicroCityWeb can be roughly divided into four areas:
 * [Right - Red Area](#red-canvas-area): view area
 * [Bottom - Yellow Area](#yellow-code-output-area): output information, recognize program running status
 
-![Interface zones](./images/MicroCityWeb/WebUIParts.png)
+![Interface zones](../../images/note/MicroCityWeb/WebUIParts.png)
 
 Next, we will provide a detailed description of the usage and functions of these areas.
 
 ## Blue: Command Area
 The content of this area is shown in the following figure, with nine available buttons.
 
-![Command bar](./images/MicroCityWeb/CommandBar.png)
+![Command bar](../../images/note/MicroCityWeb/CommandBar.png)
 
 ### Program Control
 The first three buttons are mainly used to control program execution. Their specific functions are as follows:
@@ -29,7 +29,7 @@ The first three buttons are mainly used to control program execution. Their spec
 
 3.  **Stop/Force Stop:** If the program is running, clicking the left mouse button will stop its execution. If left-clicking does not stop the script, right-clicking can forcibly terminate its execution.
 
-![Program control](./images/MicroCityWeb/RunCode.gif)
+![Program control](../../images/note/MicroCityWeb/RunCode.gif)
 
 ### Code Editing
 
@@ -39,7 +39,7 @@ Buttons 4-7 are mainly related to code editing.
     
 5.  **Open Built-In Code:** You can directly load built-in code (import built-in models), such as cubes, trucks, earth, world maps, etc. The specific models will be introduced in detail when the [red canvas area](#red-canvas-area) is introduced.
 ::: center
-![Built-in code](./images/MicroCityWeb/Presets.png)
+![Built-in code](../../images/note/MicroCityWeb/Presets.png)
 
 Built-in code list
 :::
@@ -66,7 +66,7 @@ Built-in code list
 
 ## Green: Code Editor
 
-![Code Editor](./images/MicroCityWeb/AceEditor.png)
+![Code Editor](../../images/note/MicroCityWeb/AceEditor.png)
 
 The integrated code editor on the left side of MicroCityWeb is based on AceEditor and therefore has some of its features.
 
@@ -110,12 +110,12 @@ After importing the scene code, click the "Run" button to load the scene.
 
 ::: center
 
-![Built-in car model](./images/MicroCityWeb/Preset_Truck.png)
+![Built-in car model](../../images/note/MicroCityWeb/Preset_Truck.png)
 
 Built-in car model
 
 
-![Built-in Earth model](./images/MicroCityWeb/Preset_Earth.png)
+![Built-in Earth model](../../images/note/MicroCityWeb/Preset_Earth.png)
 
 Built-in Earth model
 :::
@@ -129,7 +129,7 @@ Scene operations, including viewpoint movement and rotation, need to be performe
 * Rotation
   * Scene rotation: Hold down the left mouse button and drag to rotate from your viewpoint.
   * Object rotation: Click on the object, the color of the object changes, and then hold down the left mouse button on the object to rotate around the object's center.
-  ![Rotate object](./images/MicroCityWeb/ObjectRotate.gif)
+  ![Rotate object](../../images/note/MicroCityWeb/ObjectRotate.gif)
 
 These operation rules apply to both two-dimensional and three-dimensional objects.
 
@@ -137,7 +137,7 @@ These operation rules apply to both two-dimensional and three-dimensional object
 
 After opening MicroCityWeb, the code output area is shown below. Clicking on the code output area will cause the entire area to move up, allowing you to see more historical output information.
 
-![Bottom bar](./images/MicroCityWeb/BottomBar.gif)
+![Bottom bar](../../images/note/MicroCityWeb/BottomBar.gif)
 
 Regarding the information output in this area, the code output area will output the following information:
 * **Script output:** The left side is the output of the script, including the output time and content.
@@ -145,6 +145,6 @@ Regarding the information output in this area, the code output area will output 
 * **MicroCityWeb version number:** Indicates the current version number of MicroCityWeb being used. If there is a difference from the known version, you can force a refresh to load the latest version.
 
 ## Notes
-![Turn off automatic translation](./images/MicroCityWeb/AutoTranslate.png)
+![Turn off automatic translation](../../images/note/MicroCityWeb/AutoTranslate.png)
 
 **Turn off automatic translation:** If your operating system language is not English and the browser has automatic translation enabled, it needs to be manually disabled, otherwise there will be errors when running the code.

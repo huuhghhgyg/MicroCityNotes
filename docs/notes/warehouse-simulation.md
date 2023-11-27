@@ -3,7 +3,7 @@
 > 本文思路仅供参考，建议做出适当改进。
 
 ## 具体问题：基于元胞自动机的仓库仿真
-![Problem1](./images/MicroCityWeb/../WarehouseSim/problem1.webp)
+![Problem1](../images/note/WarehouseSim/problem1.webp)
 
 其中，出入库位置可以更改，叉车为AGV。
 
@@ -32,14 +32,14 @@
 
 **旧方法：无障碍预判**（进出货点在 $x=3,y=3$ 的位置）
 ::: center
-![旧方法效果动图](./images/WarehouseSim/无预判障碍.gif)
+![旧方法效果动图](../images/note/WarehouseSim/无预判障碍.gif)
 :::
 
 👉 AGV完成第一个货架的出库后，向第二个货架移动，但是发现第一个货架挡住了去路，因此又回到第一个货架的位置将其移开，再回到第二个货架进行出库操作。
 
 **新方法：预判障碍**（进出货点在 $x=3,y=3$ 的位置）
 ::: center
-![新方法效果动图](./images/WarehouseSim/预判障碍.gif)
+![新方法效果动图](../images/note/WarehouseSim/预判障碍.gif)
 :::
 
 👉 AGV完成第一个货架的出库操作后判断后一个货架是否需要移动其他位置的货架才能到达出入库点。如果需要，则移动障碍货架后才前往后一个货架进行出库。
@@ -68,7 +68,7 @@
 * 黄色高亮：相同布局下操作次数最少（ticks最小）的方案
 
 ::: center
-![最佳布局](./images/WarehouseSim/optimal_layout.webp)
+![最佳布局](../images/note/WarehouseSim/optimal_layout.webp)
 :::
 
 #### 空间利用率最大
@@ -85,7 +85,7 @@
 
 **进出货点在x=2，y=3的位置**
 
-![8个货架动图](./images/WarehouseSim/8cargo.gif)
+![8个货架动图](../images/note/WarehouseSim/8cargo.gif)
 
 ### 创新点
 * 额外考虑货物种类不同的情况。
@@ -100,17 +100,17 @@
 
 5个货架的情况示例
 ::: center
-![不同种类货物-5个货架](./images/WarehouseSim/color5.gif)
+![不同种类货物-5个货架](../images/note/WarehouseSim/color5.gif)
 :::
 
 8个货架的情况示例
 ::: center
-![不同种类货物-8个货架](./images/WarehouseSim/color8.gif)
+![不同种类货物-8个货架](../images/note/WarehouseSim/color8.gif)
 :::
 
 
 ## 仿真改进：三维化自动仓库仿真
-![Problem2](./images/WarehouseSim/problem2.webp)
+![Problem2](../images/note/WarehouseSim/problem2.webp)
 
 在这一部分题目也稍微有所变化，要求将元胞自动机仿真仓库案例**三维化**，进行自动化仓库仿真。具体要求如上图。
 
@@ -140,20 +140,20 @@
 
 **旧策略：** 找到离AGV最近的装有需求货物的货架，将其移动到出入库点。
 
-![旧策略](./images/WarehouseSim/old.gif)
+![旧策略](../images/note/WarehouseSim/old.gif)
 
 可以看到AGV已经将需要出库的同种货物（青色方块）移动到了出入库点，但是由于AGV移动的货架对象是旁边的货架，因此没有对已经在出入库点的货物进行出库。
 
 
 **新策略：** 找到离出入库点最近的装有需求货物的货架，将其移动到出入库点。改变策略后，没有发现以上提到的不合理情况出现。
 
-![新策略](./images/WarehouseSim/new.gif)
+![新策略](../images/note/WarehouseSim/new.gif)
 
 
 ### 创新
 由于测试的次数较多，因此将主体流程写入函数并进行适应性改进，实现自动对所有情况进行仿真测试并将数据输出。下图为自动仿真测试运行为示例。
 
-![自动测试](./images/WarehouseSim/auto_test.webp)
+![自动测试](../images/note/WarehouseSim/auto_test.webp)
 
 自动仿真测试流程代码，仅供参考
 
@@ -194,7 +194,7 @@ end
 在自动仿真测试的过程中发现了BUG，详见下文说明。
 
 ### 货架布局方案
-![货架布局方案](./images/WarehouseSim/test_layout.webp)
+![货架布局方案](../images/note/WarehouseSim/test_layout.webp)
 
 颜色说明
 * 浅蓝色：出入库点
@@ -210,18 +210,18 @@ end
 对每个货物布局方案中每种需求数量的情况仿真测试30次，求单方案结果中的最大值、最小值、平均值。最终得到结论为在6个货架的情况中，方案2的布局表现最优。
 
 #### 方案3：3个货架
-![方案3](./images/WarehouseSim/3trend.webp)
+![方案3](../images/note/WarehouseSim/3trend.webp)
 
 #### 方案6
 方案6平均Ticks总趋势图
-![方案6平均Ticks总趋势图](./images/WarehouseSim/6trend.webp)
+![方案6平均Ticks总趋势图](../images/note/WarehouseSim/6trend.webp)
 
 方案6最优布局方案：方案2
-![方案6最优布局方案](./images/WarehouseSim/sim-result.webp)
+![方案6最优布局方案](../images/note/WarehouseSim/sim-result.webp)
 
 还应绘制分方案的“需求量-最短平均服务时间”单位趋势图。以下以方案6-1为例，横坐标为货物需求数量，纵轴为最短平均服务时间（Ticks）。
 
-![方案6-1](./images/WarehouseSim/6-1trend.webp)
+![方案6-1](../images/note/WarehouseSim/6-1trend.webp)
 
 ### 改进空间
 由于题目没有给定具体事件的执行时间，也没有指定时间单位，因此此处只计量货架的操作次数作为耗费的时间。也就是说，时间是后计算的，我想大部分同学做到这里可能都是这样的思路。虽然最终得出的结果没有问题，但是思路还可以转变一下，适应于后面的学习。

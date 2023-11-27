@@ -5,7 +5,7 @@
 MicroCity Web中的三维场景坐标系符合右手坐标系，各个坐标轴的正方向具体见下图。
 
 ::: center
-![MicroCityWeb中的坐标系](./images/MicroCityWeb/coordinate.png)
+![MicroCityWeb中的坐标系](../images/note/MicroCityWeb/coordinate.png)
 MicroCity Web中的坐标系
 :::
 

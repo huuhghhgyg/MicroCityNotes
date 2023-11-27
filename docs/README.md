@@ -24,7 +24,7 @@ head:
 
 1. 打开[MicroCity Web](https://microcity.gitee.io/)，默认加载方块旋转的示例代码。
 
-2. 点击运行![Play](./notes/images/play.svg)按钮运行代码
+2. 点击运行![Play](./images/note/play.svg)按钮运行代码
  
 3. 程序运行，看到右侧视图中方块旋转。
 
@@ -35,14 +35,14 @@ head:
 
 1. 转到MicroCity的文档仓库下载 [**MicroCity的最新版本**](https://github.com/microcity/Desktop/releases/latest)
 
-2. 打开 ![icon](./docs/imgs/icon_script_editor.png)**ScriptEditor** 并输入:  
+2. 打开 ![icon](./images/doc/icon_script_editor.png)**ScriptEditor** 并输入:  
 ```lua
 Print("hello, world!")
 ```
 
-3. 将脚本另存为 **test.mcs** 并将其拖入 ![icon](./docs/imgs/icon_microcity.png)**MicroCity**
+3. 将脚本另存为 **test.mcs** 并将其拖入 ![icon](./images/doc/icon_microcity.png)**MicroCity**
 
-4. 在程序主界面左侧转到 **Modules** 标签页，打开 ![icon](./docs/imgs/icon_module_file.png)**test** ，双击其中的 ![icon](./docs/imgs/icon_module.png)**main** ，执行刚刚编写的脚本。 
+4. 在程序主界面左侧转到 **Modules** 标签页，打开 ![icon](./images/doc/icon_module_file.png)**test** ，双击其中的 ![icon](./images/doc/icon_module.png)**main** ，执行刚刚编写的脚本。 
 
 5. 程序界面下方的 **Messages** 栏中会输出执行脚本的信息。  
 

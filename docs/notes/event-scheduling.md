@@ -125,7 +125,7 @@ print(seed:random())
 本文中的程序控制主要是指如何使用用户界面中的[按钮](./web-ui#蓝色-命令区域)控制程序的运行，包括暂停、恢复、停止等。
 
 ::: center
-![命令栏](./images/MicroCityWeb/CommandBar.png)
+![命令栏](../images/note/MicroCityWeb/CommandBar.png)
 命令栏
 :::
 

@@ -16,28 +16,28 @@ head:
 ### Lookup Table 通过表中值改变颜色
 将`Type`的属性值改为`Lookup Table`，根据表格中的数值改变图形的颜色，达到选中指定图形的效果。
 
-![LookupTableProperties.png](./images/LookupTableProperties.png)
+![LookupTableProperties.png](../images/note/LookupTableProperties.png)
 
 此处示例将`Lookup Table`中的`Attribute`改为表格中的`SELECT`，通过表中的`SELECT`列值控制线的颜色（属性设置见上图）。当值为0时显示黑色，值为1时显示红色。表格中`SELECT`列的值和`Lookup Table`中的具体设置如下图。
 
-![TableSelect.png](./images/TableSelect.png)
-![LookupTableColor.png](./images/LookupTableColor.png)
+![TableSelect.png](../images/note/TableSelect.png)
+![LookupTableColor.png](../images/note/LookupTableColor.png)
 
 最终实现的效果
-![SelectLinksColor.png](./images/SelectLinksColor.png)
+![SelectLinksColor.png](../images/note/SelectLinksColor.png)
 
 ### Graduated Color 根据值的大小显示渐变色
 将`Type`的属性值改为`Graduated Color`，根据表格中不同数值的大小显示不同的颜色，达到显示渐变色的效果。
 
-![GraduatedColorProperties.png](./images/GraduatedColorProperties.png)
+![GraduatedColorProperties.png](../images/note/GraduatedColorProperties.png)
 
 此处示例根据每个国家的人口数量显示渐变色。可以看到中国人口数量大，因此显示红色，印度人口数量也较大，因此显示橙色。其他地区人口数量较低，但也能通过颜色看出一些差别。
 
-![GraduatedColorResult.png](./images/GraduatedColorResult.png)
+![GraduatedColorResult.png](../images/note/GraduatedColorResult.png)
 
 `Graduated Color`下的`Colors`属性中还可以调整其他配色方案。设置界面如下图，此处就不不一一列举了。
 
-![GraduatedColorSettings.png](./images/GraduatedColorSettings.png)
+![GraduatedColorSettings.png](../images/note/GraduatedColorSettings.png)
 
 如果感兴趣可以参考文档[2.1 展示世界地图](../docs/2.1_showing_a_world_map.md)中的示例手动尝试更改此属性。
 
@@ -48,19 +48,19 @@ head:
 
 内容**以地图为参考系**时，显示内容的大小会根据地图大小同步缩放，如下图：
 ::: center
-![RelateToMapBig.png](./images/RelateToMapBig.png)
+![RelateToMapBig.png](../images/note/RelateToMapBig.png)
 (以地图为参考系放大)
 
-![RelateToMapSmall.png](./images/RelateToMapSmall.png)
+![RelateToMapSmall.png](../images/note/RelateToMapSmall.png)
 (以地图为参考系缩小)
 :::
 
 内容**以屏幕为参考系**时，无论地图怎么缩放内容的大小都差不多，如下图：
 ::: center
-![RelateToScreenBig.png](./images/RelateToScreenBig.png)
+![RelateToScreenBig.png](../images/note/RelateToScreenBig.png)
 (以屏幕为参考系放大)
 
-![RelateToScreenSmall.png](./images/RelateToScreenSmall.png)
+![RelateToScreenSmall.png](../images/note/RelateToScreenSmall.png)
 (以屏幕为参考系缩小)
 :::
 
@@ -71,13 +71,13 @@ head:
 #### 参考系应用实例
 在图中绘制圆点，将圆的半径设置为圆的大小，并将圆的中心设置在每个绿点的中心上，**灰色圆的大小表示每个绿点的覆盖范围大小**。
 
-![RangeDotRelateToMap.png](./images/RangeDotRelateToMap.png)
+![RangeDotRelateToMap.png](../images/note/RangeDotRelateToMap.png)
 
 图中**以地图为参考系(Map Units)**，以16为半径为每个绿点都绘制了一个灰色的圆，表示每个绿点的覆盖范围。这些灰色的圆存放在名为`Range.shp`的图层内，图层类型为`Points`。
 
 ### 参考系的设定
 在程序界面左下角的图形属性框内可以设置图形及其标签的尺寸参考系。
-![SizeProperties.png](./images/SizeProperties.png)
+![SizeProperties.png](../images/note/SizeProperties.png)
 
 如图标记的两个位置可以分别调整图形尺寸的参考系和标签尺寸的参考系。
 - **图形尺寸参考系设置**：`Size`栏目下的`Size relates to...`调整图形尺寸的参考系，`Default Size`调整图形的相对于坐标系的尺寸。
@@ -89,7 +89,7 @@ head:
 
 需要更改的属性位置如图，图中需要显示表中对应`MSG`列的值，只需要将`Labels`栏目下的`Attribute`属性值改为`MSG`即可。
 
-![LabelAttribProperties.png](./images/LabelAttribProperties.png)
+![LabelAttribProperties.png](../images/note/LabelAttribProperties.png)
 
 但是每次更改图形并执行`Update()`函数后标签（Label）会取消显示。如果需要执行的脚本中含有此对于此图层的`Update()`函数，不必在每次执行完脚本后手动重新设置显示的标签，**可以通过脚本自动选择显示的标签**。
 
@@ -99,7 +99,7 @@ head:
 
 点开这条属性以后，可以看到`MSG`在第二个。
 
-![SetParameterProperties.png](./images/SetParameterProperties.png)
+![SetParameterProperties.png](../images/note/SetParameterProperties.png)
 
 由于Lua中编号一般由1开始，因此此处`ID`的编号对应1，`MSG`的编号对应2。需要操作对象为`MSG`，所以函数中需要填入`Choice`类型的参数值为2。
 
@@ -127,6 +127,6 @@ SetParameter (Shapes|Table|Grid|Scene|Module, "id", Number|"String"|Object)
 
 一种使用栅格图绘制热力图的场景就是**绘制地价图**。在绘制地价图时，我们可以遍历栅格图上的每个格点，计算该格点到每个仓库的距离之和。然后将该格点的值设置为这个值，就可以得到一张热力图。这种方法可以帮助我们可视化地价的分布情况，并且可以用来发现地价的趋势和规律。
 
-![PlotPrice1.png](./images/PlotPrice1.png)
-![PlotPrice2.png](./images/PlotPrice2.png)
-![DL_Heatmap.png](./images/DL_Heatmap.png)
+![PlotPrice1.png](../images/note/PlotPrice1.png)
+![PlotPrice2.png](../images/note/PlotPrice2.png)
+![DL_Heatmap.png](../images/note/DL_Heatmap.png)

@@ -1,7 +1,7 @@
 # 用户界面简介
 MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用户界面（UI）操作。
 
-![总体界面](./images/MicroCityWeb/WebUIOverview.png)
+![总体界面](../images/note/MicroCityWeb/WebUIOverview.png)
 
 ## 界面分区概览
 整体来看，MicroCity Web的界面大致可以划分为4个区域。
@@ -10,14 +10,14 @@ MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用
 * [右侧-红色区域](#红色-画布区域)：视图区域
 * [底部-黄色区域](#黄色-代码输出区域)：输出信息、识别程序运行状态
 
-![界面分区](./images/MicroCityWeb/WebUIParts.png)
+![界面分区](../images/note/MicroCityWeb/WebUIParts.png)
 
 下面将详细介绍这几个区域的用法和功能。
 
 ## 蓝色：命令区域
 此区域的的内容如下图所示，共有9个可用按钮。
 
-![命令栏](./images/MicroCityWeb/CommandBar.png)
+![命令栏](../images/note/MicroCityWeb/CommandBar.png)
 
 ### 程序控制
 前3个按钮的功能大致都用于控制程序运行。详细作用分别如下：
@@ -28,7 +28,7 @@ MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用
 
 3. **停止运行/强行停止:** 如果程序正在运行，左键点击后程序将停止运行。有时存在左键点击无法停止运行脚本的情况，右键点击可以强行终止其运行。
 
-![程序控制](./images/MicroCityWeb/RunCode.gif)
+![程序控制](../images/note/MicroCityWeb/RunCode.gif)
 
 ### 代码编辑
 编号4~7的按钮主要与代码编辑有关。
@@ -37,7 +37,7 @@ MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用
 
 5. **打开内置的代码** 可以直接载入内置的代码（导入内置模型），如立方体、卡车、地球、世界地图等。具体的模型将在介绍[画布区域](#红色画布区域)时详细介绍。
 ::: center
-![内置代码](./images/MicroCityWeb/Presets.png)
+![内置代码](../images/note/MicroCityWeb/Presets.png)
 
 内置代码列表
 :::
@@ -61,7 +61,7 @@ MicroCity Web的总体界面如下图，本文将详细介绍MicroCity Web的用
 9. **查看帮助文档。**
 
 ## 绿色：代码编辑器
-![代码编辑器](./images/MicroCityWeb/AceEditor.png)
+![代码编辑器](../images/note/MicroCityWeb/AceEditor.png)
 
 MicroCity Web左侧整合的代码编辑器源于AceEditor，因此也具有AceEditor的一些特性。
 
@@ -94,10 +94,10 @@ MicroCity Web左侧整合的代码编辑器源于AceEditor，因此也具有AceE
 > 导入场景代码后要点击“运行”按钮才会载入场景
 
 ::: center
-![内置代码_方块](./images/MicroCityWeb/Preset_Truck.png)
+![内置代码_方块](../images/note/MicroCityWeb/Preset_Truck.png)
 内置汽车模型
 
-![内置代码_方块](./images/MicroCityWeb/Preset_Earth.png)
+![内置代码_方块](../images/note/MicroCityWeb/Preset_Earth.png)
 内置地球模型
 :::
 
@@ -108,14 +108,14 @@ MicroCity Web左侧整合的代码编辑器源于AceEditor，因此也具有AceE
 * 旋转
   * 场景旋转：按住鼠标左键拖动，以你的视角进行旋转
   * 对象旋转：点击对象，对象颜色改变后从对象上按住鼠标左键拖动，以对象为中心旋转。
-  ![旋转对象](./images/MicroCityWeb/ObjectRotate.gif)
+  ![旋转对象](../images/note/MicroCityWeb/ObjectRotate.gif)
 
 无论是二维对象还是三维对象都遵循上述操作逻辑。
 
 ## 黄色：代码输出区域
 打开MicroCity Web后，代码输出区域如下。点击代码输出区域后整个区域会上移，能够看到更多的历史输出信息。
 
-![底栏](./images/MicroCityWeb/BottomBar.gif)
+![底栏](../images/note/MicroCityWeb/BottomBar.gif)
 
 说到这个区域输出的信息，代码输出区域会输出以下信息：
 * **脚本输出:** 左侧是脚本的输出，包含输出时间、脚本输出内容。
@@ -123,6 +123,6 @@ MicroCity Web左侧整合的代码编辑器源于AceEditor，因此也具有AceE
 * **MicroCityWeb版本号:** 表示当前使用的MicroCityWeb版本号。如果与已知版本有差异，可以通过强制刷新加载最新版本。
 
 ## 注意事项
-![关闭自动翻译](./images/MicroCityWeb/AutoTranslate.png)
+![关闭自动翻译](../images/note/MicroCityWeb/AutoTranslate.png)
 
 **关闭自动翻译：** 如果你的操作系统语言不是英语且浏览器开启了自动翻译，需要手动关闭，否则代码运行将出现错误。

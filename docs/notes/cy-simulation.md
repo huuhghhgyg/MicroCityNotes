@@ -2,13 +2,13 @@
 
 > 本文思路仅供参考。
 
-![Banner](./images/CYSim/Banner.png)
+![Banner](../images/note/CYSim/Banner.png)
 
 集装箱码头的流程仿真是一个比较复杂的仿真，需要考虑的因素、涉及到的对象比较多。本文主要介绍如何使用MicroCityWeb实现AGV从接收场桥服务到接受岸桥服务流程的思路。
 
 ## 实现场桥对集装箱的抓取
 
-![问题1截图](./images/CYSim/Q1Banner.png)
+![问题1截图](../images/note/CYSim/Q1Banner.png)
 
 ### 总体思路
 实现场桥对集装箱的抓取是实现堆场仿真的第一步。这个部分我打算使用面向对象的方法实现，即将场桥和堆场抽象为对象。
@@ -25,7 +25,7 @@
 在这部分的仿真中主要业务流程聚焦于集装箱的移动。因此，最重要的就是集装箱所有权的流转。集装箱的所有权流转流程如下图所示：
 
 ::: center
-![集装箱对象流转过程](./images/CYSim/Q1ContainerProcessFlow.png =600x)
+![集装箱对象流转过程](../images/note/CYSim/Q1ContainerProcessFlow.png =600x)
 
 集装箱对象流转过程
 :::
@@ -34,9 +34,9 @@
 以下是这个仿真中主要涉及到的对象的结构
 
 ::: center
-![问题1场桥对象结构图](./images/CYSim/RMG1.png =500x)
+![问题1场桥对象结构图](../images/note/CYSim/RMG1.png =500x)
 
-![问题1堆场对象结构图](./images/CYSim/CY1.png =500x)
+![问题1堆场对象结构图](../images/note/CYSim/CY1.png =500x)
 :::
 
 ### 实现方法
@@ -48,7 +48,7 @@
 * **堆场占地大小方面**，通过在创建对象时输入两点坐标来确定，根据两点连成的对角线构成一个矩形，从而确定堆场的占地面积。
 * **集装箱层数方面**，通过在创建对象时输入一个数字来确定。根据这两个输入就就可以确定堆场的规模。
 
-![堆场布局计算](./images/CYSim/CYLayout.jpg)
+![堆场布局计算](../images/note/CYSim/CYLayout.jpg)
 
 #### 事件和任务
 由于在这个仿真中需要移动的对象主要是场桥，因此每次循环执行任务的时候只需要操作场桥即可。
@@ -73,11 +73,11 @@
 
 ### 运行结果
 
-![场桥仿真](./images/CYSim/Q1Run.gif)
+![场桥仿真](../images/note/CYSim/Q1Run.gif)
 
 ## 实现AGV到达至服务的全流程
 ### 问题描述
-![问题2描述](./images/CYSim/Q2.jpg)
+![问题2描述](../images/note/CYSim/Q2.jpg)
 
 使用事件调度法实现以上流程的三维化形式
 
@@ -100,30 +100,30 @@
 
 #### 堆场
 堆场仍然作为数据模型。
-![堆场](./images/CYSim/CY2.png)
+![堆场](../images/note/CYSim/CY2.png)
 
 #### 场桥
-![场桥](./images/CYSim/RMG2.png)
+![场桥](../images/note/CYSim/RMG2.png)
 
 #### AGV
-![AGV](./images/CYSim/AGV2.png)
+![AGV](../images/note/CYSim/AGV2.png)
 
 #### 岸桥
 岸桥的代码和涉及结构主要衍生自堆场，因此后面不详细叙述。
-![岸桥](./images/CYSim/RMGQC2.png)
+![岸桥](../images/note/CYSim/RMGQC2.png)
 
 #### 船
 船对象的主要作用也是作为数据模型，设计思路同堆场。
 ::: center
-![船](./images/CYSim/SHIP2.png =400x)
+![船](../images/note/CYSim/SHIP2.png =400x)
 :::
 
 ### 总体布局
-![总体布局](./images/CYSim/Q2Layout.png)
+![总体布局](../images/note/CYSim/Q2Layout.png)
 
 ### 总体流程
 ::: center
-![总体流程图](./images/CYSim/Q2ProcessFlow.png)
+![总体流程图](../images/note/CYSim/Q2ProcessFlow.png)
 
 集装箱流转流程
 :::
@@ -141,7 +141,7 @@ AGV出现后，场桥、岸桥和AGV之间的流程也变得更加复杂。首�
 因此，AGV和场桥之间的流程是一个相互等待的流程。具体流程可以参考下图。
 
 ::: center
-![AGV和场桥相互等待的流程图](./images/CYSim/RMG-AGV-ProcessFlow.png =400x)
+![AGV和场桥相互等待的流程图](../images/note/CYSim/RMG-AGV-ProcessFlow.png =400x)
 :::
 
 而岸桥的流程和场桥的流程类似，也是一个相互等待的流程。主要体现在：
@@ -160,7 +160,7 @@ $$
 由于AGV的长度比1个集装箱略长，因此需要占用2个停车位的长度。每次执行任务时，AGV会判断前方空间是否被阻塞，如果没被阻塞则向前移动。如果前方位置为目标bay，则前进后等待场桥作业，获取集装箱后继续以元胞为单位向前移动直到离开。场桥部分排队和岸桥部分排队原理也相同。
 
 ::: center
-![AGV排队示意图](./images/CYSim/AGVQueueModel.png)
+![AGV排队示意图](../images/note/CYSim/AGVQueueModel.png)
 
 AGV元胞自动机排队模型示意图
 :::
@@ -172,7 +172,7 @@ AGV元胞自动机排队模型示意图
 
 我认为课件中的下面这张图能够很好地表示如何使用事件调度法来进行仿真并刷新场景。其中，第一行指的是仿真的业务流程，第二行Refresh部分指的是刷新场景。
 
-![事件调度法示意图](./images/CYSim/EventSchedulingRefresh.jpg)
+![事件调度法示意图](../images/note/CYSim/EventSchedulingRefresh.jpg)
 
 ### 运行结果
 
@@ -185,14 +185,14 @@ AGV元胞自动机排队模型示意图
 :::
 
 场桥运行过程
-![场桥运行过程1](./images/CYSim/Result-RMG1.gif)
+![场桥运行过程1](../images/note/CYSim/Result-RMG1.gif)
 
-![场桥运行过程2](./images/CYSim/Result-RMG2.gif)
+![场桥运行过程2](../images/note/CYSim/Result-RMG2.gif)
 
 岸桥运行过程
-![岸桥运行过程](./images/CYSim/Result-RMGQC.gif)
+![岸桥运行过程](../images/note/CYSim/Result-RMGQC.gif)
 
 总体运行过程
-![总体运行过程1](./images/CYSim/Result-All1.gif)
+![总体运行过程1](../images/note/CYSim/Result-All1.gif)
 
-![总体运行过程2](./images/CYSim/Result-All2.gif)
+![总体运行过程2](../images/note/CYSim/Result-All2.gif)
