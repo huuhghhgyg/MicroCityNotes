@@ -22,7 +22,6 @@ export default {
       head: [
         ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
         ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
-        ["link", { rel: "icon", href: "./images/icon_microcity.png" }],
       ],
     },
     "/en/": {
@@ -32,7 +31,6 @@ export default {
       head: [
         ["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }],
         ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
-        ["link", { rel: "icon", href: "../images/icon_microcity.png" }],
       ],
     },
   },
