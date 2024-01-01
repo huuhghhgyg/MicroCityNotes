@@ -8,7 +8,7 @@ domain="mcn.zhhuu.top"
 
 # 删除Base directory的设置
 sed -i '/base:/d' docs/.vuepress/config.js
-# 删除manifest的前缀
+# 删除manifest和icon的前缀
 sed -i 's/"\/MicroCityNotes/"/g' docs/.vuepress/config.js
 # 使用定义的域名替换
 sed -i "s/${fixed_domain}/${domain}/g" docs/.vuepress/config.js

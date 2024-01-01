@@ -22,6 +22,7 @@ export default {
       head: [
         ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
         ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
+        ["link", { rel: "icon", href: "/MicroCityNotes/images/icon_microcity.png"}],
       ],
     },
     "/en/": {
