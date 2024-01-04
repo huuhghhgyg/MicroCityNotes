@@ -3,6 +3,10 @@
 
 规划模型中所有函数的详细用法可以参考文档 [4.8混合整数线性规划](../docs/4.8_mixed_integer_programming.md)
 
+::: tip
+本页内容基于 MicroCity 桌面版。如果你在寻找 MicroCity Web 版的混合整数规划求解方法，请参考 MicroCity Web 笔记中对应的 [混合整数规划](./mip.md) 部分。
+:::
+
 ## 创建模型对象
 创建规划模型对象，存入变量`lp`中。
 ```lua

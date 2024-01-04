@@ -13,7 +13,7 @@ lua会自动识别变量类型，因此无需在变量名称前定义变量类�
 ```lua
 a = 1.5
 b = "string"
-c = {} -- c为集合，见下文介绍
+c = {} -- c为表，见下文介绍
 ```
 
 函数的定义
@@ -101,8 +101,8 @@ end
 > 步长为负数时，需要注意开始和结束的数字也应该为倒序
 
 泛型循环
-可以直接遍历一个集合中的所有元素。
-`i`为集合元素的下标，从1开始；`v`为集合元素的值。
+可以直接遍历一个表中的所有元素。
+`i`为表元素的下标，从1开始；`v`为表元素的值。
 ```lua
 a = {4,7,9}
 for i,v in ipairs(a) do
@@ -126,7 +126,7 @@ end
 同其他语言的规定一样，`break`关键字用于跳出循环。
 LUA中没有`continue`，只有`break`。但是可以可以通过使用`if`+`break`的形式实现`continue`的功能。
 
-## Lua的小特性：集合
+## Lua的小特性：表
 虽然Lua里面把它自己的数组称作`table`，但是我认为这个数据结构更类似于Python的集合或者json，里面可以存储任何东西，不受结构约束。
 ```lua
 collection = {{"a", 1, 2}, "abc", {2, 3}}
@@ -138,11 +138,31 @@ for i=1,#list do
     print(list[i])
 end
 ```
-Lua的数组（集合）下标从`1`开始，不同于C类语言的`0`。此处以前面定义的`collection`为例：
+Lua的数组（表）下标从`1`开始，不同于C类语言的`0`。此处以前面定义的`collection`为例：
 ```lua
+-- collection = {{"a", 1, 2}, "abc", {2, 3}}
 print(collection[1][1]) --a
 print(collection[2]) --abc
 print(collection[3][2]) --3
+```
+
+### 索引
+Lua的表的索引非常灵活，可以是数字，也可以是字符串，甚至是其他类型的数据。
+
+下面是一些简单的例子：
+```lua
+local list = {}
+
+-- 以数字为索引
+list[1] = "a"
+
+-- 以字符串为索引
+list["b"] = 2
+list.message = "hello world" -- 等价于list["message"] = "hello world"
+
+print(list[1]) -- a
+print(list["b"]) -- 2
+print(list.message) -- hello world
 ```
 
 ### 添加元素

@@ -22,20 +22,21 @@ jobs:
     steps:
       # 拉取代码
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           # 拉取commit的深度，默认1，0表示拉取所有commit，会降低速度
           fetch-depth: 0
 
       # 安装NPM
-      - name: npm/yarn/pnpm install
+      - name: Install Dependencies
         # You may pin to the exact commit or the version.
-        # uses: Jaid/action-npm-install@9483da054882538350947c4147de4c8adbf0d597
-        uses: Jaid/action-npm-install@v1.2.4
+        # uses: Jaid/action-npm-install@v1.2.4
+        run: npm ci  # clean install
 
       # 生成静态文件
       - name: Build
-        run: npm install && npm run build
+        run: npm run build
 
       # 部署到 GitHub Pages
       - name: Deploy

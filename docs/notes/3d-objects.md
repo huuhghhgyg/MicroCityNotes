@@ -1,5 +1,5 @@
 # 3D 对象
-本节将介绍三维场景的对象及其控制函数。
+本节将介绍 MicroCity Web 中的三维场景对象及其控制函数。
 
 ## 添加对象
 向场景中添加对象，函数形式如下
@@ -74,7 +74,7 @@ scene.addobj("polyline", {vertices = {0,0,0, -2,3,5, 4,6,7}})
 ```
 
 ::: center
-![polyline点顺序对比图](./images/MicroCityWeb/polylines_order.jpg)
+![polyline点顺序对比图](../images/note/MicroCityWeb/polylines_order.jpg)
 
 polyline点顺序对比图
 :::
@@ -112,7 +112,7 @@ end
 ```
 
 ::: center
-![不同长宽高设置的box](./images/MicroCityWeb/box_lwh.jpg)
+![不同长宽高设置的box](../images/note/MicroCityWeb/box_lwh.jpg)
 
 不同长宽高设置的box
 :::
@@ -131,7 +131,7 @@ local obj = scene.addobj('sphere', {radius=15, segments=360})
 |`segments`|球体的渲染面数。设置值越高球体的模型越精细。|
 
 ::: center
-![不同segment对于相同sphere的影响](./images/MicroCityWeb/segments.jpg)
+![不同segment对于相同sphere的影响](../images/note/MicroCityWeb/segments.jpg)
 
 不同segment对于相同sphere的影响
 :::
@@ -151,7 +151,7 @@ local obj = scene.addobj("polygon", {vertices = {-1,-1,0, -1,1,-0, 1,1,0, 1,-1,0
 |`size`|体积|由于第三维的坐标不影响，且多边形的顶点确定后面积就已经确定，因此 `size` 属性通过控制每个点的第三维坐标值来控制体积。|
 
 ::: center
-![不同size对于相同polygon体积的影响](./images/MicroCityWeb/polygon_sizes.jpg)
+![不同size对于相同polygon体积的影响](../images/note/MicroCityWeb/polygon_sizes.jpg)
 
 不同size对于相同polygon体积的影响
 :::
@@ -178,7 +178,7 @@ local obj = scene.addobj('https://huuhghhgyg.github.io/ModelResource/models/F16-
 :::
 
 ### light
-设置光源的方向，可选参数 `vertices` 为一个三维向量，表示光的照射方向。由于MicroCityWeb的场景中已经设置了很强的光源，因此此处不过多做介绍。
+设置光源的方向，可选参数 `vertices` 为一个三维向量，表示光的照射方向。由于MicroCity Web的场景中已经设置了很强的光源，因此此处不过多做介绍。
 
 ### mesh
 多个点构成的面，多见于引用的外部模型中。由于应用较少此处不做介绍。
@@ -245,4 +245,10 @@ local num = obj:getparent()
 设置 `obj` 对象的父对象为 `obj0`
 ```lua:no-line-numbers
 obj:setparent(obj0)
+```
+
+### delete()
+删除 `obj` 对象
+```lua:no-line-numbers
+obj:delete()
 ```
