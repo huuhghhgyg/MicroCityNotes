@@ -1,150 +1,156 @@
-# Introduction to the User Interface
+# User Interface Overview
+The overall interface of MicroCity Web is shown in the following image. This article will provide a detailed introduction to the user interface (UI) operations of MicroCity Web.
 
-The overall interface of MicroCityWeb is shown in the following figure. This article will provide a detailed introduction to the user interface (UI) operations of MicroCityWeb.
+![Overall Interface](../../images/note/MicroCityWeb/WebUIOverview.png)
 
-![Overall interface](../../images/note/MicroCityWeb/WebUIOverview.png)
+## Overview of Interface Sections
+In general, the interface of MicroCity Web can be divided into 4 sections.
+* [Top - Blue Section](#blue-section-commands): Executes various operations on code and files
+* [Left - Green Section](#green-section-code-editor): Code editor
+* [Right - Red Section](#red-section-canvas): View area
+* [Bottom - Yellow Section](#yellow-section-code-output): Output information, recognizes program running status
 
-## Overview of Interface Zones
-Overall, the interface of MicroCityWeb can be roughly divided into four areas:
-* [Top - Blue Area](#blue-command-area): performs various operations on code and files
-* [Left - Green Area](#green-code-editor): code editor
-* [Right - Red Area](#red-canvas-area): view area
-* [Bottom - Yellow Area](#yellow-code-output-area): output information, recognize program running status
+![Interface Sections](../../images/note/MicroCityWeb/WebUIParts.png)
 
-![Interface zones](../../images/note/MicroCityWeb/WebUIParts.png)
+Below, we will provide a detailed explanation of the usage and features of these sections.
 
-Next, we will provide a detailed description of the usage and functions of these areas.
+## Blue Section - Commands
+The content of this section is shown in the following image, and there are a total of 9 available buttons.
 
-## Blue: Command Area
-The content of this area is shown in the following figure, with nine available buttons.
+![Command Bar](../../images/note/MicroCityWeb/CommandBar.png)
 
-![Command bar](../../images/note/MicroCityWeb/CommandBar.png)
+Their specific functions are as follows:
+- [Program Control](#program-control)
+
+  1. Run/Debug
+  2. Pause Execution
+  3. Stop Execution/Force Stop
+
+- [Code Editing](#code-editing)
+
+  4. Show Editor / Hide Editor
+  5. Open Sample Code
+  6. Open Local Code File / Upload File to Virtual Disk
+  7. Save Code / Download
+
+- [Others](#others)
+
+  8. Share
+  9. View Help Documentation
 
 ### Program Control
 The first three buttons are mainly used to control program execution. Their specific functions are as follows:
 
-1.  **Run/Debug:** Clicking the left mouse button will run the code in the [code editor](#green-code-editor) on the left-hand side of the webpage, while right-clicking will debug the code.
+1. **Run/Debug:** Left-clicking will run the code in the left side [Code Editor](#green-code-editor) of the webpage; Right-clicking will start debugging the code.
 
-2.  **Pause:** If the program is running, clicking this button will **pause** its execution (if supported).
+2. **Pause Execution:** If the program is running, clicking this button will pause the program execution (if supported by the program).
 
-3.  **Stop/Force Stop:** If the program is running, clicking the left mouse button will stop its execution. If left-clicking does not stop the script, right-clicking can forcibly terminate its execution.
+3. **Stop Execution/Force Stop:** If the program is running, left-clicking this button will stop the program execution. In some cases where left-clicking fails to stop the script, right-clicking can forcibly terminate its execution.
 
-![Program control](../../images/note/MicroCityWeb/RunCode.gif)
+![Program Control](../../images/note/MicroCityWeb/RunCode.gif)
 
 ### Code Editing
+Buttons numbered 4 to 7 are mainly related to code editing.
 
-Buttons 4-7 are mainly related to code editing.
+4. **Show Editor / Hide Editor:** If the left-side code editor is open, clicking this button will close it. If it is closed, clicking this button will open it again. If you right-click, the editor can expand to full screen.
 
-4.  **Show/Hide Editor:** If the left code editor is open, clicking this button will close it. If it's closed, clicking it will reopen it. If you right-click, the editor can be expanded to full screen.
-    
-5.  **Open Built-In Code:** You can directly load built-in code (import built-in models), such as cubes, trucks, earth, world maps, etc. The specific models will be introduced in detail when the [red canvas area](#red-canvas-area) is introduced.
+5. **Open Sample Code:** This button loads built-in code (imports built-in models), such as cube, truck, earth, world map, etc. The specific models will be discussed in detail when introducing the [Canvas area](#red-canvas-area).
+
 ::: center
-![Built-in code](../../images/note/MicroCityWeb/Presets.png)
+![Built-in Code](../../images/note/MicroCityWeb/Presets.png)
 
-Built-in code list
+List of built-in codes
 :::
-    
-6.  **Open Local Code:** 
 
-    **Left-click**: A dialog box will pop up when you left-click, and you can choose a code file (.lua) on your local machine. After confirming the selection to open the file, the text of the code file will be automatically imported into the code editor on the left.
+6. **Open Local Code File / Upload File to Virtual Disk**
 
-    **Right-click**: You can select one or more files to upload to MicroCityWeb by right-clicking. The "Save" button (⑦) on the right can be clicked to view the list of uploaded files.
-    
-7.  **Save Code:**
+   **Left-clicking:** This opens a file dialog where you can select a code file (.lua) on your local machine. After selecting a file, its contents will be automatically imported into the left-side code editor.
 
-    **Left-click**: When you save a file for the first time, a save file dialog box will pop up after you click the save button. You can choose the save location and fill in the file name. If you have previously saved the file locally and you have made modifications to the file and want to save the changes, you can simply click the save button to save the changes directly to the previously saved file.
+   **Right-clicking:** You can choose one or more files to upload to MicroCity Web. Right-clicking the "Save" button (⑦) allows you to view the list of uploaded files.
 
-    **Right-click**: You can view the list of uploaded files, and you can click on a file in the list and download it to your local machine.
+7. **Save Code / Download**
+
+   **Left-clicking:** When you save a file for the first time, clicking the save button will prompt a save file dialog where you can choose the save location and enter a file name. If you have previously saved the file locally, and you have made modifications and want to save the changes, simply click the save button to directly save the changes to the previously saved file.
+
+   ::: tip
+   In the new version of MicroCity Web, the code and uploaded files are packaged as `.mw` files.
+   For more information, please refer to [File Saving | Debugging Related](./debug.md/#file-saving).
+   :::
+
+   **Right-clicking:** You can view the list of files uploaded to the virtual disk and download them to your local machine by clicking on a file in the list.
 
 ### Others
+8. **Share:** After clicking this button, a dialog will pop up asking for a password. Afterwards, you will receive a link that anyone can use to access your shared content.
 
-8. **Share.** After clicking the button, a dialog box for entering a password will pop up. Afterwards, you will receive a link that anyone can use to access your share. 
-    
-    If you enter a password in the dialog box, others who open the link can only run your program code and observe the running result, but cannot view your code (unless you tell them the password); if you do not enter a password, others can not only run your code to view the running result but also view the code you have written.
+If you enter a password in the pop-up dialog box, when others open the link, they can only run your program code and observe the running result, without being able to view your code (unless you inform them of the password); if you do not enter a password, others can not only run your code to view the running result, but also view the code you wrote.
 
-9.  **View help documentation.**
+9. **View the help documentation.**
 
-## Green: Code Editor
-
+## Green area: Code Editor
 ![Code Editor](../../images/note/MicroCityWeb/AceEditor.png)
 
-The integrated code editor on the left side of MicroCityWeb is based on AceEditor and therefore has some of its features.
+The integrated code editor on the left side of MicroCity Web is based on AceEditor, so it also has some features of AceEditor.
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
+Below are some common shortcuts to help you edit code more effectively.
 
-Below are some commonly used keyboard shortcuts to help you edit code more efficiently.
+**Most commonly used:**
+* <kbd>Ctrl</kbd>+<kbd>Z</kbd>: Undo
 
-**Most Common**
+**Line operations:**
+* <kbd>Ctrl</kbd>+<kbd>D</kbd>: Delete a line
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>: Duplicate a line
+* <kbd>Alt</kbd>+<kbd>↑</kbd>: Move the line of code up
+* <kbd>Alt</kbd>+<kbd>↓</kbd>: Move the line of code down
 
-<kbd>Ctrl</kbd>+<kbd>Z</kbd>: Undo
+**Search content:**
+* <kbd>Ctrl</kbd>+<kbd>K</kbd>: Find the next occurrence of the selected content in the code
+
+**Code indentation:**
+* <kbd>Ctrl</kbd>+<kbd>[</kbd>: Increase code indentation
+* <kbd>Ctrl</kbd>+<kbd>]</kbd>: Decrease code indentation
+
+**Modify values:**
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>: Increment the value of the number before the cursor
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>: Decrement the value of the number before the cursor
 
 
-**Line Operations**
-
-<kbd>Ctrl</kbd>+<kbd>D</kbd>: Delete a line
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>: Duplicate a line
-
-<kbd>Alt</kbd>+<kbd>↑</kbd>: Move line of code up
-<kbd>Alt</kbd>+<kbd>↓</kbd>: Move line of code down
-
-
-**Find Content**
-
-<kbd>Ctrl</kbd>+<kbd>K</kbd>: Find the next occurrence of selected content in the code
-
-**Indentation**
-
-<kbd>Ctrl</kbd>+<kbd>[</kbd>: Increase code indentation
-<kbd>Ctrl</kbd>+<kbd>]</kbd>: Decrease code indentation
-
-**Modify Values**
-
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>: Increase the numeric value before the cursor by 1
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>: Decrease the numeric value before the cursor by 1
-
-## Red: Canvas area
-
-Built-in code can be imported into the scene, see Command Area - Code Editing for details.
-
-After importing the scene code, click the "Run" button to load the scene.
+## Red area: Canvas
+You can import scenes from built-in code, see [Command Area - Code Editing](#代码编辑)
+> After importing scene code, you need to click the "Run" button to load the scene.
 
 ::: center
-
-![Built-in car model](../../images/note/MicroCityWeb/Preset_Truck.png)
-
+![Built-in Code_Cube](../../images/note/MicroCityWeb/Preset_Truck.png)
 Built-in car model
 
-
-![Built-in Earth model](../../images/note/MicroCityWeb/Preset_Earth.png)
-
-Built-in Earth model
+![Built-in Code_Cube](../../images/note/MicroCityWeb/Preset_Earth.png)
+Built-in earth model
 :::
 
-### Scene Operations
-
-Scene operations, including viewpoint movement and rotation, need to be performed in the canvas area. Therefore, the following will introduce the basic operations of the canvas area.
-
-* Zooming in and out of the scene: Scroll the mouse wheel up to zoom in and down to zoom out.
-* Translation: Hold down the right mouse button and drag.
-* Rotation
-  * Scene rotation: Hold down the left mouse button and drag to rotate from your viewpoint.
-  * Object rotation: Click on the object, the color of the object changes, and then hold down the left mouse button on the object to rotate around the object's center.
+### Scene operations
+Operations on scenes, including perspective movement and rotation, need to be performed in the canvas area. Therefore, the basic operations in the canvas area are explained below.
+* Zoom in/out on the scene: Scroll up the mouse wheel to zoom in and scroll down to zoom out.
+* Pan: Hold down the right mouse button and drag.
+* Rotate
+  * Scene rotation: Hold down the left mouse button and drag to rotate from your perspective.
+  * Object rotation: Click on the object, and after the color of the object changes, hold down the left mouse button and drag to rotate around the object as the center.
   ![Rotate object](../../images/note/MicroCityWeb/ObjectRotate.gif)
 
-These operation rules apply to both two-dimensional and three-dimensional objects.
+The above operations apply to both 2D and 3D objects.
 
-## Yellow: Code Output Area
+## Yellow area: Code Output
+After opening MicroCity Web, the code output area is as follows. Clicking on the code output area will cause the entire area to move up, allowing you to see more historical output information.
 
-After opening MicroCityWeb, the code output area is shown below. Clicking on the code output area will cause the entire area to move up, allowing you to see more historical output information.
+![Bottom Bar](../../images/note/MicroCityWeb/BottomBar.gif)
 
-![Bottom bar](../../images/note/MicroCityWeb/BottomBar.gif)
-
-Regarding the information output in this area, the code output area will output the following information:
-* **Script output:** The left side is the output of the script, including the output time and content.
-* **Script running status:** The first line on the right side shows the script running status. "state: ready" indicates that the script is ready to start running (not yet running), and "state: running" indicates that the script is running.
-* **MicroCityWeb version number:** Indicates the current version number of MicroCityWeb being used. If there is a difference from the known version, you can force a refresh to load the latest version.
+Speaking of the information output in this area, the code output area will display the following information:
+* **Script output:** The left side shows the output of the script, including the output time and script output content.
+* **Script running status:** The first line on the right side indicates the running status of the script. `state:ready` indicates that the script is ready to start running (not running), `state:running` indicates that the script is running.
+* **MicroCityWeb version:** Indicates the current version of MicroCityWeb being used. If it differs from the known version, you can force refresh to load the latest version.
 
 ## Notes
-![Turn off automatic translation](../../images/note/MicroCityWeb/AutoTranslate.png)
+![Disable Auto-Translate](../../images/note/MicroCityWeb/AutoTranslate.png)
 
-**Turn off automatic translation:** If your operating system language is not English and the browser has automatic translation enabled, it needs to be manually disabled, otherwise there will be errors when running the code.
+**Disable Auto-Translate:** If your operating system language is not English and your browser has auto-translate enabled, you need to manually disable it, otherwise code execution will result in errors.
+
+> This post is translated using ChatGPT, please [**feedback**](https://github.com/huuhghhgyg/MicroCityNotes/issues/new) if any omissions.
