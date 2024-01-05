@@ -52,3 +52,26 @@ stack traceback:
 Lua 的 Debug 函数大多都适用于 MicroCity Web，可以参考：
 - [The Debug Library | Lua 5.4 Reference Manual](https://www.lua.org/manual/5.4/manual.html#6.10)
 - [Lua 调试(Debug) | 菜鸟教程](https://www.runoob.com/lua/lua-debug.html)
+
+## 文件保存
+
+MicroCity Web 在保存项目文件时会将代码和上传到虚拟磁盘的文件打包保存为 `.mw` 文件，其压缩格式为 `.gz`。下载到本地后，如果需要提取文件中的所有文件，可以将 `mw` 文件的后缀名改为 `gz` 即可解压。
+
+::: warning WIP 🚧
+目前发现如果打开单个文件或者编辑完直接保存文件，则保存为 `.mw` 文件；上传了多个文件的时候，不会保存为 `.mw` 文件，而是直接将打开的代码保存到本地磁盘打开的源文件中。
+:::
+
+### 示例
+假设保存得到 `PoissonGraph.mw`，重命名为 `PoissonGraph.gz` 后解压得到如下文件结构
+
+```
+PoissonGraph
+├── code
+├── Histogram.lua
+├── pass
+└── Subplot.lua
+```
+
+说明
+- code: 编辑器中的代码文件。添加后缀名（如重命名为 `code.lua`）后可以得到编辑器中打开的代码。
+- `Histogram.lua` 和 `Subplot.lua`: 虚拟磁盘中的库文件。

@@ -21,8 +21,8 @@ export default {
       description: "记录MicroCity的学习过程并提供快捷的参考",
       head: [
         ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
-        ["link", { rel: "manifest", href: "manifest.webmanifest" }],
-        ["link", { rel: "icon", href: "./images/icon_microcity.png" }],
+        ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
+        ["link", { rel: "icon", href: "/MicroCityNotes/images/icon_microcity.png"}],
       ],
     },
     "/en/": {
@@ -31,8 +31,7 @@ export default {
       description: "Record the learning process of MicroCity and provide quick reference",
       head: [
         ["meta", { name: "keywords", content: "MicroCity,Notes,Docs" }],
-        ["link", { rel: "manifest", href: "../manifest.webmanifest" }],
-        ["link", { rel: "icon", href: "../images/icon_microcity.png" }],
+        ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
       ],
     },
   },
@@ -139,7 +138,7 @@ export default {
             {
               text: "通用知识",
               collapsible: true,
-              children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
+              children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop", "/notes/tools"],
             },
             {
               text: "MicroCity",
@@ -255,7 +254,7 @@ export default {
             {
               text: "General Knowledge",
               collapsible: true,
-              children: ["/en/notes/lua", "/en/notes/versions", "/en/notes/timelapse", "/en/notes/oop"],
+              children: ["/en/notes/lua", "/en/notes/versions", "/en/notes/timelapse", "/en/notes/oop", "/en/notes/tools"],
             },
             {
               text: "MicroCity",
@@ -320,8 +319,6 @@ export default {
     ),
     //PWA支持
     pwaPlugin({
-      // 首次成功注册时显示PWA安装按钮
-      showInstall: true,
       // 缓存站点图片（站点图片不大）
       cachePic: true,
       // 网站体积不大，并使文档完全离线可用
