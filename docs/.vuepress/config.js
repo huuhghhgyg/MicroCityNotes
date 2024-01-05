@@ -138,7 +138,7 @@ export default {
             {
               text: "通用知识",
               collapsible: true,
-              children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop"],
+              children: ["/notes/lua", "/notes/versions", "/notes/timelapse", "/notes/oop", "/notes/tools"],
             },
             {
               text: "MicroCity",
@@ -254,7 +254,7 @@ export default {
             {
               text: "General Knowledge",
               collapsible: true,
-              children: ["/en/notes/lua", "/en/notes/versions", "/en/notes/timelapse", "/en/notes/oop"],
+              children: ["/en/notes/lua", "/en/notes/versions", "/en/notes/timelapse", "/en/notes/oop", "/en/notes/tools"],
             },
             {
               text: "MicroCity",
