@@ -5,23 +5,52 @@
 本页所有开放源代码遵循MIT协议，可以随意使用，但公开发布时请保留版权信息。
 :::
 
-## 直方图
-直方图(Histogram)一般用于显示数据集中各数据值的频数或频率分布情况。它将数据按照一定的间隔划分为若干个区间（或称为“箱子”），然后绘制出每个区间的频数（或频率）在纵轴上的柱状图，以此反映数据的分布情况。
+## 导入库文件
+首先介绍库文件的使用方式。“库文件”指提前包装好的绘图函数，有以下3种方法将文件导入到 MicroCity Web 中使用。
 
-以下是用我包装的直方图对象绘制的直方图的示例
+### 方法一：使用代码在线导入
+👍 **推荐使用本方法使用库文件，这样可以保证使用的是最新版本的库文件。**
+
+以导入 `Histogram` 和 `Subplot` 为例，导入库文件代码如下：
+
+```lua
+print('正在下载依赖库到虚拟磁盘...')
+-- 下载直方图代码到虚拟磁盘
+os.upload('https://www.zhhuu.top/ModelResource/libs/Histogram.lua')
+-- 下载子图代码到虚拟磁盘
+os.upload('https://www.zhhuu.top/ModelResource/libs/Subplot.lua')
+print('下载完成')
+```
+
+### 方法二：下载代码文件并导入
+转到 [代码文件下载](#代码文件下载) 处下载所需库文件，然后在 MicroCity Web 中导入该文件，最后引用该文件后即可使用。
+
+以引用直方图为例，引用的代码如下:
+```lua
+require("Histogram") --引用直方图
+```
+
+### 方法三：复制代码
+除非需要修改函数功能或逻辑，否则不建议这么做。各个函数的代码见[代码](#代码)部分。
+
+## 直方图
+直方图(Histogram)一般用于显示数据集中各数据值的频数或频率分布情况。
+
+它将数据按照一定的间隔划分为若干个区间（或称为“箱子”），然后绘制出每个区间的频数（或频率）在纵轴上的柱状图，以此反映数据的分布情况。
+
+以下是用直方图对象（函数）绘制的直方图的示例
 
 ::: center
 ![直方图示例](../images/note/Histogram.png =500x)
 :::
 
 ### 导入直方图
-首先导入直方图的代码。目前有两种选择：
-1. **下载代码文件并导入（推荐）**：[下载直方图代码文件](#代码文件下载) `Histogram.lua`，在MicroCityWeb中导入该文件，再引用该文件后即可使用。引用的代码如下:
+首先导入直方图的代码，具体导入方式见[导入库文件](#导入库文件)。
+
+直方图的文件名为 `Histogram.lua`，引用直方图：
 ```lua
 require("Histogram") --引用直方图
 ```
-
-2. **复制代码**：直接将`Histogram.lua`文件中的代码复制到你的代码中，代码见[**下方**](#直方图代码)。
 
 ### 创建直方图对象
 创建一个直方图对象
@@ -51,7 +80,9 @@ local plot = Histogram(list, {range={40,90,0,100}, scale={10, 50}, fdisp=functio
 |`fdisp`|数据标签的显示函数，默认返回数量。设置数据标签显示函数时也会影响y轴刻度的显示。|`fdisp = function(v) return (v/n*100).."%" end`，将数据标签改为按照比例显示（假设n为样本数）|
 
 ### 直方图高级用法
-动态刷新数据图
+
+📈 **动态刷新数据图**
+
 1. 修改图中的数据。此处以向图中添加数据为例。其中假设`rnd`为添加的数据。也可以直接修改`plot.data`的值。
 ```lua
 table.insert(plot.data, rnd)
@@ -105,14 +136,14 @@ scene.render()
 
 -- 动态绘制
 local count = 1
-while count < 1000 do
+while count < 1000 and scene.render() do
     local rnd = seed:random()
     table.insert(histplot.data, rnd)
 
     histplot:refresh()
     count = count + 1
-    scene.render()
 end
+scene.render()
 ```
 
 ## 子图
@@ -123,22 +154,11 @@ end
 :::
 
 ### 导入子图
-首先导入直方图的代码。与直方图一样，导入有两种选择：
-1. **下载代码文件并导入（推荐）**：[下载子图代码文件](#代码文件下载)，在MicroCityWeb中导入`Subplot.lua`文件，再引用该文件后即可使用。引用的代码如下:
-```lua
-require("Subplot") --引入子图代码
-```
-2. **复制代码**：直接将`Subplot.lua`文件中的代码复制到你的代码中。这样就不需要导入了。代码见[**下方**](#子图代码)。
+首先导入子图的代码，具体导入方式见[导入库文件](#导入库文件)。
 
-### 创建子图对象
-创建子图时必须输入子图的行数和列数。子图的行数和列数决定了子图的数量。
+子图的文件名为 `Subplot.lua`，引用子图：
 ```lua
-local subplot = Subplot(rows, cols)
-```
-
-还可以设置附加属性，对子图的位置和尺寸进行设置。这是一个在创建时设置子图位置和尺寸的例子。
-```lua
-local subplot = Subplot(rows, cols, {span=10, diag={-80, -70, 80, 70}})
+require("Subplot") --引用子图
 ```
 
 ### 子图属性设置
@@ -204,252 +224,4 @@ scene.render()
 |直方图|[ModelResource/libs/Histogram.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Histogram.lua)|
 |子图|[ModelResource/libs/Subplot.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Subplot.lua)|
 
-### 直方图代码
-`Histogram`
-```lua
--- 初始场景设置
-local s = scene.setenv({camtype = "ortho"})
-
--- 返回一个直方图对象
-function Histogram(data, ...)
-    local plot = {
-        -- 默认值设置
-        origin = {-50, -50}, --坐标原点坐标
-        size = {100, 100}, --坐标轴长度
-        scale = {3, 2}, --坐标轴刻度分度值
-        range = {0, 10, 0, 20}, --xy轴范围
-        axislabel = {"x", "y"},
-        filled = true, --是否填充
-        fdisp = function(v) --数据标签显示
-            return v
-        end,
-    }
-    -- 导入参数和fallback
-    if ... ~= nil then
-        for k, v in pairs(...) do
-            plot[k] = v
-        end
-    end
-    
-    local barShape = "polygon"
-    if plot.filled==false then barShape = "polyline" end
-
-    -- 初始化
-    plot.axes = {} -- 坐标轴
-    plot.originlabel = {} -- 零点可能存在双坐标
-    plot.bars = {} -- 数据条
-    plot.xvalue = {} -- x轴刻度值(不包括最小值)
-    plot.data = data
-
-    function plot:deldata() --删除数据(private)
-        if #plot.bars == 0 then
-            return
-        end
-
-        for i = #plot.bars, 1, -1 do
-            -- print("plot.bar:",i)
-            plot.bars[i][2]:delete()
-            plot.bars[i][1]:delete()
-        end
-
-        plot.zero:delete()
-        for i = #plot.originlabel, 1, -1 do
-            plot.originlabel[i]:delete()
-        end
-
-        for i = #plot.axes, 1, -1 do
-            for j = #plot.axes[i], 1, -1 do
-                plot.axes[i][j][2]:delete()
-                plot.axes[i][j][1]:delete()
-            end
-        end
-    end
-
-    function plot:refresh() --反复绘图时调用(public)
-        plot:deldata()
-
-        -- 计算坐标刻度参数
-        local xmax = math.max(math.max(table.unpack(plot.data)), plot.range[2])
-        local xmin = math.min(math.min(table.unpack(plot.data)), plot.range[1])
-        local valueRange = xmax - xmin
-        plot.range[1], plot.range[2] = xmin, xmax
-
-        -- 绘图值统计
-        local barData = {}
-        for i = 1, #data do -- 深拷贝
-            table.insert(barData, data[i])
-        end
-        plot.barValue = {}
-
-        -- 绘制零点
-        plot.zero = scene.addobj("points", {
-            vertices = {plot.origin[1], plot.origin[2], 0},
-            size = 10
-        })
-        if plot.range[1] == plot.range[3] then -- 都是0
-            plot.originlabel[1] = scene.addobj("label", {
-                text = plot.range[1],
-                size = 4
-            })
-            plot.originlabel[1]:setpos(plot.origin[1] - 4, plot.origin[2] - 4, 0)
-        else
-            plot.originlabel[1] = scene.addobj("label", {
-                text = plot.range[1],
-                size = 4
-            })
-            plot.originlabel[1]:setpos(plot.origin[1], plot.origin[2] - 4, 0)
-            plot.originlabel[2] = scene.addobj("label", {
-                text = plot.range[3],
-                size = 4
-            })
-            plot.originlabel[2]:setpos(plot.origin[1] - 4, plot.origin[2], 0)
-        end
-
-        -- X坐标刻度
-        local xaxis = {} -- x坐标轴对象，其中元素为{point，label}
-        for j = 1, (plot.range[2] - plot.range[1]) / plot.scale[1] do -- 第几个刻度
-            local xpt = plot.origin[1] + j * plot.size[1] / (plot.range[2] - plot.range[1]) * plot.scale[1] -- X刻度位置
-            local pt = scene.addobj("points", {
-                vertices = {xpt, plot.origin[2], 0},
-                size = 5
-            }) -- 刻度点
-            local label = scene.addobj("label", {
-                text = string.format("%.1f", plot.range[1] + j * plot.scale[1]),
-                size = 4
-            }) -- 刻度标签
-            table.insert(plot.xvalue, plot.range[1] + j * plot.scale[1]) -- 当前x刻度值
-            label:setpos(xpt, plot.origin[2] - 4, 0)
-            xaxis[j] = {pt, label} -- 对象加入x轴集合
-        end
-        plot.axes[1] = xaxis
-
-        for i = 1, #plot.axes[1] do -- 根据x轴分值
-            local ub = plot.xvalue[i] -- 本次循环最大值
-            -- print("循环", i, "ub=", ub) -- for debug
-
-            local value = 0
-            for j = #barData, 1, -1 do
-                if barData[j] <= ub then
-                    value = value + 1
-                    table.remove(barData, j)
-                end
-            end
-            plot.barValue[i] = value -- 录入值
-        end
-        local ymax = math.max(table.unpack(plot.barValue))
-        plot.range[4] = math.max(ymax, plot.range[4])
-
-        -- Y坐标刻度
-        local yaxis = {} -- y坐标轴对象，其中元素为{point，label}
-        for i = 1, (plot.range[4] - plot.range[3]) / plot.scale[2] do -- 第几个刻度
-            local ypt = plot.origin[2] + i * plot.size[2] / (plot.range[4] - plot.range[3]) * plot.scale[2] -- Y刻度位置
-            local pt = scene.addobj("points", {
-                vertices = {plot.origin[1], ypt, 0},
-                size = 5
-            }) -- 刻度点
-            local label = scene.addobj("label", {
-                text = plot.fdisp(plot.range[3] + i * plot.scale[2]),
-                size = 4
-            }) -- 刻度标签
-            label:setpos(plot.origin[1] - 4, ypt, 0)
-            yaxis[i] = {pt, label}
-        end
-        plot.axes[2] = yaxis
-
-        -- 绘制数据
-        local xunit = plot.size[1] / (plot.range[2] - plot.range[1]) * #plot.axes[1] -- x轴分度值
-        local yunit = plot.size[2] / (plot.range[4] - plot.range[3]) -- y轴分度值
-
-        -- 根据数值绘制直方图
-        for i = 1, #plot.axes[1] do
-            -- 绘图
-            local xl = plot.origin[1] + (i - 1) * plot.size[1] / (plot.range[2] - plot.range[1]) * plot.scale[1]
-            local xr = plot.origin[1] + i * plot.size[1] / (plot.range[2] - plot.range[1]) * plot.scale[1]
-            local yb, yt = plot.origin[2], plot.origin[2] + plot.barValue[i] * yunit
-            local bar = scene.addobj(barShape, {
-                vertices = {xl, yb, 0, xr, yb, 0, xr, yt, 0, xl, yt, 0, xl, yb, 0}
-            })
-            local label = scene.addobj("label", {
-                text = plot.fdisp(plot.barValue[i]),
-                size = 4
-            })
-            label:setpos((xl + xr) / 2, yt + 2, 0)
-            plot.bars[i] = {bar, label}
-        end
-    end
-
-    function plot:draw() --初始化绘制
-        -- 坐标轴对象
-        plot.coord = scene.addobj("polyline", {
-            vertices = {plot.origin[1] + plot.size[1], plot.origin[2], 0, plot.origin[1], plot.origin[2], 0,
-                        plot.origin[1], plot.origin[2] + plot.size[2], 0}
-        })
-        -- 坐标轴标题
-        if plot.axislabel~=nil then
-            plot.axislabel[1] = scene.addobj("label", {
-                text = plot.axislabel[1],
-                size = 4
-            })
-            plot.axislabel[1]:setpos(plot.origin[1] + plot.size[1], plot.origin[2] - 8, 0)
-            plot.axislabel[2] = scene.addobj("label", {
-                text = plot.axislabel[2],
-                size = 4,
-            })
-            plot.axislabel[2]:setpos(plot.origin[1]-4, plot.origin[2] + plot.size[2]+6, 0)
-            plot.axislabel[2]:setrot(0,0,1)
-        end
-    end
-
-    plot:draw()
-    plot:refresh()
-    scene.render()
-    return plot
-end
-```
-
-### 子图代码
-`Subplot`
-
-```lua
--- 属性参数
--- local diag = {-80, -70, 80, 70} --lbx,lby,rtx,rty
--- local span = 10
--- local row, col = 2, 2
-function Subplot(row, col, ...)
-    local subplot = {
-        span = 10,
-        diag = {-80, -70, 80, 70},
-        originpt = {}, --存放各行列点坐标
-        psize = {} --子图大小
-    }
-    subplot.row, subplot.col = row, col
-
-    -- 导入参数和fallback
-    if ... ~= nil then
-        for k, v in pairs(...) do
-            subplot[k] = v
-        end
-    end
-    
-    function subplot:refresh()
-        -- 计算参数
-        subplot.psize = {
-            (subplot.diag[3]-subplot.diag[1] - (subplot.col-1)*subplot.span)/subplot.col,
-            (subplot.diag[4]-subplot.diag[2] - (subplot.row-1)*subplot.span)/subplot.row
-        }
-        local gwidth, gheight = subplot.psize[1]+subplot.span, subplot.psize[2]+subplot.span
-    
-        -- 重新计算originpt
-        subplot.originpt = {}
-        for i = 1, subplot.row do
-            subplot.originpt[i]={}
-            for j = 1, subplot.col do
-                subplot.originpt[i][j] = {subplot.diag[1]+(j-1)*gwidth, subplot.diag[2]+(i-1)*gheight}
-            end
-        end
-    end
-    
-    subplot:refresh()
-    return subplot
-end
-```
+> 🔗上方表格链接指向GitHub仓库。您可以在GitHub直接查看代码，也可以将文件下载到本地使用。
