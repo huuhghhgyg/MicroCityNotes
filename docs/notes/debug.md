@@ -55,20 +55,5 @@ Lua 的 Debug 函数大多都适用于 MicroCity Web，可以参考：
 
 ## 文件保存
 MicroCity Web 在保存文件时可以选择保存为 `.mw` 文件和 `.lua` 文件。
-- `.mw` 文件：打包当前的整个项目，包含当前打开的代码文件和虚拟磁盘中的文件。`.mw` 文件的压缩格式为 `.gz`，下载到本地后，如果需要提取文件中的所有文件，可以将 `mw` 文件的后缀名改为 `gz` 后再解压查看。
+- `.mw` 文件：打包当前的整个项目，包含当前打开的代码文件和虚拟磁盘中的文件。
 - `.lua` 文件：仅保存当前编辑的代码文件。常用于仅编写 lua 脚本和修改自定义`.lua`库文件的情况。
-
-### 示例
-假设保存得到 `PoissonGraph.mw`，重命名为 `PoissonGraph.gz` 后解压得到如下文件结构
-
-```
-PoissonGraph
-├── code
-├── Histogram.lua
-├── pass
-└── Subplot.lua
-```
-
-说明
-- code: 编辑器中的代码文件。添加后缀名（如重命名为 `code.lua`）后可以得到编辑器中打开的代码。
-- `Histogram.lua` 和 `Subplot.lua`: 虚拟磁盘中的库文件。
