@@ -135,7 +135,7 @@ print(seed:random())
 The program control mentioned in this article mainly refers to how to use the [buttons](./web-ui#blue-command-area) in the user interface to control the program's operation, including pausing, resuming, stopping, etc.
 
 ::: center
-![Command Bar](../images/note/MicroCityWeb/CommandBar.png)
+![Command Bar](../../images/note/MicroCityWeb/CommandBar.png)
 Command Bar
 :::
 
