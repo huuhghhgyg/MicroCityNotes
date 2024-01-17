@@ -23,7 +23,10 @@ print('下载完成')
 
 #### 导入函数
 
-如果函数文件名为 `abc.lua`，则引用函数时使用 `require("abc")` 即可完成导入。
+如果函数文件名为 `abc.lua`，引用函数后即完成导入。
+```lua
+require("abc")
+```
 
 ### 函数列表
 
@@ -33,11 +36,11 @@ print('下载完成')
 
 本站提供的代码文件列表见 [ModelResource/libs](https://github.com/huuhghhgyg/ModelResource/tree/main/libs)，下方列表都为 ModelResource 仓库中的文件。
 
-| 名称        | 说明                       | 链接                                                                                                             |
-| ----------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Histogram   | 用于绘制直方图             | [ModelResource/libs/Histogram.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Histogram.lua)     |
-| Subplot     | 绘制多各图的情况下绘制子图 | [ModelResource/libs/Subplot.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Subplot.lua)         |
-| TableString | 将table转为字符串      | [ModelResource/libs/TableString.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/TableString.lua) |
-
+| 名称      | 说明                       | 链接                                                                                                         |
+| --------- | -------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Histogram | 用于绘制直方图             | [ModelResource/libs/Histogram.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Histogram.lua) |
+| Subplot   | 绘制多各图的情况下绘制子图 | [ModelResource/libs/Subplot.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/Subplot.lua)     |
+| tablestr  | 将table转为字符串          | [ModelResource/libs/tablestr.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/tablestr.lua)   |
+| setpoint  | 在指定坐标设置显示点       | [ModelResource/libs/setpoint.lua](https://github.com/huuhghhgyg/ModelResource/blob/main/libs/setpoint.lua)   |
 
 🔨 持续更新...
