@@ -22,7 +22,7 @@ export default {
       head: [
         ["meta", { name: "keywords", content: "MicroCity,笔记,文档" }],
         ["link", { rel: "manifest", href: "/MicroCityNotes/manifest.webmanifest" }],
-        ["link", { rel: "icon", href: "/MicroCityNotes/images/icon_microcity.png"}],
+        ["link", { rel: "icon", href: "/MicroCityNotes/images/icon_microcity.png" }],
       ],
     },
     "/en/": {
@@ -44,13 +44,11 @@ export default {
     locales: {
       "/": {
         selectLanguageName: "简体中文",
+        selectLanguageText: "选择语言",
+        selectLanguageAriaLabel: "选择语言",
 
         // 顶栏配置
         navbar: [
-          {
-            text: "首页",
-            link: "/",
-          },
           {
             text: "笔记",
             link: "/notes/",
@@ -71,27 +69,25 @@ export default {
             ],
           },
           {
-            text: "MicroCity项目仓库",
+            text: "MicroCity链接",
             children: [
               {
-                text: "github",
+                text: "GitHub",
                 children: [
-                  { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
-                  { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+                  { text: "MicroCity Desktop 仓库", link: "https://github.com/microcity/Desktop" },
+                  { text: "MicroCity Web 仓库", link: "https://github.com/microcity/microcity.github.io" },
+                  { text: "MicroCity Web 在线环境", link: "https://microcity.github.io/" },
                 ],
               },
               {
-                text: "gitee",
+                text: "Gitee",
                 children: [
-                  { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
-                  { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+                  { text: "MicroCity Desktop 仓库", link: "https://gitee.com/microcity/desktop" },
+                  { text: "MicroCity Web 仓库", link: "https://gitee.com/microcity/microcity" },
+                  { text: "MicroCity Web 在线环境", link: "https://microcity.gitee.io/" },
                 ],
               },
             ],
-          },
-          {
-            text: "MicroCity Web",
-            link: "https://microcity.gitee.io/",
           },
         ],
 
@@ -164,10 +160,6 @@ export default {
         // Top bar configuration
         navbar: [
           {
-            text: "Home",
-            link: "/en/",
-          },
-          {
             text: "Notes",
             link: "/en/notes/",
           },
@@ -187,27 +179,25 @@ export default {
             ],
           },
           {
-            text: "MicroCity Repositories",
+            text: "MicroCity Links",
             children: [
               {
                 text: "GitHub",
                 children: [
-                  { text: "MicroCity Desktop", link: "https://github.com/microcity/Desktop" },
-                  { text: "MicroCity Web", link: "https://github.com/microcity/microcity.github.io" },
+                  { text: "MicroCity Desktop Repository", link: "https://github.com/microcity/Desktop" },
+                  { text: "MicroCity Web Repository", link: "https://github.com/microcity/microcity.github.io" },
+                  { text: "MicroCity Web Online Environment", link: "https://microcity.github.io/" },
                 ],
               },
               {
                 text: "Gitee",
                 children: [
-                  { text: "MicroCity Web", link: "https://gitee.com/microcity/microcity" },
-                  { text: "MicroCity Desktop", link: "https://gitee.com/microcity/desktop" },
+                  { text: "MicroCity Desktop Repository", link: "https://gitee.com/microcity/desktop" },
+                  { text: "MicroCity Web Repository", link: "https://gitee.com/microcity/microcity" },
+                  { text: "MicroCity Web Online Environment", link: "https://microcity.gitee.io/" },
                 ],
               },
             ],
-          },
-          {
-            text: "MicroCity Web",
-            link: "https://microcity.gitee.io/",
           },
         ],
 
