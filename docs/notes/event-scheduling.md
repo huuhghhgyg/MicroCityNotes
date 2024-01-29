@@ -80,6 +80,7 @@ end
 
 -- 车辆移动
 function carmove()
+    print()
     print("car move at ",t)
     local x, y, z = car:getpos()
     car:setpos(x,y,z+dt*car.speed)
@@ -90,7 +91,7 @@ end
 coroutine.queue(dt,update)
 ```
 
-[在MicroCityWeb中打开](https://microcityweb.gitee.io/#rvnpar)
+[在MicroCityWeb中打开](https://microcity.gitee.io/#s80gxo)
 
 ## 随机数
 ### 随机数生成原理简介
