@@ -36,7 +36,7 @@ head:
 1. 转到MicroCity的文档仓库下载 [**MicroCity的最新版本**](https://github.com/microcity/Desktop/releases/latest)
 
 2. 打开 ![icon](./images/doc/icon_script_editor.png)**ScriptEditor** 并输入:  
-```lua
+```lua:no-line-numbers
 Print("hello, world!")
 ```
 
