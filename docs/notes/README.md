@@ -15,7 +15,7 @@
 - [用户界面简介](./web-ui.md)
 - [3D 场景](./3d-scene.md)
 - [3D 对象](./3d-objects.md)
-- [离散事件模拟和程序控制](./event-scheduling.md)
+- [离散事件仿真和程序控制](./event-scheduling.md)
 - [混合整数规划](./mip.md)
 - [调试相关](./debug.md)
 
