@@ -16,9 +16,8 @@ MicroCity Web 不需要任何安装，只需要使用现代浏览器（如Google
 
 MicroCity Web 版也提供使用浏览器打包导出的离线版本（见上方 🔗[链接](#microcityweb)）。
 
-::: warning
-但是由于 Chromium 浏览器内核的更新，某些老旧的系统版本可能不受支持（如 Windows 8.1 及以下的 Windows 版本、32 位的 Windows 操作系统等）
-:::
+> [!warning]
+> 但是由于 Chromium 浏览器内核的更新，某些老旧的系统版本可能不受支持（如 Windows 8.1 及以下的 Windows 版本、32 位的 Windows 操作系统等）
 
 ## 兼容性
 MicroCity Web 版使用 Lua 5.4 作为脚本语言编写脚本。您可以在 MicroCity Web 运行环境或编辑器中输入 `print(_VERSION)` 指令查看使用的 Lua 版本。

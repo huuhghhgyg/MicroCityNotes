@@ -1,4 +1,6 @@
-import { defaultTheme } from "@vuepress/theme-default";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
@@ -10,7 +12,8 @@ import { commentPlugin } from "vuepress-plugin-comment2";
 import { getDirname, path } from "@vuepress/utils";
 const __dirname = getDirname(import.meta.url);
 
-export default {
+export default defineUserConfig({
+  bundler: viteBundler(),
   base: "/MicroCityNotes/",
   // head需要到locals中分别配置
   locales: {
@@ -300,8 +303,10 @@ export default {
         align: true,
         // 自定义图片大小
         imgSize: true,
-        // 启用容器
-        container: true,
+        // 启用 GFM 警告
+        alert: true,
+        // 启用提示容器
+        hint: true,
         // 启用流程图
         flowchart: true,
       },
@@ -327,4 +332,4 @@ export default {
       categoryId: "DIC_kwDOIf-Z0c4CTl1f",
     }),
   ],
-};
+});
