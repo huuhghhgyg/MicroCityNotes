@@ -24,7 +24,7 @@ print('下载完成')
 #### 导入函数
 
 如果函数文件名为 `abc.lua`，引用函数后即完成导入。
-```lua
+```lua:no-line-numbers
 require("abc")
 ```
 

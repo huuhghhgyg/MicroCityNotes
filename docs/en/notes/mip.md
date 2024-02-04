@@ -141,7 +141,7 @@ mip:addrow('c2', 'bin')
 
 Since the objective function and constraint equations have been added, solving the model is straightforward:
 
-```lua
+```lua:no-line-numbers
 mip:solve()
 ```
 
@@ -153,13 +153,13 @@ After solving, you still need to output; otherwise, you won't know the results. 
 
 Get the **value of the objective function**:
 
-```lua
+```lua:no-line-numbers
 mip['obj']
 ```
 
 Get the value of the `i`-th **variable**:
 
-```lua
+```lua:no-line-numbers
 mip['c'..i]
 ```
 
