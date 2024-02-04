@@ -37,7 +37,7 @@ If you want to learn more about how to use MicroCity Web and its advanced featur
 1. Go to the MicroCity documentation repository to download the [**Latest Version of MicroCity**](https://github.com/microcity/Desktop/releases/latest).
 
 2. Open the ![icon](../images/doc/icon_script_editor.png)**ScriptEditor** and type:
-```lua
+```lua:no-line-numbers
 Print("hello, world!")
 ```
 
