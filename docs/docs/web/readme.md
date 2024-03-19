@@ -79,6 +79,6 @@ MicroCity Web是**一个在线空间建模工具**，重构自<a href="https://g
 [obj:setvertices](4.3_scene_and_object.md#obj:setvertices)&nbsp;
 [obj:tojson](4.3_scene_and_object.md#obj:tojson)
 
-> 声明：本目录下文档中大部分内容来源于[MicroCity Web](https://gitee.com/microcity/microcity/tree/master/doc)，版权归原作者所有。
+> 声明：本目录下文档中大部分内容来源于[MicroCity Web](https://gitee.com/microcity/microcity/tree/master/doc)，版权归原作者所有，内容仅供参考。
 
 > 本文使用ChatGPT翻译，如有遗漏请[**反馈**](https://github.com/huuhghhgyg/MicroCityNotes/issues/new)。

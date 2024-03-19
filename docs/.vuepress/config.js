@@ -60,11 +60,11 @@ export default defineUserConfig({
             text: "文档",
             children: [
               {
-                text: "Desktop版文档",
+                text: "Microcity Desktop 文档",
                 link: "/docs/desktop/index.html",
               },
               {
-                text: "Web版文档",
+                text: "Microcity Web 文档",
                 link: "/docs/web/index.html",
               }
             ],
