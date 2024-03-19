@@ -1,7 +1,7 @@
 # 模型求解
 在MicroCity中可以对数学模型进行求解。接下来，本文将介绍在MicroCity中求解数学模型的常见过程，并提供一些技巧帮助你更好地建模。
 
-规划模型中所有函数的详细用法可以参考文档 [4.8混合整数线性规划](../docs/4.8_mixed_integer_programming.md)
+规划模型中所有函数的详细用法可以参考文档 [4.8混合整数线性规划](../docs/desktop/4.8_mixed_integer_programming.md)
 
 ::: tip
 本页内容基于 MicroCity 桌面版。如果你在寻找 MicroCity Web 版的混合整数规划求解方法，请参考 MicroCity Web 笔记中对应的 [混合整数规划](./mip.md) 部分。
@@ -171,7 +171,7 @@ GetVariable(lp, i)
 | 6        | 用户终止了求解 |
 | 7        | 超时错误       |
 
-其他返回值表示的含义请参阅文档 [4.8混合整数线性规划](../docs/4.8_mixed_integer_programming.md) 中的`SolveLP()`函数。
+其他返回值表示的含义请参阅文档 [4.8混合整数线性规划](../docs/desktop/4.8_mixed_integer_programming.md) 中的`SolveLP()`函数。
 
 ## 模型求解示例
 这里提供一个简单的从建模至求解的示例供参考。（其实就是将前面的拼起来）

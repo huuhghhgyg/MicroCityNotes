@@ -39,7 +39,7 @@ head:
 
 ![GraduatedColorSettings.png](../images/note/GraduatedColorSettings.png)
 
-如果感兴趣可以参考文档[2.1 展示世界地图](../docs/2.1_showing_a_world_map.md)中的示例手动尝试更改此属性。
+如果感兴趣可以参考文档[2.1 展示世界地图](../docs/desktop/2.1_showing_a_world_map.md)中的示例手动尝试更改此属性。
 
 
 ## 更改图形和标签的显示大小
@@ -120,10 +120,10 @@ SetParameter (Shapes|Table|Grid|Scene|Module, "id", Number|"String"|Object)
 |参数2|其中的`id`为属性对应的ID。如果是上文的情况，就是`LABEL_ATTRIB`|
 |参数3|如果需要更改属性值，只接受数值(Number)、字符串(String)、对象(Object)三种类型|
 
-`SetParameter()`函数的介绍出现在文档 [4.2 控制用户界面](../docs/4.2_ui_control.md) 中，请参阅。
+`SetParameter()`函数的介绍出现在文档 [4.2 控制用户界面](../docs/desktop/4.2_ui_control.md) 中，请参阅。
 
 ## 借助栅格图
-栅格图也可以用于可视化，我认为栅格图最常用的场景就是**绘制热力图**。热力图的绘制主要通过修改栅格图上每个格子的值实现。如果不清楚栅格图的具体结构，可以先参考文档 [3.3 栅格图](../docs/3.3_raster_grids.md)。关于使用脚本控制栅格图，可以参考文档 [4.4 栅格图形](../docs/4.4_grids.md)。
+栅格图也可以用于可视化，我认为栅格图最常用的场景就是**绘制热力图**。热力图的绘制主要通过修改栅格图上每个格子的值实现。如果不清楚栅格图的具体结构，可以先参考文档 [3.3 栅格图](../docs/desktop/3.3_raster_grids.md)。关于使用脚本控制栅格图，可以参考文档 [4.4 栅格图形](../docs/desktop/4.4_grids.md)。
 
 一种使用栅格图绘制热力图的场景就是**绘制地价图**。在绘制地价图时，我们可以遍历栅格图上的每个格点，计算该格点到每个仓库的距离之和。然后将该格点的值设置为这个值，就可以得到一张热力图。这种方法可以帮助我们可视化地价的分布情况，并且可以用来发现地价的趋势和规律。
 

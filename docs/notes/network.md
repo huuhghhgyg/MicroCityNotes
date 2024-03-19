@@ -18,7 +18,7 @@ head:
 对于上图的示例，上方的道路O=1，D=2，所以方向描述为从1到2；下方的道路O=2，D=1，方向描述为从2到1。
 
 ## 使用函数对网络进行拓补
-MicroCity可以处理网络，所有函数的具体用法见参考文档：[4.6 网络](../docs/4.6_networks.md)
+MicroCity可以处理网络，所有函数的具体用法见参考文档：[4.6 网络](../docs/desktop/4.6_networks.md)
 
 此处简单列举几种创建MicroCity中网络对象的方法：
 ```lua
@@ -102,7 +102,7 @@ CopyShapeTo(TargetShapes, dx, dy, Shape1 [, Shape2, ...])
 ```lua
 CopyShapeTo(TargetShapes, 0, 0, Shape1 [, Shape2, ...])
 ```
-`CopyShapeTo()`函数的具体用法见 [4.3 矢量图形和表格](../docs/4.3_shapes_and_tables.md)
+`CopyShapeTo()`函数的具体用法见 [4.3 矢量图形和表格](../docs/desktop/4.3_shapes_and_tables.md)
 
 ## 网络拓补化后算法的使用
 对网络进行拓补化后，可以使用自带的函数求解很多问题，如：最短路径生成树、最短路径、最短距离等。本文以计算最短路径和最短路长为例介绍一下计算最短路径的流程及踩过的坑
@@ -149,7 +149,7 @@ MicroCity的文档中提供了3种信息可供获取，分别为：
 2. 点或线的索引(**index**)序列
 3. 点或线的形状(**Shape**)序列。
 
-函数的详细用法请参阅 [4.6 网络 - 算法](../docs/4.6_networks.md#algorithms)，此处仅以第2种：点或线的索引序列作为示例。
+函数的详细用法请参阅 [4.6 网络 - 算法](../docs/desktop/4.6_networks.md#algorithms)，此处仅以第2种：点或线的索引序列作为示例。
 
 返回点的序列：
 ```lua

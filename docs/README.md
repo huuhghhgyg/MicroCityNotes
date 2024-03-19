@@ -2,8 +2,8 @@
 home: true
 title: 首页
 actions:
-  - text: 桌面版 文档
-    link: /docs/
+  - text: Web版 文档
+    link: /docs/web/
     type: secondary
   - text: 学习笔记
     link: /notes/

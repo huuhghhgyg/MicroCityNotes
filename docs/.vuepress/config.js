@@ -61,14 +61,12 @@ export default defineUserConfig({
             children: [
               {
                 text: "Desktop版文档",
-                link: "/docs/",
-                children: [
-                  { text: "1.MicroCity介绍", link: "/docs/1.1_what_microcity_can_do" },
-                  { text: "2.开始使用MicroCity", link: "/docs/2.1_showing_a_world_map" },
-                  { text: "3.用户界面", link: "/docs/3.1_ui_overview" },
-                  { text: "4.脚本编写", link: "/docs/4.1_si_overview" },
-                ],
+                link: "/docs/desktop/index.html",
               },
+              {
+                text: "Web版文档",
+                link: "/docs/web/index.html",
+              }
             ],
           },
           {
@@ -97,36 +95,59 @@ export default defineUserConfig({
         // 侧边栏配置
         sidebar: {
           "/": [
-            { text: "MicroCity文档", link: "/docs/", collapsible: true },
+            {
+              text: "MicroCity文档", collapsible: true, children: [
+                { text: "桌面版文档", link: "/docs/desktop/readme" },
+                { text: "Web版文档", link: "/docs/web/readme" },
+              ]
+            },
             { text: "笔记", link: "/notes/", collapsible: true },
           ],
-          "/docs/": [
+          "/docs/desktop/": [
             {
-              text: "MicroCity文档",
+              text: "MicroCity Desktop文档",
               children: [
-                { text: "目录", link: "/docs/", children: [] },
+                { text: "目录", link: "/docs/desktop/", children: [] },
                 {
                   text: "1.MicroCity介绍",
                   collapsible: true,
-                  children: ["/docs/1.1_what_microcity_can_do"],
+                  children: ["/docs/desktop/1.1_what_microcity_can_do"],
                 },
                 {
                   text: "2.开始使用MicroCity",
                   collapsible: true,
-                  children: ["/docs/2.1_showing_a_world_map", "/docs/2.2_searching_for_countries"],
+                  children: ["/docs/desktop/2.1_showing_a_world_map", "/docs/desktop/2.2_searching_for_countries"],
                 },
                 {
                   text: "3.用户界面",
                   collapsible: true,
-                  children: ["/docs/3.1_ui_overview", "/docs/3.2_vector_shapes", "/docs/3.3_raster_grids", "/docs/3.4_3d_scenes", "/docs/3.5_tables", "/docs/3.6_maps_and_layers", "/docs/3.7_modules"],
+                  children: ["/docs/desktop/3.1_ui_overview", "/docs/desktop/3.2_vector_shapes", "/docs/desktop/3.3_raster_grids", "/docs/desktop/3.4_3d_scenes", "/docs/desktop/3.5_tables", "/docs/desktop/3.6_maps_and_layers", "/docs/desktop/3.7_modules"],
                 },
                 {
                   text: "4.脚本编写",
                   collapsible: true,
-                  children: ["/docs/4.1_si_overview", "/docs/4.2_ui_control", "/docs/4.3_shapes_and_tables", "/docs/4.4_grids", "/docs/4.5_3d_scenes", "/docs/4.6_networks", "/docs/4.7_des_simulations", "/docs/4.8_mixed_integer_programming"],
+                  children: ["/docs/desktop/4.1_si_overview", "/docs/desktop/4.2_ui_control", "/docs/desktop/4.3_shapes_and_tables", "/docs/desktop/4.4_grids", "/docs/desktop/4.5_3d_scenes", "/docs/desktop/4.6_networks", "/docs/desktop/4.7_des_simulations", "/docs/desktop/4.8_mixed_integer_programming"],
                 },
               ],
             },
+          ],
+          "/docs/web/": [
+            {
+              text: "MicroCity Web文档",
+              children: [
+                { text: "目录", link: "/docs/web/", children: [] },
+                { text: "1.简介", collapsible: true, children: ["/docs/web/1.1_what_microcity_web_can_do"] },
+                { text: "2.入门指南", collapsible: true, children: ["/docs/web/2.1_rolling_a_cube", "/docs/web/2.2_searching_for_countries"] },
+                { text: "3.用户界面", collapsible: true, children: ["/docs/web/3.1_ui_overview", "/docs/web/3.2_editing_scripts", "/docs/web/3.3_running_scripts", "/docs/web/3.4_navigating_scenes"] },
+                { text: "4.脚本接口", collapsible: true, children: ["/docs/web/4.1_si_overview", "/docs/web/4.2_operation_system", "/docs/web/4.3_scene_and_object", "/docs/web/4.4_discrete_event_simulation", "/docs/web/4.5_mixed_integer_programming"] },
+                {
+                  text: "附录", collapsible: true, children: [
+                    { text: "Lua参考手册", link: "https://www.lua.org/manual/5.4/contents.html" },
+                    { text: "从空间数据到物流模型", link: "https://microcity.gitee.io/book" },
+                  ]
+                }
+              ],
+            }
           ],
           "/notes/": [
             {
