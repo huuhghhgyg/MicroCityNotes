@@ -24,4 +24,4 @@
   - [4.7 Discrete Event Simulations](4.7_des_simulations.md)
   - [4.8 Mixed Integer Programming](4.8_mixed_integer_programming.md)
 
-> Statement: Part of the content of the documents on this website comes from [MicroCity Desktop](https://github.com/microcity/Desktop), and the copyright belongs to the original author.
+> Statement: The content of the documents in this directory comes from [MicroCity Desktop](https://github.com/microcity/Desktop), and the copyright belongs to the original author.

@@ -1,6 +1,6 @@
 # Microcity Web 文档
 
-MicroCity Web是**一个在线空间建模工具**，重新组装自<a href="https://github.com/microcity/" target="_blank">MicroCity</a>的桌面版本。
+MicroCity Web是**一个在线空间建模工具**，重构自<a href="https://github.com/microcity/" target="_blank">MicroCity</a>的桌面版本。
 
 ## 目录
 - 1 简介
@@ -78,5 +78,7 @@ MicroCity Web是**一个在线空间建模工具**，重新组装自<a href="htt
 [obj:setscale](4.3_scene_and_object.md#obj:setscale)&nbsp;
 [obj:setvertices](4.3_scene_and_object.md#obj:setvertices)&nbsp;
 [obj:tojson](4.3_scene_and_object.md#obj:tojson)
+
+> 声明：本目录下文档中大部分内容来源于[MicroCity Web](https://gitee.com/microcity/microcity/tree/master/doc)，版权归原作者所有。
 
 > 本文使用ChatGPT翻译，如有遗漏请[**反馈**](https://github.com/huuhghhgyg/MicroCityNotes/issues/new)。

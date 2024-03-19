@@ -24,6 +24,6 @@
   - [4.7 离散事件仿真](4.7_des_simulations.md)
   - [4.8 混合整数规划](4.8_mixed_integer_programming.md)
 
-> 声明：本网站文档中的部分内容来源于[MicroCity Desktop](https://github.com/microcity/Desktop)，版权归原作者所有。
+> 声明：本目录下文档中大部分内容来源于[MicroCity Desktop](https://github.com/microcity/Desktop)，版权归原作者所有。
 
 > 这篇文章使用ChatGPT翻译自其他语言，如果有问题请在[**反馈**](https://github.com/huuhghhgyg/MicroCityNotes/issues/new)页面提交反馈。

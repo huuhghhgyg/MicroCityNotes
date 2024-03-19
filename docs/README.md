@@ -28,7 +28,9 @@ head:
  
 3. 程序运行，看到右侧视图中方块旋转。
 
-如果想要深入了解 MicroCity Web 的用法和使用技巧，可以参阅本站提供的 [**学习笔记**](./notes/)
+更多MicroCity的使用方法可以参考本站翻译的 [**MicroCity Web中文文档**](./docs/web/)。
+
+如果想要深入了解 MicroCity Web 的用法和使用技巧，可以参考本站提供的 [**学习笔记**](./notes/)
 
 ## 开始使用MicroCity Desktop
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/Desktop) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/Desktop/latest/total)

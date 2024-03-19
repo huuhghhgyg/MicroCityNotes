@@ -325,7 +325,6 @@ for k = 1, 4 do -- control the value of the i dimension
     end
     AddConstraint(lp, cons, "==", 1)
 end
-```
 
 for k = 1, 4 do -- Control the value of the jth dimension
     local cons = {}
