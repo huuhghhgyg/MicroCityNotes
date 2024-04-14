@@ -295,20 +295,14 @@ export default defineUserConfig({
     //markdown增强
     mdEnhancePlugin(
       {
-        // 启用代码块分组
-        codetabs: true,
-        // 使用 KaTeX 启用 TeX 支持
-        katex: true,
-        // 自定义对齐
-        align: true,
-        // 自定义图片大小
-        imgSize: true,
-        // 启用 GFM 警告
-        alert: true,
-        // 启用提示容器
-        hint: true,
-        // 启用流程图
-        flowchart: true,
+        codetabs: true, // 启用代码块分组
+        katex: true, // 使用 KaTeX 启用 TeX 支持
+        align: true, // 自定义对齐
+        imgSize: true, // 自定义图片大小
+        alert: true, // 启用 GFM 警告
+        hint: true, // 启用提示容器
+        flowchart: true, // 启用流程图
+        mermaid: true, // 启用 Mermaid
       },
       false
     ),
