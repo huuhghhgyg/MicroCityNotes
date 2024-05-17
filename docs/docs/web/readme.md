@@ -21,7 +21,7 @@ MicroCity Web是**一个在线空间建模工具**，重构自<a href="https://g
   - [4.5 混合整数规划](4.5_mixed_integer_programming.md)
 - 附录
   - <a href="https://www.lua.org/manual/5.4/contents.html" target="_blank">Lua参考手册</a>
-  - <a href="https://microcity.gitee.io/book" target="_blank">教材：物流空间建模</a>
+  - <a href="https://microcity.github.io/book" target="_blank">教材：物流空间建模</a>
 
 ## 函数索引
 - 协程:
