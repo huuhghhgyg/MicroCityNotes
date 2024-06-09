@@ -1,1 +1,0 @@
-const s="/MicroCityNotes/assets/new_scene-8_vgmKnR.png",t="/MicroCityNotes/assets/scene_menu-RSZKJk7N.png",o="/MicroCityNotes/assets/object_menu-rLYhy67y.png",e="/MicroCityNotes/assets/scene_coordinate-muj-oFBk.png";export{s as _,t as a,o as b,e as c};
