@@ -56,6 +56,6 @@ Print("hello, world!")
 
 <A2hs/>
 
-国内用户如果不方便访问 GitHub 也可以访问本站在 Netlify 上搭建的 [**同步站点**](https://mcn.zhhuu.top)
+国内用户如果不方便访问 GitHub 也可以访问本站在 Netlify 上搭建的 [**同步站点**](https://mcn.zhhuu.top)，如果 GitHub Pages 上的 MicroCity Web 在线环境无法访问，可以尝试使用本站提供部署在 CloudFlare 上的分支版本 [**在线环境**](https://mcw.zhhuu.top)。
 
 如果发现文档或笔记有问题，欢迎 [Pull Request](https://github.com/huuhghhgyg/MicroCityNotes/pulls) 或者提供 [Issues](https://github.com/huuhghhgyg/MicroCityNotes/issues) 让它变得更完善😋
