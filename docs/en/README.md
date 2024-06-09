@@ -23,7 +23,7 @@ head:
 
 ## Getting Started with MicroCity Web
 
-1. Open [MicroCity Web](https://microcity.gitee.io/), and the example code for rotating blocks will load by default.
+1. Open [MicroCity Web](https://microcity.github.io/), and the example code for rotating blocks will load by default.
 
 2. Click the ![Play](../images/note/play.svg) button to run the code.
 

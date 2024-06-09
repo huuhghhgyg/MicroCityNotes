@@ -22,7 +22,7 @@ head:
 
 ## 开始使用MicroCity Web
 
-1. 打开[MicroCity Web](https://microcity.gitee.io/)，默认加载方块旋转的示例代码。
+1. 打开[MicroCity Web](https://microcity.github.io/)，默认加载方块旋转的示例代码。
 
 2. 点击运行![Play](./images/note/play.svg)按钮运行代码
  

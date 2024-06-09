@@ -175,7 +175,7 @@ x3= 1.0
 ```
 
 ::: tip 在线运行
-在MicroCity Web中查看这个[示例](https://microcity.gitee.io/#s80lle)
+在MicroCity Web中查看这个[示例](https://microcity.github.io/#s80lle)
 :::
 
 ## 建模的一些技巧
@@ -303,7 +303,7 @@ x[4][2]= 1.0
 ```
 
 ::: tip 在线运行
-在MicroCity Web中查看这个[示例](https://microcity.gitee.io/#s80lnp)
+在MicroCity Web中查看这个[示例](https://microcity.github.io/#s80lnp)
 :::
 
 | 结果       |  人   | 配送工件 |

@@ -217,7 +217,7 @@ x3= 1.0
 ```
 
 ::: tip Online Execution
-Check this [example](https://microcity.gitee.io/#s44523) in MicroCityWeb
+Check this [example](https://microcity.github.io/#s44523) in MicroCityWeb
 :::
 
 ## Some Modeling Techniques
@@ -355,7 +355,7 @@ x[4][2]= 1.0
 ```
 
 ::: tip Online Execution
-Check this [example](https://microcity.gitee.io/#s445tk) in MicroCityWeb
+Check this [example](https://microcity.github.io/#s445tk) in MicroCityWeb
 :::
 
 | Result | Person | Item |

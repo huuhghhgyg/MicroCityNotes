@@ -8,7 +8,7 @@ MicroCity是一款简单快速的空间规划和建模软件，可用于数学�
 ## MicroCityWeb
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/microcity/microcity.github.io/master)
 
-🎯[访问MicroCity Web](https://microcityweb.gitee.io) 📍[(离线版)下载](https://gitee.com/microcityweb/microcityweb/releases/latest)
+🎯[访问MicroCity Web](https://microcity.github.io)
 
 MicroCity Web 不需要任何安装，只需要使用现代浏览器（如Google Chrome、Microsoft Edge）访问它的网站即可。虽然相比于桌面版，运行在浏览器上可能会造成一定的性能损失，但是这使得用户可以在几乎任何操作系统上使用该软件，比如电脑系统Windows、MacOS、Linux和手机/平板系统Android等。
 

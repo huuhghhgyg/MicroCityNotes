@@ -91,7 +91,7 @@ end
 coroutine.queue(dt, update)
 ```
 
-[Open in MicroCityWeb](https://microcityweb.gitee.io/#rvnpar)
+[Open in MicroCityWeb](https://microcity.github.io/#s80gxo)
 
 ## Random Numbers
 ### Introduction to the Principle of Random Number Generation

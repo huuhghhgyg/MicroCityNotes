@@ -91,7 +91,7 @@ end
 coroutine.queue(dt,update)
 ```
 
-[在MicroCityWeb中打开](https://microcity.gitee.io/#s80gxo)
+[在MicroCityWeb中打开](https://microcity.github.io/#s80gxo)
 
 ## 随机数
 ### 随机数生成原理简介

@@ -8,8 +8,7 @@ MicroCity is a simple and fast spatial planning and modeling software, which can
 ## MicroCityWeb
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/microcity/microcity.github.io/master)
 
-🎯[Visit MicroCity Web](https://microcityweb.gitee.io) 📍[Download (Offline Version)](https://gitee.com/microcityweb/microcityweb/releases/latest)
-
+🎯[Visit MicroCity Web](https://microcity.github.io)
 MicroCity Web does not require any installation, just use a modern browser (such as Google Chrome, Microsoft Edge) to access its website. Although running on a browser may cause some performance loss compared to the desktop version, it allows users to use the software on almost any operating system, such as computer systems Windows, MacOS, Linux, and mobile/tablet systems Android, etc.
 
 Even with the release of MicroCity Web, you can still continue to use the previously developed Desktop version of MicroCity. However, the desktop version will no longer be updated with new features, all new functions and improvements will be delivered continuously to MicroCity Web, in order to provide the best user experience and avoid version control issues. If you want to experience the latest features and improvements, it is necessary to switch to MicroCity Web.
