@@ -1,13 +1,13 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
-import { seoPlugin } from "vuepress-plugin-seo2";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
+import { seoPlugin } from '@vuepress/plugin-seo'
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
-import { pwaPlugin } from "vuepress-plugin-pwa2";
+import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
-import { commentPlugin } from "vuepress-plugin-comment2";
+import { commentPlugin } from '@vuepress/plugin-comment'
 
 import { getDirname, path } from "@vuepress/utils";
 const __dirname = getDirname(import.meta.url);
@@ -299,7 +299,8 @@ export default defineUserConfig({
 
   plugins: [
     // 搜索插件
-    fullTextSearchPlugin({
+    searchProPlugin({
+      indexContent: true, // 索引文章的全部内容
       locales: {
         "/": {
           placeholder: "搜索",
@@ -309,6 +310,7 @@ export default defineUserConfig({
         },
       },
     }),
+
     //SEO优化相关
     //网站地图
     sitemapPlugin({
