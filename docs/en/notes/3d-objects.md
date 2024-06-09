@@ -174,7 +174,7 @@ local obj = scene.addobj('/res/2axle.glb')
 You can also reference an external model by referencing the URL of the file:
 
 ```lua:no-line-numbers
-local obj = scene.addobj('https://microcityweb.gitee.io/res/agv.glb')
+local obj = scene.addobj('https://microcity.github.io/res/agv.glb')
 ```
 
 > If you have 3D model resources at hand, you can view them in [3D Viewer](http://3dviewer.net/) and export them as `.glb` models through this website.

@@ -85,7 +85,13 @@ export default defineUserConfig({
                 children: [
                   { text: "MicroCity Desktop 仓库", link: "https://gitee.com/microcity/desktop" },
                   { text: "MicroCity Web 仓库", link: "https://gitee.com/microcity/microcity" },
-                  { text: "MicroCity Web 在线环境", link: "https://microcity.gitee.io/" },
+                ],
+              },
+              {
+                text: "zhhuu.top (非官方)",
+                children: [
+                  { text: "MicroCity Web (fork) 仓库", link: "https://github.com/huuhghhgyg/microcityweb"},
+                  { text: "MicroCity Web (fork) 在线环境", link: "https://mcw.zhhuu.top/" },
                 ],
               },
             ],
