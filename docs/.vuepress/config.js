@@ -181,6 +181,11 @@ export default defineUserConfig({
               collapsible: true,
               children: ["/notes/warehouse-simulation", "/notes/plots", "/notes/cy-simulation"],
             },
+            {
+              text: "Gallery",
+              collapsible: true,
+              children: ["/notes/gallery/build-a-clock"],
+            }
           ],
         },
       },

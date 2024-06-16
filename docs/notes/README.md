@@ -24,4 +24,7 @@
 - [通用绘图代码](./plots.md)
 - [港口AGV服务流程三维仿真思路](./cy-simulation.md)
 
+## Gallery
+- [构建一个时钟](./gallery/build-a-clock.md)
+
 > 本页目录所指的笔记内容适用于相应版本的MicroCity。特别感谢在编写和整理的过程中 [孙卓老师(MicroCity作者)](https://github.com/sunzhuo) 给予的指导和帮助。
