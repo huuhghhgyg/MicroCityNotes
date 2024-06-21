@@ -66,7 +66,20 @@ export default defineUserConfig({
               {
                 text: "Microcity Web 文档",
                 link: "/docs/web/index.html",
-              }
+              },
+              {
+                text: "其它",
+                children: [
+                  {
+                    text: "仿真框架（港口）说明文档",
+                    link: "https://github.com/huuhghhgyg/Container-Terminal-Simulation/tree/main/docs",
+                  },
+                  {
+                    text: "模型/库资源",
+                    link: "https://www.zhhuu.top/ModelResource"
+                  }
+                ]
+              },
             ],
           },
           {
@@ -88,9 +101,9 @@ export default defineUserConfig({
                 ],
               },
               {
-                text: "zhhuu.top (非官方)",
+                text: "zhhuu.top (自建修改)",
                 children: [
-                  { text: "MicroCity Web (fork) 仓库", link: "https://github.com/huuhghhgyg/microcityweb"},
+                  { text: "MicroCity Web (fork) 仓库", link: "https://github.com/huuhghhgyg/microcityweb" },
                   { text: "MicroCity Web (fork) 在线环境", link: "https://mcw.zhhuu.top/" },
                 ],
               },
@@ -202,7 +215,11 @@ export default defineUserConfig({
             text: "Documentation",
             children: [
               {
-                text: "Desktop Documentation",
+                text: "MicroCity Web",
+                link: "https://github.com/microcity/microcity.github.io/tree/master/doc"
+              },
+              {
+                text: "MicroCity Desktop",
                 link: "/en/docs/",
                 children: [
                   { text: "1. MicroCity Introduction", link: "/en/docs/1.1_what_microcity_can_do" },
@@ -222,14 +239,6 @@ export default defineUserConfig({
                   { text: "MicroCity Desktop Repository", link: "https://github.com/microcity/Desktop" },
                   { text: "MicroCity Web Repository", link: "https://github.com/microcity/microcity.github.io" },
                   { text: "MicroCity Web Online Environment", link: "https://microcity.github.io/" },
-                ],
-              },
-              {
-                text: "Gitee",
-                children: [
-                  { text: "MicroCity Desktop Repository", link: "https://gitee.com/microcity/desktop" },
-                  { text: "MicroCity Web Repository", link: "https://gitee.com/microcity/microcity" },
-                  { text: "MicroCity Web Online Environment", link: "https://microcity.gitee.io/" },
                 ],
               },
             ],
