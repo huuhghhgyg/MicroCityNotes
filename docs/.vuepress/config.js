@@ -197,7 +197,7 @@ export default defineUserConfig({
             {
               text: "Gallery",
               collapsible: true,
-              children: ["/notes/gallery/build-a-clock"],
+              children: ["/notes/gallery/build-a-clock", "/notes/gallery/build-an-elevator"],
             }
           ],
         },
