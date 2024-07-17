@@ -1,5 +1,7 @@
 # 绘制一个时钟
 
+![build a clock thumbnail](../../images/note/gallery/build-a-clock-thumbnail.webp)
+
 ## 目标
 
 本文的目标是制作一个时钟，每秒钟时针和分针都会进行非线性运动，并且能够持续循环，这也可以算是一种仿真。
@@ -89,7 +91,7 @@ $$
 v=1-cos(8t)
 $$
 
-![时针速度函数](../../images/note/gallery/clock_hour_hand_velocity.svg)
+![时针速度函数](../../images/note/gallery/clock-hour-hand-velocity.svg)
 
 而分针每个周期的运动速度正好是时针的 8 倍，因此分针的运动函数只需在时针运动函数的基础上修改三角函数的参数即可。
 
@@ -97,7 +99,7 @@ $$
 v=1-cos(t)
 $$
 
-![分针速度函数](../../images/note/gallery/clock_minute_hand_velocity.svg)
+![分针速度函数](../../images/note/gallery/clock-minute-hand-velocity.svg)
 
 ### 函数转换
 
