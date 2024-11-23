@@ -21,6 +21,7 @@ head:
 ---
 
 ## 开始使用MicroCity Web
+![GitHub last commit](https://img.shields.io/github/last-commit/microcity/microcity.github.io) 
 
 1. 打开[MicroCity Web](https://microcity.github.io/)，默认加载方块旋转的示例代码。
 
@@ -31,6 +32,10 @@ head:
 更多MicroCity的使用方法可以参考本站翻译的 [**MicroCity Web中文文档**](./docs/web/)。
 
 如果想要深入了解 MicroCity Web 的用法和使用技巧，可以参考本站提供的 [**学习笔记**](./notes/)
+
+还可以参考老师的[**教材**](https://microcity.github.io/book/)，介绍了很多算法
+
+![GitHub last commit](https://img.shields.io/github/last-commit/microcity/book)
 
 ## 开始使用MicroCity Desktop
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/microcity/Desktop) ![GitHub release (by tag)](https://img.shields.io/github/downloads/microcity/Desktop/latest/total)
