@@ -355,6 +355,7 @@ export default defineUserConfig({
       cachePic: true,
       // 网站体积不大，并使文档完全离线可用
       cacheHTML: true,
+      themeColor: "#25a5f9"
     }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, "./components"),
