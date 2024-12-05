@@ -48,7 +48,7 @@ flowchart TD
 
 ## 代码实现
 
-<iframe src="https://microcity.github.io/#/H4sIAAAAAAAACu2WW2vbMBTH8xzIdzgEQhNqZ3aaC4ymn6RQ7Fhp3Cl2kG3WvZV1tNmaXVibMrpujFFYX5amsEHX26eJ7fRpX2HItziXUvpQxph+D7YjHZ3zl86RopquoMQDIwiCUC4X6VuslIT4m7JQKCwkxGKlUBRFsShUEmKhWCnScQ8tjGIZpkQSgmBKRJYwXjNusbur/x+F58Fuf7K/7didfafbd173Ukms1yQMurwGVSiUSuUSAM+Du3c8OH/j/NwZnnTdgxfux57zZdveuEwlU0nqpXcw+PXSOdkbXm/a21dOt59K1i2tZqq6BjW92ZIIyq5z1G0ulQQAUOuwDoteHLOBNCDItIgGvOh3I2wgz2RpyiRmETYJgDQllfQenh6ns03ns7Nrn1K5g/OO3d5y3h26P77GhKH11oqsahJ5tmIgidQaWSxzYMkctAiqqYaqa4Fanodh79q96t1cfBj2juy3z70p0i4sQ5U+dBKJt2iT5TUFLZE/qMa+dQICFRxE8BfRPt242TwekxWuqBfOS080hVnyA80UyTAQMbOWDEtUJAdpS66mIZ+n8vJ5SEPTMkyQEcjq6ioiYDYkDXBgg+OunjZUjOgwns52KTYNRR9ZjSQ2VQWqkMUyzFNN8AgKs8wIMixsQjWqkqaqxOskRK1HplXgRa8ixi2iZDRVZbqnRVTNzBomUbXVfF0nTcnMpg1k0iGmDpl6mqMDcxNhgzochb4tsnX/yNadkaedyQRJTyYMtVjQsR/B7hjLAQd+kQSbyN8xEBRg+8jZ/45l+30nNJgpPkjVY8goHGSUNBclj/qmuRu1WEFLOD2/jCbt6cpOjhirq5k6sFzN1Lll06LvdDiz+EKqdZrfRRBmZC3cpfOQDap6IgMzY9r9LUv2Dxa73ffCjocMKsbbI7PChucFf9+weCIsHg8bJj6W0iD/t5wRo9Ny2N90947DUya+Lzmoq5qEV+gg/8tbtemDM5dK+rrn/FPWvdh1Ph/+vjyY4yJXc8vm4OzV4GzH7Xb8nmnnub/9l/hf0ZKMB7/R3HH/o0zc/0pimd3/GAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwG4178AVEjTe0AKAAA" width="100%" height="600" style="border-radius:8px;"></iframe>
+<iframe src="https://microcity.github.io/#/H4sIAAAAAAAACu2WW2sTQRTH+xzIdzgEShO6G3djk4J0+0kKZTeZtFsnu2F2ButbsWqrjRfsBa1VRAr6YkxBofb2abKb9MmvILP3XGrpQwVhfg+bzcyZc/5nz9mZrdo1NHHLKIqiVCoz/FedLSvpX87dSkmdUGdmSzMldXa2UppQS2VV5etuWxiHOVQnE4pCdWLoGK84V9hdN/+fIsvgbn5wv2y5rT1vt+O9aGczTWJaNF8AkGXwjp9cvjv03l70Dk+yGWxXdQy2sQIalMrlStm36e187Z689H5u9b/v9vYf9963vU8b7tpZNpPNcP/t/e6vZ973nf7Furtx7u12spk6s6rUtC2o2o2mTlB+VeJuC9kMAIBZh1WY8+PQZWQBQZQRC2Q1mEbYQb7J/IhJyiIaUgBZtWzGv/h6vNYGz3Rr2z3icrsnLXfzqff6oPfjc0oYWm0uGqalk4eLDtJJdTmPDQmYIUGToKrpmLYVqpVl6Lcveufty9O3/fah++qRnyKfwgZo/GKTWDzjQ8wfCkdif6Cl7m0CSjAfRwkepHu0drn+dUBa9FT9kH6J4jTGpRDq5uiOgwjNMwPmuVAJcszQclAsconFIuSgwRwKBgLDXFpCBOiybgEObXDa1YNlEyO+TOYZz6dSqdmJVSKxYdZAgzw2YJprgjtQGmdGkMMwBS3ulIZZS/dKhFmPTTWQVb8rBi3igjTM2uhM0PQOJaa1VKzbpKHTfM5BlC+hNkzWcxJfWBgKG/ZiEvqqyOzmkdm1kUedGQTp94cMrVTQgT/hGzJQAwmCJglfpMg8acLNQ2/vGzbcN63IaGwCYbnuwWRNgslaTooLyP3z+iUjLByJUgwq71CdokW/YsNLR81Y2owNmAXXoD0Tn1qyMN2fY3PBhjZZlxYo47+56AmlCzK0rSQTZj2JOQfKmOaINoRpyIcvz1Chx0pyO0+ZEQRzNzu+qkFFYWPGwefHBo82KPmmwfFQcDwYPN1lyd21FU2M/lLP0Z7sd9b9Myi9kaf6+4o9MDkRgvXRLpredySom5aOF/mi4M4XNno4FKJjcyoQ0Dvd9j4e/D7bn5JiV1MLtHv8vHu81dttBTOjzgv/+Pxv6s6tf9Fc8/3HGf7+uyu+/wQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgeBm/AE/gTYoACgAAA==" width="100%" height="600" style="border-radius:8px;"></iframe>
 
 🔗 [在 MicroCityWeb 中打开](https://microcity.github.io/#snzd6a)
 
@@ -56,6 +56,7 @@ flowchart TD
 
 ```lua
 -- 初始化数据
+print()  -- 清除显示
 local obj = 25565  -- 用于测试的目标值
 
 -- 定义比较函数
@@ -71,7 +72,7 @@ function exp_binary_search(lb, ub, precision)
     lb = lb or -1
     ub = ub or 1
     precision = precision or 0
-
+    
     -- 定义局部binary_search函数
     local function binary_search(lb, ub)
         assert(ub >= lb, "ub=" .. ub .. " must be bigger than lb=" .. lb)
@@ -90,20 +91,28 @@ function exp_binary_search(lb, ub, precision)
         end
         return (lb + ub) / 2, lb, ub
     end
-
+    
     -- 判断lb和ub
     print(string.format("compare: %d, %d", compare(lb, obj), compare(ub, obj)))
-    while compare(lb, obj) == compare(ub, obj) do
+    local state_lb = compare(lb, obj)
+    local state_ub = compare(ub, obj)
+    
+    while state_lb == state_ub do
         print(string.format("lb=%f,\tub=%f", lb, ub))
-        if lb < 0 then
+        -- 指数拓展
+        if state_lb < 0 then
             ub = ub + (ub - lb)
             print(string.format("将ub拓展到%f", ub))
-        elseif lb > 0 then
+        elseif state_lb > 0 then
             lb = lb - (ub - lb)
             print(string.format("将lb拓展到%f", lb))
         end
+        
+        state_lb = compare(lb, obj)
+        state_ub = compare(ub, obj)
     end
-
+    
+    -- 调用二分搜索
     return binary_search(lb, ub)
 end
 
