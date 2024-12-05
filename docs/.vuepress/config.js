@@ -1,7 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
 import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 import { seoPlugin } from '@vuepress/plugin-seo'
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
@@ -313,16 +313,16 @@ export default defineUserConfig({
 
   plugins: [
     // 搜索插件
-    searchProPlugin({
-      indexContent: true, // 索引文章的全部内容
-      locales: {
-        "/": {
-          placeholder: "搜索",
+    slimsearchPlugin({
+        indexContent: true, // 索引文章的全部内容
+        locales: {
+          "/": {
+            placeholder: "搜索",
+          },
+          "/en/": {
+            placeholder: "Search",
+          },
         },
-        "/en/": {
-          placeholder: "Search",
-        },
-      },
     }),
 
     //SEO优化相关
