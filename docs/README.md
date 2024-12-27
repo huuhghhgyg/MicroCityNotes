@@ -53,7 +53,7 @@ Print("hello, world!")
 
 5. 程序界面下方的 **Messages** 栏中会输出执行脚本的信息。  
 
-更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：[**MicroCity文档**](./docs/)，也可以参考 [MicroCtiy](https://microcity.github.io/) 在GitHub上的文档。
+更多MicroCity的使用方法可以参考本站搬运自GitHub的文档：[**MicroCity文档**](./docs/web/)，也可以参考 [MicroCtiy](https://microcity.github.io/) 在GitHub上的文档。
 
 ## [MicroCityNotes](https://github.com/huuhghhgyg/MicroCityNotes) 仓库
 
