@@ -197,7 +197,7 @@ export default defineUserConfig({
             {
               text: "Gallery",
               collapsible: true,
-              children: ["/notes/gallery/build-a-clock", "/notes/gallery/build-an-elevator", "/notes/gallery/exp-extended-bisect-search"],
+              children: ["/notes/gallery/build-a-clock", "/notes/gallery/build-an-elevator", "/notes/gallery/exp-extended-bisect-search", "/notes/gallery/computational-complexity"],
             }
           ],
         },
