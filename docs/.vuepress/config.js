@@ -8,6 +8,7 @@ import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { commentPlugin } from '@vuepress/plugin-comment'
+import { markdownMathPlugin } from '@vuepress/plugin-markdown-math'
 
 import { getDirname, path } from "@vuepress/utils";
 const __dirname = getDirname(import.meta.url);
@@ -339,7 +340,6 @@ export default defineUserConfig({
     mdEnhancePlugin(
       {
         codetabs: true, // 启用代码块分组
-        katex: true, // 使用 KaTeX 启用 TeX 支持
         align: true, // 自定义对齐
         imgSize: true, // 自定义图片大小
         alert: true, // 启用 GFM 警告
@@ -368,6 +368,9 @@ export default defineUserConfig({
       repoId: "R_kgDOIf-Z0Q",
       category: "讨论",
       categoryId: "DIC_kwDOIf-Z0c4CTl1f",
+    }),
+    // 数学公式
+    markdownMathPlugin({
     }),
   ],
 });
