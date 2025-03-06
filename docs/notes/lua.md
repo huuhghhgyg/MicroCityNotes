@@ -79,7 +79,7 @@ print(1~=1) -- false
 最普通的形式
 ```lua
 -- 输出1到10共10个数
-for i = 1:10 do
+for i = 1,10 do
     print(i)
 end
 ```
@@ -94,7 +94,7 @@ for(int i=1; i<=10; i++){
 考虑步长
 ```lua
 -- 输出10到1共10个数，步长为-1
-for i = 10:1:-1 do
+for i = 10,1,-1 do
     print(i)
 end
 ```
