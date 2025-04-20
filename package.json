@@ -19,7 +19,7 @@
     "@vuepress/plugin-register-components": "2.0.0-rc.82",
     "@vuepress/plugin-seo": "2.0.0-rc.82",
     "@vuepress/plugin-sitemap": "2.0.0-rc.82",
-    "@vuepress/plugin-slimsearch": "2.0.0-rc.82",
+    "@vuepress/plugin-slimsearch": "^2.0.0-rc.80",
     "@vuepress/theme-default": "2.0.0-rc.82",
     "flowchart.ts": "^3.0.1",
     "katex": "^0.16.11",
