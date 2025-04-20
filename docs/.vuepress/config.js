@@ -188,7 +188,7 @@ export default defineUserConfig({
             {
               text: "MicroCityWeb",
               collapsible: true,
-              children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip", "/notes/debug"],
+              children: ["/notes/web-ui", "/notes/3d-scene", "/notes/3d-objects", "/notes/event-scheduling", "/notes/mip", "/notes/debug", "/notes/charts"],
             },
             {
               text: "思路",

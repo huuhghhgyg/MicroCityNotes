@@ -18,6 +18,7 @@
 - [离散事件仿真和程序控制](./event-scheduling.md)
 - [混合整数规划](./mip.md)
 - [调试相关](./debug.md)
+- [图表绘制](./charts.md) (新特性)
 
 ## 思路
 - [仓库仿真](./warehouse-simulation.md)
